@@ -11,7 +11,7 @@ const COUNTRY_ORDER = ["AR", "BO", "BR", "CL", "CO", "EC", "PY", "PE", "UY", "VE
 type State = "idle" | "sending" | "ok" | "error";
 
 const field =
-  "mt-1.5 block w-full rounded-[2px] border border-line bg-card px-3.5 py-3 text-ink placeholder:text-muted/60 focus:border-navy focus:outline-none";
+  "mt-1.5 block w-full rounded-lg border border-line bg-white px-3.5 py-3 text-ink placeholder:text-muted/60 focus:border-navy focus:outline-none";
 const lab = "block text-[0.95rem] font-medium";
 
 export function ContactForm({ d, locale, compact = false }: { d: Dict; locale: Locale; compact?: boolean }) {

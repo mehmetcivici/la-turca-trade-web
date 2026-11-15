@@ -146,4 +146,59 @@
   }
   .link-arrow:hover { color: var(--color-copper); }
   .tabular { font-variant-numeric: tabular-nums; }
+  /* Kurumsal kart dili */
+  .card {
+    background: #fff;
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+  }
+  .card-hover {
+    transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+  }
+  .card-hover:hover {
+    box-shadow: 0 18px 40px -22px rgba(24, 35, 58, 0.35);
+    transform: translateY(-2px);
+    border-color: #cfc8b8;
+  }
+  .shadow-soft {
+    box-shadow: 0 24px 60px -30px rgba(24, 35, 58, 0.45);
+  }
+  .btn-light {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+  }
+  .btn-light:hover {
+    background: #fff;
+    color: var(--color-navy);
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-copper);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 1.6rem;
+    height: 2px;
+    background: currentColor;
+  }
+  .eyebrow-light {
+    color: var(--color-copper-l);
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    background: var(--color-paper-2);
+    color: var(--color-navy);
+  }
+
 }

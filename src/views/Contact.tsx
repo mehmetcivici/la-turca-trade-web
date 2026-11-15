@@ -4,19 +4,24 @@ import { site } from "@/content/site";
 import { ContactForm } from "@/components/ContactForm";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
-import { Breadcrumb } from "./shared";
+import { PageBanner } from "@/components/ui";
+import { crumbs } from "./shared";
 
 export function Contact({ locale, d }: { locale: Locale; d: Dict }) {
   const c = d.contact;
   return (
     <>
       <JsonLd data={breadcrumbSchema(locale, d, "contact", d.nav.contact)} />
-      <Breadcrumb d={d} locale={locale} name={d.nav.contact} />
-      <section className="wrap grid gap-14 pb-24 pt-10 lg:grid-cols-12 lg:pt-14">
+      <PageBanner
+        title={c.h1}
+        lead={c.lead}
+        kicker="ES · PT · EN · TR"
+        image={{ src: "/img/star-termos/lineup.webp", w: 1582, h: 986, alt: "Star Termos", pos: "object-[70%_60%]" }}
+        crumbs={crumbs(d, locale, d.nav.contact)}
+      />
+      <section className="wrap grid gap-8 py-16 md:py-24 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <h1 className="display">{c.h1}</h1>
-          <p className="lead mt-6">{c.lead}</p>
-          <dl className="mt-10 space-y-6 border-t border-line pt-6">
+          <dl className="card space-y-6 p-7">
             {site.email && (
               <div>
                 <dt className="text-sm text-muted">{c.direct}</dt>
@@ -56,8 +61,8 @@ export function Contact({ locale, d }: { locale: Locale; d: Dict }) {
             </div>
           </dl>
         </div>
-        <div className="lg:col-span-7 lg:col-start-6">
-          <div className="bg-card p-6 md:p-10">
+        <div className="lg:col-span-8">
+          <div className="card p-6 shadow-soft md:p-10">
             <ContactForm d={d} locale={locale} />
           </div>
         </div>

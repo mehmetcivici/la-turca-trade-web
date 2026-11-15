@@ -1,12 +1,13 @@
-import { type Locale } from "@/i18n/config";
-import { asset } from "@/lib/asset";
+import Link from "next/link";
+import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
 import { catalogs, manufacturers } from "@/content/site";
+import { asset } from "@/lib/asset";
 import { gastroCategories, gnSizes, gnDepths, gnPerBox, gnCode } from "@/content/products";
-import { Arrow, Download, Img, Ledger, SectionHead } from "@/components/ui";
+import { Arrow, Check, Download, Img, PageBanner, SectionHead, Stats } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
-import { Breadcrumb, CategoryGrid, CtaBand } from "./shared";
+import { CategoryGrid, CtaBand, crumbs } from "./shared";
 
 export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
   const g = d.gastro;
@@ -22,120 +23,131 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
           itemListElement: gastroCategories.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: d.products.gastro[c.id].t })),
         }}
       />
-      <Breadcrumb d={d} locale={locale} name="Gastroplast" />
-
-      <section className="wrap grid gap-12 pb-16 pt-10 lg:grid-cols-12 lg:pb-24 lg:pt-14">
-        <div className="lg:col-span-6 lg:pr-6">
-          <p className="kicker">{g.sub}</p>
-          <h1 className="display mt-4">{g.h1}</h1>
-          <div className="mt-8 space-y-5 text-[1.08rem] leading-relaxed text-ink/85">
-            {g.intro.map((p) => (
-              <p key={p.slice(0, 24)}>{p}</p>
-            ))}
-          </div>
-          <p className="mt-5 text-sm text-muted">{g.brands}</p>
-          <div className="mt-8 flex flex-wrap items-center gap-5">
-            <a href={asset(cat.file)} download className="btn btn-dark">
-              <Download /> {d.common.download}
-            </a>
-            <a href={manufacturers.gastroplast.web} target="_blank" rel="noopener" className="link-arrow text-[0.95rem]">
-              {d.common.officialSite} <Arrow />
-            </a>
-          </div>
+      <PageBanner
+        title={g.h1}
+        kicker={g.sub}
+        lead={d.home.gastro.lead}
+        image={{ src: "/img/gastroplast/scene-condiment.webp", w: 1600, h: 900, alt: "Gastroplast" }}
+        crumbs={crumbs(d, locale, "Gastroplast")}
+      >
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a href={asset(cat.file)} download className="btn btn-amber">
+            <Download /> {d.common.download}
+          </a>
+          <Link href={href(locale, "contact")} className="btn btn-light">
+            {d.common.quote}
+          </Link>
         </div>
-        <div className="lg:col-span-6">
-          <Img src="/img/gastroplast/gn-pc-black.webp" alt={d.products.gastro.gnPc.t} w={800} h={800} priority className="aspect-[4/5] w-full object-cover" />
+      </PageBanner>
+      <div className="wrap relative z-10 -mt-10">
+        <Stats items={g.facts} className="shadow-soft" />
+      </div>
+
+      <section className="wrap grid items-center gap-10 py-20 md:py-24 lg:grid-cols-12">
+        <div className="space-y-5 text-[1.05rem] leading-relaxed text-ink/85 lg:col-span-7">
+          {g.intro.map((p) => (
+            <p key={p.slice(0, 24)}>{p}</p>
+          ))}
+          <p className="text-sm text-muted">{g.brands}</p>
+          <a href={manufacturers.gastroplast.web} target="_blank" rel="noopener" className="link-arrow text-navy">
+            {d.common.officialSite} <Arrow />
+          </a>
         </div>
-      </section>
-
-      <section className="wrap pb-16">
-        <Ledger items={g.facts} />
-      </section>
-
-      <section className="wrap pb-20 md:pb-28" aria-labelledby="cats">
-        <h2 id="cats" className="h2">{g.catsTitle}</h2>
-        <div className="mt-10">
-          <CategoryGrid d={d} showCodes />
+        <div className="lg:col-span-5">
+          <Img src="/img/gastroplast/gn-pc-black.webp" alt={d.products.gastro.gnPc.t} w={800} h={800} className="aspect-square w-full rounded-2xl object-cover shadow-soft" />
         </div>
       </section>
 
-      <section className="border-y border-line bg-card py-20 md:py-28" aria-labelledby="gn">
-        <div className="wrap grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-4">
-            <SectionHead id="gn" title={g.gnTitle} lead={g.gnLead} />
-            <Img src="/img/gastroplast/gn-pc-clear.webp" alt={g.gnTitle} w={840} h={839} className="mt-8 hidden w-4/5 lg:block" />
+      <section className="bg-paper-2 py-20 md:py-28" aria-labelledby="cats">
+        <div className="wrap">
+          <SectionHead id="cats" kicker="Gastroplast" title={g.catsTitle} />
+          <div className="mt-10">
+            <CategoryGrid d={d} showCodes />
           </div>
-          <div className="overflow-x-auto lg:col-span-8">
-            <table className="w-full min-w-[36rem] border-collapse text-left">
-              <caption className="sr-only">{g.gnTitle}</caption>
-              <thead>
-                <tr className="border-b border-ink/70 text-[0.9rem] text-muted">
-                  <th scope="col" className="py-3 pr-4 font-medium">{g.gnSize}</th>
-                  {gnDepths.map((dp) => (
-                    <th key={dp} scope="col" className="py-3 pr-4 font-medium">
-                      {dp} mm
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {gnSizes.map((sz) => (
-                  <tr key={sz} className="border-b border-line">
-                    <th scope="row" className="py-4 pr-4 font-serif text-xl font-normal text-navy">GN {sz}</th>
-                    {gnDepths.map((dp, i) => {
-                      const n = gnPerBox[sz][i];
-                      return (
-                        <td key={dp} className="py-4 pr-4 align-top">
-                          {n ? (
-                            <>
-                              <span className="tabular block text-[0.95rem]">{gnCode(sz, dp)}</span>
-                              <span className="tabular block text-sm text-muted">
-                                {n} {d.common.perBox.toLowerCase()}
-                              </span>
-                            </>
-                          ) : (
-                            <span className="text-muted">—</span>
-                          )}
-                        </td>
-                      );
-                    })}
-                  </tr>
+        </div>
+      </section>
+
+      <section className="wrap grid gap-6 py-20 md:py-28 lg:grid-cols-12" aria-labelledby="gn">
+        <div className="lg:col-span-4">
+          <SectionHead id="gn" kicker="GN · PC" title={g.gnTitle} lead={g.gnLead} />
+          <Img src="/img/gastroplast/gn-pc-clear.webp" alt={g.gnTitle} w={840} h={839} className="mt-8 hidden w-4/5 rounded-2xl lg:block" />
+        </div>
+        <div className="card overflow-x-auto p-6 md:p-8 lg:col-span-8">
+          <table className="w-full min-w-[36rem] border-collapse text-left">
+            <caption className="sr-only">{g.gnTitle}</caption>
+            <thead>
+              <tr className="border-b border-line text-[0.85rem] uppercase tracking-[0.05em] text-muted">
+                <th scope="col" className="py-3 pr-4 font-bold">{g.gnSize}</th>
+                {gnDepths.map((dp) => (
+                  <th key={dp} scope="col" className="py-3 pr-4 font-bold">
+                    {dp} mm
+                  </th>
                 ))}
-              </tbody>
-            </table>
-            <p className="mt-4 text-sm text-muted">{g.gnNote}</p>
+              </tr>
+            </thead>
+            <tbody>
+              {gnSizes.map((sz) => (
+                <tr key={sz} className="border-b border-line last:border-0">
+                  <th scope="row" className="py-4 pr-4 font-serif text-xl font-medium text-navy">GN {sz}</th>
+                  {gnDepths.map((dp, i) => {
+                    const n = gnPerBox[sz][i];
+                    return (
+                      <td key={dp} className="py-4 pr-4 align-top">
+                        {n ? (
+                          <>
+                            <span className="tabular block text-[0.93rem] font-semibold">{gnCode(sz, dp)}</span>
+                            <span className="tabular block text-sm text-muted">
+                              {n} {d.common.perBox.toLowerCase()}
+                            </span>
+                          </>
+                        ) : (
+                          <span className="text-muted">—</span>
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-4 text-sm text-muted">{g.gnNote}</p>
+        </div>
+      </section>
+
+      <section className="bg-navy py-20 text-white md:py-28" aria-labelledby="gcerts">
+        <div className="wrap grid gap-12 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-7">
+            <SectionHead id="gcerts" kicker="NSF · FDA · EU" title={g.certTitle} light />
+            <ul className="mt-10 grid gap-3 sm:grid-cols-2">
+              {g.certs.map((c) => (
+                <li key={c.t} className="flex items-start gap-3 rounded-xl bg-white/[0.06] p-4 ring-1 ring-white/10">
+                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-amber text-navy-2">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span>
+                    <span className="block font-bold">{c.t}</span>
+                    <span className="text-[0.93rem] text-white/70">{c.d}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-10 font-sans text-sm font-bold uppercase tracking-[0.06em] text-copper-l">{g.fairsTitle}</h3>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {g.fairs.map((f) => (
+                <li key={f} className="rounded-full bg-white/10 px-3 py-1 text-sm">{f}</li>
+              ))}
+            </ul>
+            <p className="mt-8 text-sm text-white/60">
+              {d.common.source}:{" "}
+              <a href={manufacturers.gastroplast.web} target="_blank" rel="noopener" className="underline hover:text-white">
+                gastroplast.com
+              </a>{" "}
+              · Gastroplast catalog
+            </p>
           </div>
-        </div>
-      </section>
-
-      <section className="grid md:grid-cols-2">
-        <Img src="/img/gastroplast/scene-sauce-cake.webp" alt={d.products.gastro.dispensers.t} w={1600} h={900} className="aspect-[4/3] h-full w-full object-cover object-right" />
-        <Img src="/img/gastroplast/scene-fruit.webp" alt={d.products.gastro.storage.t} w={1600} h={900} className="aspect-[4/3] h-full w-full object-cover" />
-      </section>
-
-      <section className="wrap grid gap-12 py-20 md:py-28 lg:grid-cols-12" aria-labelledby="gcerts">
-        <div className="lg:col-span-7">
-          <h2 id="gcerts" className="h2">{g.certTitle}</h2>
-          <ul className="mt-10 divide-y divide-line border-y border-line">
-            {g.certs.map((c) => (
-              <li key={c.t} className="grid gap-1 py-5 sm:grid-cols-[13rem_1fr] sm:gap-6">
-                <span className="font-serif text-xl text-navy">{c.t}</span>
-                <span className="self-center text-muted">{c.d}</span>
-              </li>
-            ))}
-          </ul>
-          <h3 className="mt-12 font-sans text-sm font-medium text-copper">{g.fairsTitle}</h3>
-          <p className="mt-2 font-serif text-xl">{g.fairs.join(" · ")}</p>
-          <p className="mt-8 text-sm text-muted">
-            {d.common.source}:{" "}
-            <a href={manufacturers.gastroplast.web} target="_blank" rel="noopener" className="underline hover:text-copper">
-              gastroplast.com
-            </a>{" "}
-            · Gastroplast catalog
-          </p>
-        </div>
-        <div className="lg:col-span-4 lg:col-start-9">
-          <Img src="/img/gastroplast/nsf-listing.webp" alt="NSF International — Gastroplast official listing" w={700} h={945} className="w-full bg-white shadow-[0_18px_40px_-24px_rgba(27,34,48,0.45)]" />
+          <div className="lg:col-span-4 lg:col-start-9">
+            <Img src="/img/gastroplast/nsf-listing.webp" alt="NSF International — Gastroplast official listing" w={700} h={945} className="w-full rounded-lg bg-white shadow-soft" />
+          </div>
         </div>
       </section>
 
