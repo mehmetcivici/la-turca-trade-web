@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+dist
+_indirilen
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+public/catalogs/*.pdf
+.next-pages

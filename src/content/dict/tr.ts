@@ -1,0 +1,396 @@
+// Türkçe
+import type { Dict } from "./es";
+
+const tr: Dict = {
+  meta: {
+    siteDescription:
+      "Star Termos ve Gastroplast'ın Güney Amerika satış ofisi. İstanbul'da üretilen termos, termos sürahi ve endüstriyel mutfak ürünleri; ithalatçı ve distribütörlere fabrika fiyatıyla.",
+  },
+  nav: {
+    starTermos: "Star Termos",
+    gastroplast: "Gastroplast",
+    distributors: "Distribütörler",
+    privateLabel: "Özel marka",
+    catalogs: "Kataloglar",
+    about: "Hakkımızda",
+    contact: "İletişim",
+  },
+  common: {
+    quote: "Teklif isteyin",
+    catalogs: "Katalogları indirin",
+    priceList: "Fiyat listesi isteyin",
+    download: "PDF indir",
+    open: "Çevrimiçi görüntüle",
+    pages: "sayfa",
+    menu: "Menü",
+    close: "Kapat",
+    skip: "İçeriğe geç",
+    language: "Dil",
+    madeIn: "Ürünler Türkiye'de üretilmektedir",
+    source: "Kaynak",
+    officialSite: "Üretici sitesi",
+    seeAll: "Tüm seriyi görün",
+    capacity: "Hacim",
+    material: "Malzeme",
+    code: "Kod",
+    perBox: "Koli içi adet",
+    box: "Koli (cm)",
+    boxes: "Koli",
+    units: "Adet",
+    in40hc: "40' HC konteynerde",
+    home: "Ana sayfa",
+  },
+  footer: {
+    blurb:
+      "Star Termos ve Gastroplast'ın Güney Amerika satış ofisi. İstanbul'dan bölgedeki ithalatçı, distribütör ve zincir mağazalara ihracat yapıyoruz.",
+    brandsNote:
+      "Star Termos ve Gastroplast, ilgili üreticilerin markalarıdır. Fotoğraflar ve teknik veriler her fabrikanın resmî materyallerinden alınmıştır.",
+    rights: "Tüm hakları saklıdır.",
+    write: "Bize yazın",
+    pages: "Sayfalar",
+    makers: "Üreticiler",
+  },
+  home: {
+    title: "Distribütörler için Türkiye'den termos ve endüstriyel mutfak ürünleri",
+    description:
+      "Star Termos ve Gastroplast'ın Güney Amerika satış ofisi. Vakumlu termos, termos sürahi, gastronom küvet ve HoReCa ürünleri; fabrika fiyatı, tam veya karışık konteyner ve özel marka seçeneği.",
+    hero: {
+      kicker: "Star Termos · Gastroplast · İstanbul",
+      h1: "Türk termosları ve endüstriyel mutfak ürünleri, fabrikadan doğrudan Güney Amerika'ya",
+      lead:
+        "La Turca Trade, Star Termos ve Gastroplast'ın Güney Amerika satış ofisidir. İthalatçı, distribütör ve zincir mağazalara fabrika fiyatıyla, tam veya karışık konteynerle ve gümrüğün istediği tüm belgelerle hizmet veriyoruz.",
+      caption: "Star Termos termos sürahileri, fabrika fotoğrafı.",
+    },
+    facts: [
+      { v: "30 yıl", l: "Star Termos'un mutfak eşyası sektöründeki deneyimi; bunun 12 yılı termos üretimi" },
+      { v: "ISO 9001 · 14001 · 22000 · 45001", l: "Star Termos tesisinde belgelendirilmiş yönetim sistemleri" },
+      { v: "NSF", l: "Gastroplast PC ve PP gastronom küvetleri NSF International listesinde" },
+      { v: "55+ ülke", l: "bugün Gastroplast ürünleri alıyor" },
+    ],
+    makers: {
+      title: "Esenyurt'ta iki fabrika, limana 20 km",
+      lead:
+        "Star Termos ve Gastroplast, İstanbul'un Avrupa yakasında, Ambarlı Limanı'na yaklaşık 20 km uzaklıktaki Esenyurt'ta üretim yapıyor. Bu yakınlık sayesinde iki fabrikanın ürünlerini aynı konteynerde birleştirebiliyor, yüklemeyi yerinde denetleyebiliyoruz.",
+    },
+    star: {
+      lead:
+        "250 ml'den 8 litreye vakumlu termos ve termos sürahiler: çift cam, 304 paslanmaz çelik, termos bardak ve yemek termosları. Mehmet Dinçok'un kurduğu bir aile şirketi.",
+      facts: ["19 ülkeye ihracat", "ISO 9001, 14001, 22000 ve 45001", "Sedex üyesi", "OEM ve ODM üretim"],
+      link: "Star Termos'u tanıyın",
+    },
+    gastro: {
+      lead:
+        "Otel, restoran ve catering için polikarbonat, polipropilen, Tritan ve ABS ekipman: gastronom küvetler, saklama kapları, dispenserler, bardaklar ve tepsiler. Kalıplarını kendisi tasarlıyor ve üretiyor.",
+      facts: ["55'ten fazla ülkeye ihracat", "NSF listeli GN küvetler", "FDA ve AB gıda temas testleri", "Budapeşte'de şube ve depo"],
+      link: "Gastroplast'ı tanıyın",
+    },
+    starLine: {
+      title: "Her gün sofrada kullanılan termos sürahiler",
+      lead:
+        "Çift cam termos sürahiler kahveyi, çayı ve mateyi saatlerce sıcak tutar; züccaciye zincirlerinin en çok talep ettiği üründür. Klasik seriler, güçlendirilmiş gövdeli seriler ve profesyonel kullanım için çelik seriler var.",
+    },
+    gastroLine: {
+      title: "Profesyonel mutfağın kullandığı ürünler, teknik plastikten",
+      lead:
+        "Her ölçüde gastronom küvet, saklama kapları, hamur tekneleri, dispenserler, bar ve havuz için kırılmaz bardaklar. HoReCa distribütörü için sürekli yenilenen ürünler.",
+    },
+    container: {
+      title: "Tam veya karışık konteyner",
+      lead:
+        "Bir konteyneri tek ürünle doldurabilir ya da Star Termos termoslarını Gastroplast ürünleriyle birleştirebilirsiniz. Yükü İstanbul'da birleştiriyor, konteyner kapanmadan önce adetleri ve ambalajı kontrol ediyor, her aşamanın fotoğrafını gönderiyoruz.",
+      tableTitle: "40' HC konteynere ne kadar sığar",
+      note: "Star Termos 2025 kataloğundaki veriler. Kesin adetler her proformada teyit edilir.",
+      figure: "40' HC konteyner · yaklaşık iç ölçüler",
+    },
+    routes: {
+      title: "Ambarlı'dan bölgenin limanlarına",
+      lead:
+        "İstanbul'daki Ambarlı Limanı'ndan Atlantik ve Pasifik kıyılarına sevkiyat yapıyoruz. FOB, CFR veya CIF teklif veriyoruz. Transit süre armatöre ve aktarmalara göre değişir; her teklifte teyit edilir.",
+      atlantic: "Atlantik kıyısı",
+      pacific: "Pasifik ve Karayipler",
+      origin: "İstanbul · Ambarlı",
+      mapAlt: "İstanbul'dan Güney Amerika limanlarına deniz yolu haritası",
+    },
+    pl: {
+      title: "Ürünün üzerinde sizin markanız",
+      lead:
+        "Star Termos, müşterinin logosu ve ambalajıyla üretim yapıyor. Logonuzu termos ve bardaklara uygulayabilir, renklerinizi kullanabilir, kutuyu kendi tasarımınız ve barkodunuzla üretebiliriz. Gastroplast için her siparişi ürüne ve adede göre değerlendiriyoruz.",
+      link: "Özel marka nasıl işliyor",
+    },
+    catalogs: {
+      title: "Fabrika katalogları",
+      lead: "Kodlar, ölçüler ve koli içi adetlerle eksiksiz kataloglar. Fiyat için ülkenizi ve varış limanını belirterek bize yazın.",
+    },
+    how: {
+      title: "Distribütörlerle nasıl çalışıyoruz",
+      items: [
+        { t: "USD cinsinden fabrika fiyatı", d: "FOB İstanbul, CFR veya CIF limanınıza. Sizinle fabrika arasında aracı yok." },
+        { t: "İlk siparişten önce numune", d: "İlgilendiğiniz ürünlerin numunelerini gönderiyoruz, pazarınızda deneyebilirsiniz." },
+        { t: "Yükleme öncesi kontrol", d: "Adet, ambalaj ve markalamayı kontrol ediyoruz. Konteyner kapanmadan fotoğraf ve video alırsınız." },
+        { t: "Eksiksiz belgeler", d: "Proforma, ticari fatura, çeki listesi, menşe şahadetnamesi ve konşimento." },
+        { t: "Tek muhatap", d: "İspanyolca, Portekizce, İngilizce ve Türkçe konuşuyoruz. İki fabrikayla değil, tek kişiyle görüşürsünüz." },
+        { t: "Varışa kadar takip", d: "Kalkış tarihini, aktarmaları ve limanınıza tahmini varışı bildiriyoruz." },
+      ],
+    },
+    cta: {
+      title: "Neyin dağıtımını yaptığınızı ve hangi limana çalıştığınızı yazın",
+      lead: "Fiyat listesi, katalog ve ilk sipariş önerisiyle dönüş yapıyoruz.",
+    },
+  },
+  star: {
+    title: "Star Termos: İstanbul'da üretilen termos ve termos sürahiler",
+    description:
+      "Star Termos çift cam termos sürahiler, paslanmaz çelik termoslar, termos bardaklar ve yemek termosları. Güney Amerika'ya ihracat, tam veya karışık konteyner ve özel marka üretim.",
+    h1: "Star Termos",
+    sub: "Termos ve termos sürahi, İstanbul",
+    intro: [
+      "Star Termos, mutfak eşyası sektöründe 30 yıllık, profesyonel termos üretiminde 12 yıllık deneyime sahip bir İstanbul üreticisidir. Mehmet Dinçok tarafından kurulmuştur ve bugün Dinçok ailesi tarafından yönetilmektedir.",
+      "Çift cam termos sürahiler, paslanmaz çelik termoslar, HoReCa ve kamp termosları, termos bardaklar ve yemek termosları üretir; hacimler 250 ml'den 8 litreye kadardır. Modele göre sıcak içecekleri 12 saate, soğuk içecekleri 24 saate kadar korur.",
+      "Tesis ISO 9001 (kalite), ISO 14001 (çevre), ISO 22000 (gıda güvenliği) ve ISO 45001 (iş sağlığı ve güvenliği) belgelerine sahiptir ve Sedex üyesidir. 19 ülkeye ihracat yapar, başka markalar için OEM ve ODM üretim gerçekleştirir.",
+    ],
+    facts: [
+      { v: "30", l: "yıllık sektör deneyimi" },
+      { v: "19", l: "ihracat ülkesi" },
+      { v: "250 ml – 8 L", l: "hacim aralığı" },
+      { v: "2 yıl", l: "üretim garantisi" },
+    ],
+    seriesTitle: "Seriler",
+    loadingTitle: "Yükleme verileri",
+    loadingLead: "2025 kataloğundan örnekler. Her ürünün 20' ve 40' konteyner için ayrı yükleme tablosu vardır.",
+    certTitle: "Belgeler",
+    certs: [
+      { t: "ISO 9001:2015", d: "Kalite yönetimi" },
+      { t: "ISO 14001:2015", d: "Çevre yönetimi" },
+      { t: "ISO 22000:2018", d: "Gıda güvenliği yönetimi" },
+      { t: "ISO 45001:2018", d: "İş sağlığı ve güvenliği" },
+      { t: "Sedex", d: "Etik ticaret platformu" },
+    ],
+    certNote: "Belgeler ASCERT tarafından IAF akreditasyonuyla verilmiştir; kapsam: demir, çelik, plastik ve alüminyum mutfak eşyaları üretimi ve satışı.",
+    faqTitle: "Sık sorulan sorular",
+    faq: [
+      { q: "Star termoslar ısıyı ne kadar korur?", a: "Modele göre değişir. Sıcak içecekler 12 saate, soğuk içecekler 24 saate kadar korunur." },
+      { q: "Ürünlerin garantisi nedir?", a: "Star Termos ürünleri 2 yıl üretim ve malzeme garantisi kapsamındadır." },
+      { q: "Kendi logomuzla üretim mümkün mü?", a: "Evet. Star Termos OEM ve ODM çalışır: ürün üzerinde logo, özel renk ve markalı ambalaj. Minimum adetler ürüne göre değişir." },
+      { q: "Sürahilerde hangi cam kullanılıyor?", a: "Cam serilerde çift cam vakum ampul kullanılır. Güçlendirilmiş gövdeli seriler çift camı daha dayanıklı bir dış gövdeyle birleştirir; çelik seriler çift cidarlı paslanmaz çeliktir." },
+    ],
+  },
+  gastro: {
+    title: "Gastroplast: polikarbonat gastronom küvetler ve HoReCa ekipmanları",
+    description:
+      "NSF listeli polikarbonat ve polipropilen gastronom küvetler, saklama kapları, dispenserler, bardaklar ve tepsiler. Gastroplast ürünlerinin İstanbul'dan Güney Amerika'ya ihracatı.",
+    h1: "Gastroplast",
+    sub: "Endüstriyel mutfak ekipmanları, İstanbul",
+    intro: [
+      "Gastroplast, 2015'te kurulan ve 55'ten fazla ülkeye ihracat yapan İstanbul üreticisi SürPlast Plastik'in ana markasıdır. Otel, restoran, catering ve gıda sektörüne çalışır.",
+      "Firma kalıplarını kendisi tasarlar ve üretir. Kalıbın ve ürünün aynı tesiste üretilmesi maliyeti düşürür, kalite kontrolünü güçlendirir ve yeni modellerin teslim süresini kısaltır.",
+      "PC ve PP gastronom küvetler ve kapakları NSF International listesindedir. Kullanılan polikarbonat FDA ve AB mevzuatına göre gıda temas testlerinden geçmiştir. Gastroplast'ın Macaristan'ın Budapeşte şehrinde şube ve deposu vardır; Ambiente (Frankfurt) ve Host (Milano) gibi fuarlara katılır.",
+    ],
+    facts: [
+      { v: "55+", l: "ihracat ülkesi" },
+      { v: "148", l: "sayfalık katalog" },
+      { v: "NSF", l: "PC ve PP GN küvetler" },
+      { v: "AB", l: "Budapeşte'de şube" },
+    ],
+    catsTitle: "Ürün grupları",
+    gnTitle: "Polikarbonat gastronom küvetler",
+    gnLead: "Tüm GN ölçüleri, dört derinlikte. Fabrika kodu ve koli içi adet.",
+    gnDepth: "Derinlik",
+    gnSize: "Ölçü",
+    gnNote: "Kaynak: gastroplast.com. Siyah PC ve PP seçenekleri ile düz, kesik ve menteşeli kapaklar da mevcuttur.",
+    certTitle: "Belgeler ve testler",
+    certs: [
+      { t: "NSF International", d: "PC ve PP GN küvetlerin resmî listesi (NSF/ANSI 2, gıda ekipmanı)" },
+      { t: "FDA", d: "PC-1100 polikarbonat gıda temas testi" },
+      { t: "AB", d: "Avrupa mevzuatına göre gıda temas testi" },
+      { t: "Tescilli marka", d: "Türk Patent marka tescili" },
+    ],
+    fairsTitle: "Fuarlar",
+    fairs: ["Ambiente, Frankfurt", "Host, Milano", "Anfaş, Antalya"],
+    brands: "SürPlast markaları: GastroPlast, GastroCups ve GastroCarry.",
+  },
+  dist: {
+    title: "Güney Amerika'daki ithalatçı ve distribütörler için",
+    description:
+      "Güney Amerika'daki ithalatçı, distribütör ve zincirler için koşullar: USD fabrika fiyatı, FOB, CFR veya CIF, Star Termos + Gastroplast karışık konteyner, numune, yükleme kontrolü ve ihracat belgeleri.",
+    h1: "İthalatçı ve distribütörler için",
+    lead:
+      "Konteyner veya palet bazında alım yapıp kendi ülkesinde satan firmalarla çalışıyoruz. Züccaciye, ev gereçleri, promosyon ürünleri ya da otel ve restoran ekipmanı dağıtıyorsanız portföyünüze uygun ürünlerimiz var.",
+    whoTitle: "Kimlerle çalışıyoruz",
+    who: [
+      { t: "İthalatçılar ve toptancılar", d: "Hırdavat, züccaciye ve ev gereçleri mağazalarına mal verenler." },
+      { t: "Zincir mağazalar", d: "Merkezi satın alma yapan süpermarket ve ev mağazaları." },
+      { t: "HoReCa distribütörleri", d: "Otel, restoran, kafe ve catering tedarikçileri." },
+      { t: "Kurumsal hediye", d: "Logolu termos ve bardak ihtiyacı olan firmalar." },
+    ],
+    stepsTitle: "İlk görüşmeden konteynere",
+    steps: [
+      { t: "Talep", d: "Neyin dağıtımını yaptığınızı, ülkenizi ve limanınızı yazın. Katalog ve fiyat listesini gönderelim." },
+      { t: "Numune", d: "Ürünleri birlikte seçiyor, kaliteyi ve fiyatı pazarınızda test etmeniz için numune gönderiyoruz." },
+      { t: "Proforma", d: "Koli içi adet, hacim ve ağırlıkla tam veya karışık konteyneri planlıyoruz." },
+      { t: "Üretim", d: "Avans onaylanınca fabrika üretime başlar. İlerlemeyi ve olası değişiklikleri bildiriyoruz." },
+      { t: "Kontrol ve yükleme", d: "Malı İstanbul'da kontrol ediyoruz. Konteyner kapanmadan fotoğraf ve video alırsınız." },
+      { t: "Sevkiyat ve belgeler", d: "Konşimentoyu ve belge setini gönderiyor, yükü limanınıza kadar takip ediyoruz." },
+    ],
+    termsTitle: "Ticari koşullar",
+    terms: [
+      { t: "Para birimi", d: "Fiyatlar ABD doları cinsinden." },
+      { t: "Teslim şekli", d: "FOB İstanbul, CFR veya CIF varış limanı." },
+      { t: "Ödeme", d: "Avanslı havale ve bakiye belge karşılığı ya da akreditif. Her işlemde ayrıca belirlenir." },
+      { t: "Minimum", d: "Ürüne göre değişir. İlk sipariş için 20' karışık konteyner öneriyoruz." },
+      { t: "Belgeler", d: "Proforma, ticari fatura, çeki listesi, menşe şahadetnamesi ve konşimento. Diğer belgeler talep üzerine." },
+      { t: "Diller", d: "İspanyolca, Portekizce, İngilizce ve Türkçe." },
+    ],
+    faqTitle: "Sık sorulan sorular",
+    faq: [
+      { q: "Star Termos ve Gastroplast ürünlerini aynı konteynerde alabilir miyim?", a: "Evet. İki fabrika da İstanbul Esenyurt'ta; yükü Ambarlı Limanı'na göndermeden önce birleştiriyoruz." },
+      { q: "Küçük adetlerle satış yapıyor musunuz?", a: "İthalatçı ve distribütörlerle çalışıyoruz. İlk sipariş için 20' karışık konteyner öneriyoruz; kesin minimumlar ürüne göre değişir." },
+      { q: "Menşe şahadetnamesi düzenleniyor mu?", a: "Evet. Ürünler Türkiye'de üretiliyor ve her sevkiyatta menşe şahadetnamesi düzenleniyor." },
+      { q: "Bir sipariş ne kadar sürer?", a: "Ürünlere, fabrika stoğuna ve armatöre bağlıdır. Üretim süresi ve tahmini kalkış tarihi proformada yazılır." },
+      { q: "Numune gönderiyor musunuz?", a: "Evet, ilk siparişten önce seçilen ürünlerin numunelerini gönderiyoruz." },
+    ],
+  },
+  pl: {
+    title: "Özel marka: kendi logonuzla termos ve HoReCa ürünleri",
+    description:
+      "Markanız adına üretim: termos, sürahi ve bardaklarda logo, özel renkler, kendi tasarımınız ve barkodunuzla ambalaj. Güney Amerika'daki distribütör ve zincirler için İstanbul'da OEM üretim.",
+    h1: "Özel marka",
+    lead:
+      "Firmanızın ülkenizde tanınan bir markası varsa onunla üretim yapabiliriz. Star Termos başka markalar için OEM ve ODM üretim yapıyor; tasarımı, numuneyi ve üretimi biz koordine ediyoruz.",
+    whatTitle: "Neler kişiselleştirilebilir",
+    what: [
+      { t: "Ürün üzerinde logo", d: "Modele göre paslanmaz çelikte lazer, plastik yüzeylerde serigrafi veya tampon baskı." },
+      { t: "Renkler", d: "Gövde, kapak ve detaylar markanızın renklerinde; renk başına minimum adet koşuluyla." },
+      { t: "Kutu ve ambalaj", d: "Kendi tasarımınızla ürün kutusu, İspanyolca veya Portekizce metinler ve EAN barkodunuz. Markalı dış koli." },
+      { t: "Kullanım kılavuzu ve etiket", d: "Ülkenizin mevzuatına uygun kullanım kılavuzu ve etiketleme." },
+    ],
+    stepsTitle: "Süreç nasıl ilerliyor",
+    steps: [
+      { t: "Brif", d: "Vektörel logonuzu, ilgilendiğiniz modelleri ve tahmini adetleri gönderirsiniz." },
+      { t: "Öneri", d: "Ürün ve ambalaj görselini, ürün başına fiyat ve minimumlarla hazırlıyoruz." },
+      { t: "Numune", d: "Üretime geçmeden önce onayınız için fiziksel numune üretiyoruz." },
+      { t: "Üretim ve kontrol", d: "Seri üretim; yüklemeden önce baskı, renk ve ambalaj kontrolü." },
+    ],
+    note: "Özel marka minimumları standart ürüne göre daha yüksektir ve ürün bazında teyit edilir.",
+    gastroNote: "Gastroplast ürünlerinde kişiselleştirme, ürüne ve adede göre ayrıca değerlendirilir.",
+    mock: "MARKANIZ",
+  },
+  cat: {
+    title: "Star Termos ve Gastroplast katalogları (PDF)",
+    description:
+      "Star Termos (2025) ve Gastroplast fabrika kataloglarını indirin: kodlar, hacimler, ölçüler ve koli içi adetler.",
+    h1: "Kataloglar",
+    lead: "Her fabrikanın resmî kataloğu. Kodları, hacimleri, koli ölçülerini ve Star Termos için konteyner yükleme verilerini içerir.",
+    langLabel: "Katalog dili",
+    yearLabel: "Baskı",
+    priceTitle: "Fiyat mı lazım?",
+    priceLead: "Fiyat listesi ülke ve varış limanına göre hazırlanır. Formu doldurun, e-postayla gönderelim.",
+  },
+  about: {
+    title: "La Turca Trade hakkında",
+    description:
+      "La Turca Trade, Star Termos ve Gastroplast'ı Güney Amerika'daki ithalatçı ve distribütörlere karşı temsil eden, İstanbul merkezli satış ofisidir.",
+    h1: "La Turca Trade",
+    lead:
+      "Türk fabrikalarının ürünlerini Güney Amerika'daki ithalatçı ve distribütörlere ulaştıran, İstanbul merkezli bir satış ofisiyiz. Bölgede Star Termos ve Gastroplast'ı temsil ediyoruz.",
+    body: [
+      "Az sayıda fabrikayla çalışmayı ve onları iyi tanımayı seçtik. Tesisleri ziyaret ediyor, yöneticilerini tanıyor, her birinin neyi hangi sürede üretebileceğini biliyoruz. Bu sayede doğru teklif veriyor ve verdiğimiz sözü tutuyoruz.",
+      "Distribütör için fark şudur: kendi dilini konuşan, ülkesinde ithalatın nasıl işlediğini bilen ve üretime fiziksel olarak yakın tek bir muhatap. Fabrikayla pazarlığı biz yapıyor, siparişi takip ediyor, yükleme günü sahada oluyoruz.",
+    ],
+    commitTitle: "Bizden neler bekleyebilirsiniz",
+    commits: [
+      { t: "Teklif edilen yüklenir", d: "Ürünler, adetler ve ambalaj imzalanan proformayla birebir aynıdır." },
+      { t: "Her yüklemenin fotoğrafı", d: "Konteyner kapanmadan önce malın fotoğraf ve videosunu alırsınız." },
+      { t: "Bir iş günü içinde yanıt", d: "Her ticari talebe bir iş günü içinde, kendi dilinizde yanıt veriyoruz." },
+      { t: "Süreler konusunda açıklık", d: "Fabrika veya armatör bir tarihi değiştirirse aynı gün haber veriyoruz." },
+    ],
+    whyTitle: "Neden Türk ürünleri",
+    why: [
+      "Türkiye'nin mutfak eşyası ve plastik sanayisi Avrupa, Orta Doğu ve Afrika'ya on yıllardır ihracat yapıyor ve bu pazarların kalite standartlarına göre üretiyor.",
+      "İstanbul, Güney Amerika'nın doğu ve batı kıyılarına sefer yapan büyük armatörlere bağlı; Türk ürünleri tanınan bir menşe şahadetnamesiyle sevk ediliyor.",
+    ],
+  },
+  contact: {
+    title: "İletişim: ithalatçı ve distribütörler için teklif",
+    description:
+      "Star Termos ve Gastroplast için fiyat listesi, katalog ve numune isteyin. İspanyolca, Portekizce, İngilizce ve Türkçe hizmet.",
+    h1: "İletişim",
+    lead: "Neyin dağıtımını yaptığınızı, ülkenizi ve limanınızı yazın. Bir iş günü içinde fiyat ve kataloglarla dönüş yapıyoruz.",
+    direct: "Doğrudan iletişim",
+    office: "Ofis",
+    hours: "Pazartesi–cuma, 09.00–18.00 (İstanbul saati, GMT+3)",
+  },
+  form: {
+    name: "Ad soyad",
+    company: "Firma",
+    country: "Ülke",
+    countryPlaceholder: "Seçin",
+    otherCountry: "Diğer ülke",
+    email: "E-posta",
+    phone: "WhatsApp / telefon",
+    type: "Firma türü",
+    types: ["İthalatçı / toptancı", "HoReCa distribütörü", "Zincir mağaza", "Kurumsal hediye", "Diğer"],
+    interest: "İlgilendiğiniz",
+    interests: ["Star Termos", "Gastroplast", "Özel marka"],
+    message: "Mesaj",
+    messagePlaceholder: "Ürünler, yaklaşık adetler, varış limanı…",
+    consent: "La Turca Trade'in bu bilgileri talebime yanıt vermek için kullanmasını kabul ediyorum.",
+    send: "Talebi gönder",
+    sending: "Gönderiliyor…",
+    ok: "Teşekkürler. Talebinizi aldık, bir iş günü içinde yanıt vereceğiz.",
+    error: "Form gönderilemedi. Lütfen doğrudan yazın:",
+    required: "Zorunlu",
+  },
+  countries: {
+    AR: "Arjantin", BO: "Bolivya", BR: "Brezilya", CL: "Şili", CO: "Kolombiya", EC: "Ekvador",
+    PY: "Paraguay", PE: "Peru", UY: "Uruguay", VE: "Venezuela", MX: "Meksika", PA: "Panama",
+    CR: "Kosta Rika", DO: "Dominik Cumhuriyeti", GT: "Guatemala",
+  },
+  products: {
+    groups: {
+      jugs: { t: "Cam termos sürahiler", d: "Çift cam vakum ampul. Evde ve ofiste kahve, çay ve mate için." },
+      pro: { t: "HoReCa ve kamp", d: "Otel, etkinlik ve açık hava kahve servisi için paslanmaz çelik." },
+      go: { t: "Termos bardak ve matara", d: "Çift cidarlı paslanmaz çelik, sızdırmaz kapak; arabadan masaya." },
+      food: { t: "Yemek termosları", d: "Yemeği evin dışında sıcak veya soğuk tutar." },
+    },
+    materials: {
+      doubleGlass: "Çift cam vakum ampul",
+      solidBody: "Güçlendirilmiş gövde, çift cam",
+      steel: "Çift cidarlı paslanmaz çelik",
+      steel304: "304 paslanmaz çelik, sızdırmaz kapak",
+      steelFood: "Gıdaya uygun paslanmaz çelik",
+    },
+    details: {
+      elegant: "Krom bantlı gövde",
+      east: "Rose gold bant",
+      trailmate: "140 ml çelik bardak dahil",
+      camping: "Musluklu dispenser",
+    },
+    loading: {
+      glass1: "Çift cam termos sürahi 1 L",
+      glass15: "Çift cam termos sürahi 1,5 L",
+      foodJar: "Yemek termosu 500 ml (Thermbox)",
+    },
+    gastro: {
+      gnPc: { t: "Polikarbonat gastronom küvetler", d: "Şeffaf ve siyah, GN 1/1'den 1/9'a, 65–200 mm. Düz, kesik ve menteşeli kapaklar." },
+      gnPp: { t: "Polipropilen gastronom küvetler", d: "Yarı saydam ve siyah, gıdaları ayırt etmek için renkli kapaklar." },
+      storage: { t: "Saklama", d: "Ölçekli kare ve yuvarlak kaplar, 62, 82 ve 102 litrelik erzak arabaları." },
+      bakery: { t: "Fırın ve pizza", d: "600 × 400 mm PP ve PE hamur tekneleri, istiflenebilir, kapaklı." },
+      buffet: { t: "Büfe ve servis", d: "Fanus ve tepsiler, süzgeçler, çatal-bıçaklıklar, sosluklar, polikarbonat tabak ve kaseler." },
+      dispensers: { t: "Dispenserler", d: "Pompalı sos dispenserleri, sos ve yağ için sıkma şişeler, garnitür kapları." },
+      bar: { t: "Bar ve havuz", d: "PC, PP ve Tritan kırılmaz bardak, kadeh ve sürahiler. 6 litrelik buz kovaları." },
+      transport: { t: "Yemek taşıma", d: "Catering ve paket servis için ABS GN 1/1 taşıma kabı." },
+      tools: { t: "Kürek ve ölçü kapları", d: "Buz ve un kürekleri, PC ve PP ölçekli ölçü kapları." },
+    },
+  },
+  notFound: {
+    title: "Sayfa bulunamadı",
+    lead: "Bu adres yok ya da taşınmış.",
+    back: "Ana sayfaya dön",
+  },
+  langPage: {
+    title: "La Turca Trade",
+    lead: "Dilinizi seçin",
+  },
+};
+
+export default tr;
