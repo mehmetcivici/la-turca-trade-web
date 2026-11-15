@@ -7,7 +7,7 @@
 declare(strict_types=1);
 
 const ALICI = 'info@laturcatrade.com';          // talepler bu adrese gelir
-const GONDEREN = 'web@laturcatrade.com';        // aynı alan adında bir adres olmalı (SPF)
+const GONDEREN = 'info@laturcatrade.com';       // aynı alan adında, Hostinger'de açılmış bir adres olmalı
 
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
