@@ -81,7 +81,7 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
     <div className="divide-y divide-line border-y border-line">
       {items.map((f) => (
         <details key={f.q} className="group py-5">
-          <summary className="flex cursor-pointer list-none items-start justify-between gap-6 font-serif text-[1.45rem] leading-snug [&::-webkit-details-marker]:hidden">
+          <summary className="flex cursor-pointer list-none items-start justify-between gap-6 font-serif text-[1.12rem] leading-snug [&::-webkit-details-marker]:hidden">
             {f.q}
             <span aria-hidden="true" className="mt-2 grid h-6 w-6 shrink-0 place-items-center text-copper transition-transform group-open:rotate-45">
               <svg viewBox="0 0 20 20" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.6}>

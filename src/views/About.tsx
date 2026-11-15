@@ -2,7 +2,6 @@ import Link from "next/link";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
 import { Arrow, Img } from "@/components/ui";
-import { LogoSymbol } from "@/components/Logo";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Breadcrumb, CtaBand } from "./shared";
@@ -16,7 +15,7 @@ export function About({ locale, d }: { locale: Locale; d: Dict }) {
       <section className="wrap grid gap-12 pb-20 pt-10 lg:grid-cols-12 lg:pt-14">
         <div className="lg:col-span-7">
           <h1 className="display">{a.h1}</h1>
-          <p className="mt-8 font-serif text-[1.75rem] leading-snug text-ink md:text-[2.1rem]">{a.lead}</p>
+          <p className="mt-8 font-serif text-[1.4rem] leading-snug text-ink md:text-[1.7rem]">{a.lead}</p>
           <div className="mt-8 space-y-5 text-[1.08rem] leading-relaxed text-ink/85">
             {a.body.map((p) => (
               <p key={p.slice(0, 24)}>{p}</p>
@@ -24,9 +23,7 @@ export function About({ locale, d }: { locale: Locale; d: Dict }) {
           </div>
         </div>
         <div className="lg:col-span-4 lg:col-start-9">
-          <div className="grid aspect-square place-items-center bg-navy">
-            <LogoSymbol tone="light" className="h-1/2 w-1/2" />
-          </div>
+          <Img src="/img/star-termos/scene-red-jug.webp" alt="Star Termos" w={1279} h={966} className="aspect-square w-full rounded-md object-cover" />
           <p className="mt-4 text-sm text-muted">
             La Turca Trade · {d.contact.office}: İstanbul, Türkiye
           </p>
@@ -40,7 +37,7 @@ export function About({ locale, d }: { locale: Locale; d: Dict }) {
         <ul className="mt-10 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
           {a.commits.map((c) => (
             <li key={c.t} className="border-t border-line py-6">
-              <h3 className="font-serif text-[1.6rem] leading-tight">{c.t}</h3>
+              <h3 className="font-serif text-[1.22rem] leading-tight">{c.t}</h3>
               <p className="mt-2 text-muted">{c.d}</p>
             </li>
           ))}

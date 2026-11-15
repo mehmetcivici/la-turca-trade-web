@@ -1,18 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
-import data from "./logo-data.json";
 import { asset } from "@/lib/asset";
 
 type Tone = "dark" | "light";
 
 /**
- * Logo dosyaları scripts/make-logo.py ile üretilir (brand/ → public/brand/).
- * HTML'i şişirmemek için satır içi SVG yerine önbelleğe alınan dosya kullanılır.
+ * La Turca Trade logosu: LT işareti (brand/la-turca-trade-logo-kaynak.png → scripts/make-logo.py)
+ * + "LA TURCA / TRADE" yazısı. Boyut, className'deki font-size ile ölçeklenir (em).
  */
-export function Logo({ tone = "dark", className, title = "La Turca Trade" }: { tone?: Tone; className?: string; title?: string }) {
-  const src = tone === "dark" ? "/brand/la-turca-trade-logo.svg" : "/brand/la-turca-trade-logo-beyaz.svg";
-  return <img src={asset(src)} alt={title} width={data.w} height={data.h} className={className} decoding="async" />;
-}
-
-export function LogoSymbol({ className }: { tone?: Tone; className?: string }) {
-  return <img src={asset("/brand/la-turca-trade-sembol-acik.svg")} alt="" width={120} height={120} className={className} decoding="async" />;
+export function Logo({ tone = "dark", className = "", title = "La Turca Trade" }: { tone?: Tone; className?: string; title?: string }) {
+  const mark = tone === "dark" ? "/brand/lt-lacivert.png" : "/brand/lt-acik.png";
+  const main = tone === "dark" ? "text-navy" : "text-white";
+  const sub = tone === "dark" ? "text-copper" : "text-copper-l";
+  return (
+    <span role="img" aria-label={title} className={`inline-flex items-center gap-[0.55em] leading-none ${className}`}>
+      <img src={asset(mark)} alt="" width={375} height={229} className="h-[2.55em] w-auto" />
+      <span className="flex flex-col">
+        <span className={`font-serif text-[1.5em] font-semibold tracking-[0.01em] ${main}`}>LA TURCA</span>
+        <span className={`mt-[0.3em] text-[0.62em] font-bold tracking-[0.58em] ${sub}`}>TRADE</span>
+      </span>
+    </span>
+  );
 }

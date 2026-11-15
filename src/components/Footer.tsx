@@ -11,12 +11,12 @@ export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
     <footer className="bg-navy text-paper">
       <div className="wrap grid gap-12 py-16 md:grid-cols-12 md:py-20">
         <div className="md:col-span-5">
-          <Logo tone="light" className="h-12 w-auto" />
+          <Logo tone="light" className="text-[22px]" />
           <p className="mt-6 max-w-md text-paper/75">{d.footer.blurb}</p>
           {site.email && (
             <p className="mt-6">
               <span className="block text-sm text-paper/55">{d.footer.write}</span>
-              <a href={`mailto:${site.email}`} className="font-serif text-2xl hover:text-copper-l">
+              <a href={`mailto:${site.email}`} className="font-serif text-xl hover:text-copper-l">
                 {site.email}
               </a>
             </p>

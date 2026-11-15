@@ -10,7 +10,7 @@ export function orgSchema(locale: Locale, d: Dict) {
     "@id": `${site.url}/#org`,
     name: site.name,
     url: abs(href(locale, "home")),
-    logo: abs("/brand/la-turca-trade-logo.png"),
+    logo: abs("/brand/lt-lacivert.png"),
     description: d.meta.siteDescription,
     email: site.email || undefined,
     telephone: site.phone || undefined,

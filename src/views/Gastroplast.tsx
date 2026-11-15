@@ -81,7 +81,7 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
               <tbody>
                 {gnSizes.map((sz) => (
                   <tr key={sz} className="border-b border-line">
-                    <th scope="row" className="py-4 pr-4 font-serif text-2xl font-normal text-navy">GN {sz}</th>
+                    <th scope="row" className="py-4 pr-4 font-serif text-xl font-normal text-navy">GN {sz}</th>
                     {gnDepths.map((dp, i) => {
                       const n = gnPerBox[sz][i];
                       return (
@@ -119,13 +119,13 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
           <ul className="mt-10 divide-y divide-line border-y border-line">
             {g.certs.map((c) => (
               <li key={c.t} className="grid gap-1 py-5 sm:grid-cols-[13rem_1fr] sm:gap-6">
-                <span className="font-serif text-2xl text-navy">{c.t}</span>
+                <span className="font-serif text-xl text-navy">{c.t}</span>
                 <span className="self-center text-muted">{c.d}</span>
               </li>
             ))}
           </ul>
           <h3 className="mt-12 font-sans text-sm font-medium text-copper">{g.fairsTitle}</h3>
-          <p className="mt-2 font-serif text-2xl">{g.fairs.join(" · ")}</p>
+          <p className="mt-2 font-serif text-xl">{g.fairs.join(" · ")}</p>
           <p className="mt-8 text-sm text-muted">
             {d.common.source}:{" "}
             <a href={manufacturers.gastroplast.web} target="_blank" rel="noopener" className="underline hover:text-copper">

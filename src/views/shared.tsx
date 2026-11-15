@@ -13,7 +13,7 @@ export function SeriesCard({ s, d }: { s: StarSeries; d: Dict }) {
       <div className="overflow-hidden bg-card">
         <Img src={s.image} alt={`Star Termos ${s.name} — ${d.products.materials[s.material]}`} w={900} h={900} className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
       </div>
-      <h3 className="mt-4 font-serif text-[1.6rem] leading-none">{s.name}</h3>
+      <h3 className="mt-4 font-serif text-[1.22rem] leading-none">{s.name}</h3>
       <p className="mt-2 text-[0.95rem] text-muted">
         <span className="tabular text-ink">{s.capacity}</span> · {d.products.materials[s.material]}
         {detail ? ` · ${detail}` : ""}
@@ -40,7 +40,7 @@ export function CategoryCard({ c, d, showCodes = false }: { c: GastroCategory; d
       <div className="overflow-hidden bg-white">
         <Img src={c.image} alt={`Gastroplast — ${t.t}`} w={840} h={840} className="aspect-[4/3] w-full object-cover" />
       </div>
-      <h3 className="mt-5 font-serif text-[1.55rem] leading-tight">{t.t}</h3>
+      <h3 className="mt-5 font-serif text-[1.22rem] leading-tight">{t.t}</h3>
       <p className="mt-2 text-muted">{t.d}</p>
       {showCodes && c.codes.length > 0 && (
         <p className="mt-3 text-sm text-muted">
@@ -72,7 +72,7 @@ export function CatalogCards({ d, locale }: { d: Dict; locale: Locale }) {
             <Img src={c.cover} alt={`${c.brand} — ${d.nav.catalogs}`} w={c.coverW} h={c.coverH} className="w-full" />
           </a>
           <div>
-            <h3 className="font-serif text-3xl leading-tight">{c.brand}</h3>
+            <h3 className="font-serif text-2xl leading-tight">{c.brand}</h3>
             <dl className="mt-3 space-y-1 text-[0.95rem] text-muted">
               <div>
                 <dt className="inline">{d.cat.yearLabel}: </dt>
@@ -103,18 +103,18 @@ export function CatalogCards({ d, locale }: { d: Dict; locale: Locale }) {
 
 export function CtaBand({ d, locale }: { d: Dict; locale: Locale }) {
   return (
-    <section className="bg-copper text-white">
+    <section className="bg-amber text-navy-2">
       <div className="wrap grid gap-8 py-16 md:grid-cols-12 md:items-end md:py-20">
         <div className="md:col-span-8">
           <h2 className="h2">{d.home.cta.title}</h2>
-          <p className="mt-4 max-w-2xl text-lg text-white/85">{d.home.cta.lead}</p>
+          <p className="mt-4 max-w-2xl text-lg text-navy-2/80">{d.home.cta.lead}</p>
         </div>
         <div className="flex flex-col items-start gap-4 md:col-span-4 md:items-end">
-          <Link href={href(locale, "contact")} className="btn bg-white text-ink hover:bg-paper">
+          <Link href={href(locale, "contact")} className="btn btn-dark">
             {d.common.quote} <Arrow />
           </Link>
           {site.email && (
-            <a href={`mailto:${site.email}`} className="border-b border-white/60 pb-0.5 text-white/90 hover:text-white">
+            <a href={`mailto:${site.email}`} className="border-b border-navy-2/50 pb-0.5 font-semibold text-navy-2 hover:border-navy-2">
               {site.email}
             </a>
           )}

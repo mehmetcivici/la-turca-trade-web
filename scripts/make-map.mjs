@@ -40,16 +40,16 @@ for (const [loc, t] of Object.entries(labels)) {
   const o = p(ORIGIN);
   const ports = PORTS.map((port) => {
     const [x, y] = p(port.at);
-    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5" fill="#F5F0E8" stroke="#1F2F4A" stroke-width="2"/>` +
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5" fill="#FFFFFF" stroke="#263658" stroke-width="2"/>` +
       `<text x="${(x + port.dx).toFixed(1)}" y="${(y + port.dy).toFixed(1)}" text-anchor="${port.anchor}" class="l">${esc(port.name)}<tspan class="c" dx="5">${port.cc}</tspan></text>`;
   }).join("");
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t.title)}">
 <title>${esc(t.title)}</title>
-<style>.l{font:17px ${FONT};fill:#1B2230;paint-order:stroke;stroke:#F5F0E8;stroke-width:4px;stroke-linejoin:round}.c{font-size:13px;fill:#5D6270}.o{font-size:19px;font-weight:600}</style>
-<g stroke="#F5F0E8" stroke-width=".6"><path fill="#E5DACA" d="${groups.base.join("")}"/><path fill="#D3C0A0" d="${groups.target.join("")}"/><path fill="#B4643C" d="${groups.tr.join("")}"/></g>
-<g fill="none" stroke="#1F2F4A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="${curve(TRUNK)}"/><path d="${curve(ATLANTIC)}"/><path d="${curve(PACIFIC)}"/>${SPURS.map((s) => `<path d="${curve(s)}" stroke-width="1.4" stroke-dasharray="3 4"/>`).join("")}</g>
+<style>.l{font:17px ${FONT};fill:#18233A;paint-order:stroke;stroke:#FFFFFF;stroke-width:4px;stroke-linejoin:round}.c{font-size:13px;fill:#556074}.o{font-size:19px;font-weight:600}</style>
+<g stroke="#FFFFFF" stroke-width=".6"><path fill="#ECE8E0" d="${groups.base.join("")}"/><path fill="#DCCDAE" d="${groups.target.join("")}"/><path fill="#C49E58" d="${groups.tr.join("")}"/></g>
+<g fill="none" stroke="#263658" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="${curve(TRUNK)}"/><path d="${curve(ATLANTIC)}"/><path d="${curve(PACIFIC)}"/>${SPURS.map((s) => `<path d="${curve(s)}" stroke-width="1.4" stroke-dasharray="3 4"/>`).join("")}</g>
 ${ports}
-<circle cx="${o[0].toFixed(1)}" cy="${o[1].toFixed(1)}" r="8" fill="#1F2F4A"/><circle cx="${o[0].toFixed(1)}" cy="${o[1].toFixed(1)}" r="3" fill="#F5F0E8"/>
+<circle cx="${o[0].toFixed(1)}" cy="${o[1].toFixed(1)}" r="8" fill="#263658"/><circle cx="${o[0].toFixed(1)}" cy="${o[1].toFixed(1)}" r="3" fill="#FFFFFF"/>
 <text x="${(o[0] - 14).toFixed(1)}" y="${(o[1] - 16).toFixed(1)}" text-anchor="end" class="l o">${esc(t.origin)}</text>
 </svg>`;
   writeFileSync(`public/img/map/routes-${loc}.svg`, svg);

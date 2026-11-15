@@ -21,7 +21,7 @@ export function Contact({ locale, d }: { locale: Locale; d: Dict }) {
               <div>
                 <dt className="text-sm text-muted">{c.direct}</dt>
                 <dd className="mt-1">
-                  <a href={`mailto:${site.email}`} className="font-serif text-2xl hover:text-copper">
+                  <a href={`mailto:${site.email}`} className="font-serif text-xl hover:text-copper">
                     {site.email}
                   </a>
                 </dd>

@@ -18,7 +18,7 @@ export default function GlobalNotFound() {
         <main className="grid min-h-svh place-items-center px-5">
           <div className="w-full max-w-xl">
             <a href={asset("/es/")} aria-label="La Turca Trade">
-              <Logo className="h-14 w-auto" />
+              <Logo className="text-[22px]" />
             </a>
             <p className="mt-14 font-serif text-8xl text-copper">404</p>
             <ul className="mt-8 divide-y divide-line border-y border-line">

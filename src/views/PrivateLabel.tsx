@@ -34,7 +34,7 @@ export function PrivateLabel({ locale, d }: { locale: Locale; d: Dict }) {
         <ul className="mt-10 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
           {p.what.map((w) => (
             <li key={w.t} className="border-t border-line py-6">
-              <h3 className="font-serif text-[1.6rem] leading-tight">{w.t}</h3>
+              <h3 className="font-serif text-[1.22rem] leading-tight">{w.t}</h3>
               <p className="mt-2 text-muted">{w.d}</p>
             </li>
           ))}

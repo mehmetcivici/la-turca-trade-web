@@ -1,14 +1,13 @@
-import { Instrument_Serif, Instrument_Sans } from "next/font/google";
+import { Besley, Manrope } from "next/font/google";
 
-export const serif = Instrument_Serif({
-  weight: "400",
-  style: ["normal", "italic"],
+/** Başlıklar: Besley (laturcatrade.com ile aynı). Metin: Manrope. */
+export const serif = Besley({
   subsets: ["latin", "latin-ext"],
   variable: "--font-serif",
   display: "swap",
 });
 
-export const sans = Instrument_Sans({
+export const sans = Manrope({
   subsets: ["latin", "latin-ext"],
   variable: "--font-sans",
   display: "swap",

@@ -39,7 +39,7 @@ export function ContactForm({ d, locale, compact = false }: { d: Dict; locale: L
   if (state === "ok") {
     return (
       <div role="status" className="border-l-2 border-copper bg-card px-6 py-8">
-        <p className="font-serif text-2xl leading-snug">{f.ok}</p>
+        <p className="font-serif text-xl leading-snug">{f.ok}</p>
       </div>
     );
   }
@@ -100,7 +100,7 @@ export function ContactForm({ d, locale, compact = false }: { d: Dict; locale: L
           <div className="mt-2 flex flex-wrap gap-x-6 gap-y-2">
             {f.interests.map((t) => (
               <label key={t} className="inline-flex items-center gap-2 text-[0.98rem]">
-                <input type="checkbox" name="interest" value={t} className="h-4 w-4 accent-[#1F2F4A]" />
+                <input type="checkbox" name="interest" value={t} className="h-4 w-4 accent-[#263658]" />
                 {t}
               </label>
             ))}
@@ -114,7 +114,7 @@ export function ContactForm({ d, locale, compact = false }: { d: Dict; locale: L
       </label>
 
       <label className="flex items-start gap-3 text-[0.93rem] text-muted sm:col-span-2">
-        <input type="checkbox" name="consent" required className="mt-1 h-4 w-4 accent-[#1F2F4A]" />
+        <input type="checkbox" name="consent" required className="mt-1 h-4 w-4 accent-[#263658]" />
         <span>{f.consent}</span>
       </label>
 

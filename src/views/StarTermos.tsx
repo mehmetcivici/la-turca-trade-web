@@ -95,7 +95,7 @@ export function StarTermos({ locale, d }: { locale: Locale; d: Dict }) {
             <ul className="mt-10 divide-y divide-line border-y border-line">
               {s.certs.map((c) => (
                 <li key={c.t} className="grid gap-1 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6">
-                  <span className="font-serif text-2xl text-navy">{c.t}</span>
+                  <span className="font-serif text-xl text-navy">{c.t}</span>
                   <span className="self-center text-muted">{c.d}</span>
                 </li>
               ))}

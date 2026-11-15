@@ -13,22 +13,22 @@ export function ContainerFigure({ dec = ",", caption }: { dec?: string; caption:
   return (
     <figure className="m-0">
       <svg viewBox="0 0 1150 330" className="h-auto w-full" role="img" aria-label={caption}>
-        <g fill="none" stroke="#1F2F4A" strokeWidth={1.6}>
+        <g fill="none" stroke="#263658" strokeWidth={1.6}>
           {/* dış gövde */}
           <rect x={X - 12} y={Y - 12} width={L + 24} height={Hh + 24} />
           {/* köşe dökümleri */}
           {[[X - 12, Y - 12], [X + L - 4, Y - 12], [X - 12, Y + Hh - 4], [X + L - 4, Y + Hh - 4]].map(([cx, cy], i) => (
-            <rect key={i} x={cx} y={cy} width={16} height={16} fill="#1F2F4A" />
+            <rect key={i} x={cx} y={cy} width={16} height={16} fill="#263658" />
           ))}
           {/* oluklu duvar */}
           {ribs.map((x) => (
-            <line key={x} x1={x} y1={Y} x2={x} y2={Y + Hh} strokeWidth={0.8} stroke="#7d8698" />
+            <line key={x} x1={x} y1={Y} x2={x} y2={Y + Hh} strokeWidth={0.8} stroke="#9AA3B5" />
           ))}
           {/* kesit çizgisi */}
-          <path d={`M${X + cut * cw + 6} ${Y - 12} l -6 18 l 10 22 l -8 26 l 9 30 l -9 28 l 8 26 l -7 30 l 8 26 l -6 24 l 3 ${Hh + 24 - 230}`} stroke="#1F2F4A" strokeWidth={1.4} />
+          <path d={`M${X + cut * cw + 6} ${Y - 12} l -6 18 l 10 22 l -8 26 l 9 30 l -9 28 l 8 26 l -7 30 l 8 26 l -6 24 l 3 ${Hh + 24 - 230}`} stroke="#263658" strokeWidth={1.4} />
         </g>
         {/* koliler */}
-        <g stroke="#1F2F4A" strokeWidth={0.7}>
+        <g stroke="#263658" strokeWidth={0.7}>
           {Array.from({ length: rows }).flatMap((_, r) =>
             Array.from({ length: cut }).map((__, c) => (
               <rect
@@ -37,13 +37,13 @@ export function ContainerFigure({ dec = ",", caption }: { dec?: string; caption:
                 y={Y + Hh - (r + 1) * rh + 0.6}
                 width={cw - 1.2}
                 height={rh - 1.2}
-                fill={(r + c) % 5 === 0 ? "#C9B490" : "#E3D6C1"}
+                fill={(r + c) % 5 === 0 ? "#D9BD87" : "#ECE6DA"}
               />
             )),
           )}
         </g>
         {/* ölçü çizgileri */}
-        <g stroke="#B4643C" strokeWidth={1.2} fill="#B4643C" fontFamily="var(--font-sans)" fontSize={15}>
+        <g stroke="#C49E58" strokeWidth={1.2} fill="#C49E58" fontFamily="var(--font-sans)" fontSize={15}>
           <line x1={X} y1={Y + Hh + 44} x2={X + L} y2={Y + Hh + 44} />
           <line x1={X} y1={Y + Hh + 36} x2={X} y2={Y + Hh + 52} />
           <line x1={X + L} y1={Y + Hh + 36} x2={X + L} y2={Y + Hh + 52} />
@@ -56,7 +56,7 @@ export function ContainerFigure({ dec = ",", caption }: { dec?: string; caption:
           <text x={X + L + 52} y={Y + Hh / 2 + 5} stroke="none">
             {n("2.69")} m
           </text>
-          <text x={X} y={Y - 22} stroke="none" fill="#1F2F4A" fontSize={14}>
+          <text x={X} y={Y - 22} stroke="none" fill="#263658" fontSize={14}>
             40&apos; HC · ≈ 76 m³ · {n("2.35")} m
           </text>
         </g>

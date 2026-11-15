@@ -14,7 +14,7 @@ export default function RootPage() {
     <main className="grid min-h-svh place-items-center px-5">
       <script dangerouslySetInnerHTML={{ __html: detect }} />
       <div className="w-full max-w-md text-center">
-        <Logo className="mx-auto h-16 w-auto" />
+        <Logo className="text-[28px]" />
         <ul className="mt-12 divide-y divide-line border-y border-line">
           {locales.map((l) => (
             <li key={l}>

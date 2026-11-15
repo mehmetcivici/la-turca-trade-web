@@ -29,7 +29,7 @@ export function LoadingTable({ d, locale }: { d: Dict; locale: Locale }) {
               <td className="py-4 pr-4">{d.products.loading[r.key]}</td>
               <td className="tabular py-4 pr-4 text-right">{r.perBox}</td>
               <td className="tabular py-4 pr-4 text-right">{nf.format(r.boxes40)}</td>
-              <td className="tabular py-4 text-right font-serif text-2xl text-navy">{nf.format(r.hc40)}</td>
+              <td className="tabular py-4 text-right font-serif text-xl text-navy">{nf.format(r.hc40)}</td>
             </tr>
           ))}
         </tbody>
@@ -163,11 +163,11 @@ export function Home({ locale, d }: { locale: Locale; d: Dict }) {
           <div className="grid gap-6 sm:grid-cols-2 lg:col-span-6">
             <div>
               <h3 className="font-sans text-sm font-medium text-copper">{h.routes.atlantic}</h3>
-              <p className="mt-2 font-serif text-[1.45rem] leading-snug">{ATLANTIC_PORTS.join(" · ")}</p>
+              <p className="mt-2 font-serif text-[1.12rem] leading-snug">{ATLANTIC_PORTS.join(" · ")}</p>
             </div>
             <div>
               <h3 className="font-sans text-sm font-medium text-copper">{h.routes.pacific}</h3>
-              <p className="mt-2 font-serif text-[1.45rem] leading-snug">{PACIFIC_PORTS.join(" · ")}</p>
+              <p className="mt-2 font-serif text-[1.12rem] leading-snug">{PACIFIC_PORTS.join(" · ")}</p>
             </div>
           </div>
         </div>
@@ -209,7 +209,7 @@ export function Home({ locale, d }: { locale: Locale; d: Dict }) {
           <ul className="mt-12 grid gap-x-10 md:grid-cols-2 lg:grid-cols-3">
             {h.how.items.map((it) => (
               <li key={it.t} className="border-t border-navy-line py-7">
-                <h3 className="font-serif text-[1.65rem] leading-tight">{it.t}</h3>
+                <h3 className="font-serif text-[1.25rem] leading-tight">{it.t}</h3>
                 <p className="mt-2 text-paper/70">{it.d}</p>
               </li>
             ))}

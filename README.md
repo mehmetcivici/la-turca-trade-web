@@ -68,8 +68,12 @@ npm run build:cpanel # dist/la-turca-trade-cpanel.zip → cPanel public_html iç
 7. **Gastroplast özel marka** — sitede "ürüne ve adede göre değerlendirilir" diye geçiyor; kesinleşirse metni güçlendirin.
 8. Kendi fotoğraflarınız (ofis, fabrika ziyareti, yükleme) gelirse "Hakkımızda" sayfasına eklenir — siteyi en çok güçlendirecek şey budur.
 
-## Logo
+## Logo ve kimlik
 
-İbrik (Türk sürahisi) silueti: hem Star Termos'un termos sürahilerine hem Gastroplast'ın sürahi/servis ürünlerine bağlanır;
-gövdedeki yatay boşluk ufuk çizgisini (deniz yolu) ve termoslardaki bandı çağrıştırır. Renkler: lacivert `#1F2F4A`,
-bakır `#B4643C` (cezve), krem `#F5F0E8`. Yazı: Instrument Serif + Instrument Sans.
+- **Logo:** LT işareti — Türkiye ve Güney Amerika haritalarını bağlayan altın ok. Kaynak dosya laturcatrade.com'daki şeffaf PNG:
+  `brand/la-turca-trade-logo-kaynak.png`. `python3 -I scripts/make-logo.py` bundan şunları üretir:
+  `lt-lacivert.png` (açık zemin), `lt-acik.png` (koyu zemin), favicon (`src/app/icon.png`, `apple-icon.png`).
+  Daha yüksek çözünürlüklü/vektör logo gelirse kaynak dosyayı değiştirip betiği yeniden çalıştırın.
+- **Renkler (logodan):** lacivert `#263658`, altın `#C49E58`, metin vurgusu koyu altın `#8E6A28`, açık zemin `#F4F1EA`.
+- **Yazı tipleri:** başlıklar **Besley** (laturcatrade.com ile aynı), metin **Manrope**.
+- Eski ibrik logo denemesi `brand/_eski-ibrik/`, logo/yazı tipi seçenek sayfaları `brand/secenekler/` altında.

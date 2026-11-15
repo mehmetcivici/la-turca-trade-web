@@ -15,11 +15,11 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
       </a>
       <div className="wrap flex h-[72px] items-center justify-between gap-6">
         <Link href={href(locale, "home")} className="shrink-0" aria-label="La Turca Trade">
-          <Logo className="h-[40px] w-auto md:h-[46px]" />
+          <Logo className="text-[15px] md:text-[16px]" />
         </Link>
 
         <nav aria-label={d.common.menu} className="hidden xl:block">
-          <ul className="flex items-center gap-7 text-[0.97rem]">
+          <ul className="flex items-center gap-6 whitespace-nowrap text-[0.95rem]">
             {NAV.map((k) => (
               <li key={k}>
                 <Link href={href(locale, k)} className="text-ink/85 transition-colors hover:text-copper">
@@ -30,9 +30,9 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-5 xl:flex">
-          <LangMenu locale={locale} label={d.common.language} />
-          <Link href={href(locale, "contact")} className="btn btn-dark !py-2.5 !text-[0.95rem]">
+        <div className="hidden items-center gap-3 xl:flex">
+          <LangMenu locale={locale} label={d.common.language} compact />
+          <Link href={href(locale, "contact")} className="btn btn-dark whitespace-nowrap !py-2.5 !text-[0.93rem]">
             {d.common.quote}
           </Link>
         </div>
@@ -52,13 +52,13 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
             <ul className="wrap py-6">
               {NAV.map((k) => (
                 <li key={k} className="border-b border-line">
-                  <Link href={href(locale, k)} className="block py-4 font-serif text-3xl">
+                  <Link href={href(locale, k)} className="block py-4 font-serif text-2xl">
                     {d.nav[k]}
                   </Link>
                 </li>
               ))}
               <li className="border-b border-line">
-                <Link href={href(locale, "contact")} className="block py-4 font-serif text-3xl">
+                <Link href={href(locale, "contact")} className="block py-4 font-serif text-2xl">
                   {d.nav.contact}
                 </Link>
               </li>
