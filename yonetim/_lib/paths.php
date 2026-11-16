@@ -6,6 +6,8 @@
 declare(strict_types=1);
 if (realpath((string) ($_SERVER['SCRIPT_FILENAME'] ?? '')) === __FILE__) { http_response_code(404); exit; }
 
+date_default_timezone_set('Europe/Istanbul');
+
 if (!defined('SITE_ROOT')) {
     define('SITE_ROOT', dirname(__DIR__, 2)); // public_html
 }
