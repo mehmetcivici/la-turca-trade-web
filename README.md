@@ -55,8 +55,15 @@ Türkçe, kullanıcı adı + şifreyle giriş. Hostinger'de PHP ile çalışır.
 
 **Nasıl çalışır:** Site statiktir (SEO için). Panelde "Kaydet ve yayınla" → değişiklik GitHub'a commit edilir
 (`content/*.json`, yüklenen görseller `public/img/uploads/`, PDF'ler `kataloglar/`) → GitHub Actions siteyi derleyip
-`yayin` dalına koyar (1–3 dk) → panel bu sürümü indirip `public_html`'e açar (panel açıkken otomatik, ya da
-"Siteyi şimdi güncelle"). Geliştirici `main`'e push ettiğinde de aynı yol izlenir; panele bir kez girmek siteyi günceller.
+`yayin` dalına yeni bir **sürüm** olarak ekler (1–3 dk; her sürümde `surum.json`) → sunucu sürümü GitHub'dan çeker.
+
+**Sürümler GitHub'dan otomatik çekilir:**
+- Derleme bitince Actions sunucuya haber verir: `https://laturcatrade.com/yonetim/otomatik.php?v=<sürüm>` → site hemen güncellenir.
+- Yedek: Hostinger → Cron Jobs → her 15 dakikada `php /home/…/public_html/yonetim/otomatik.php` (tam yol panelde **Sürümler** sayfasında).
+- Panel açıkken de kontrol edilir. GitHub anahtarı gerekmez (depo herkese açık; indirme codeload üzerinden).
+- Güvenlik: `otomatik.php` yalnızca `yayin` dalındaki, `surum.json` taşıyan ve yüklü olandan **yeni** sürümleri kabul eder.
+- **Sürümler** sayfası: GitHub'daki sürüm listesi; "Bu sürüme dön" ile geri alma (otomatik güncelleme duraklar,
+  "En yeni sürüme dön" ile yeniden açılır).
 
 **Giriş:** `https://laturcatrade.com/yonetim/` — kullanıcı adı `admin`. Varsayılan şifre depoda yoktur
 (`_lib/defaults.php` yalnızca bcrypt özetini tutar); şifre site sahibine ayrıca iletilmiştir. İlk girişte panel
