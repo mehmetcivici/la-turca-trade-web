@@ -4,6 +4,7 @@ declare(strict_types=1);
 if (realpath((string) ($_SERVER['SCRIPT_FILENAME'] ?? '')) === __FILE__) { http_response_code(404); exit; }
 require_once __DIR__ . '/paths.php';
 require_once __DIR__ . '/github.php';
+require_once __DIR__ . '/deploy.php';
 
 // Uyarılar JSON yanıtlarını bozmasın: ekrana değil kayda yaz
 @ini_set('display_errors', '0');
@@ -112,17 +113,13 @@ function has_git(array $c): bool
     return trim((string) ($c['token'] ?? '')) !== '';
 }
 
-function gh(array $c): GitHub
+/** $write=true: içerik yazma (anahtar şart). false: okuma/sürüm çekme (anahtarsız da çalışır). */
+function gh(array $c, bool $write = true): GitHub
 {
-    if (!has_git($c)) throw new RuntimeException('GitHub bağlantısı kurulmadı. Ayarlar sayfasından erişim anahtarını girin.');
-    return new GitHub($c['token'], $c['repo'], $c['branch'] ?? 'main');
+    if ($write && !has_git($c)) throw new RuntimeException('GitHub bağlantısı kurulmadı. Ayarlar sayfasından erişim anahtarını girin.');
+    return new GitHub((string) ($c['token'] ?? ''), $c['repo'], $c['branch'] ?? 'main');
 }
 
-function deployed(): array
-{
-    $f = data_dir() . '/yayin.json';
-    return is_file($f) ? (json_decode((string) file_get_contents($f), true) ?: []) : [];
-}
 
 function env_checks(): array
 {

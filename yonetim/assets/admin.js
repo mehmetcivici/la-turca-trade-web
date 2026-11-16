@@ -20,7 +20,7 @@
     toastEl._t = setTimeout(() => (toastEl.hidden = true), bad ? 9000 : 5000);
   };
 
-  const CLS = { live: "ok", building: "wait", ready: "wait", failed: "bad", error: "bad", nogit: "bad" };
+  const CLS = { live: "ok", building: "wait", ready: "wait", failed: "bad", error: "bad", nogit: "bad", pinned: "wait" };
 
   function show(d) {
     const text = deploying ? "Site güncelleniyor…" : d.label;
@@ -34,7 +34,7 @@
       if (d.state === "failed") html += '<p class="small warn">Derleme başarısız oldu. Son değişiklikte bir alan hatalı olabilir; geliştiriciye haber verin.</p>';
       box.innerHTML = html;
     }
-    if (nowBtn) nowBtn.hidden = !(d.state === "ready" || d.state === "live");
+    if (nowBtn) nowBtn.hidden = !(d.state === "ready" || d.state === "live" || d.state === "pinned");
   }
 
   async function deploy(manual) {

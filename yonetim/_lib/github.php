@@ -13,10 +13,11 @@ final class GitHub
         $ch = curl_init('https://api.github.com' . $path);
         $headers = [
             'Accept: application/vnd.github+json',
-            'Authorization: Bearer ' . $this->token,
             'X-GitHub-Api-Version: 2022-11-28',
             'User-Agent: LaTurcaTrade-Panel',
         ];
+        // Anahtar yoksa herkese açık depo anonim okunur (saatte 60 istek sınırı)
+        if ($this->token !== '') $headers[] = 'Authorization: Bearer ' . $this->token;
         if ($body !== null) $headers[] = 'Content-Type: application/json';
         curl_setopt_array($ch, [
             CURLOPT_CUSTOMREQUEST => $method,
@@ -114,20 +115,43 @@ final class GitHub
         ], $d);
     }
 
-    /** Dalın zip arşivini dosyaya indirir. */
+    /** Bir dalın / commit'in zip arşivini dosyaya indirir (anahtarsız: codeload, sınırsız). */
     public function downloadZip(string $ref, string $dest): void
     {
         $fp = fopen($dest, 'wb');
-        $ch = curl_init("https://api.github.com/repos/{$this->repo}/zipball/" . rawurlencode($ref));
+        if ($this->token !== '') {
+            $url = "https://api.github.com/repos/{$this->repo}/zipball/" . rawurlencode($ref);
+            $headers = ['Authorization: Bearer ' . $this->token, 'User-Agent: LaTurcaTrade-Panel', 'Accept: application/vnd.github+json'];
+        } else {
+            $url = "https://codeload.github.com/{$this->repo}/zip/" . rawurlencode($ref);
+            $headers = ['User-Agent: LaTurcaTrade-Panel'];
+        }
+        $ch = curl_init($url);
         curl_setopt_array($ch, [
             CURLOPT_FILE => $fp,
             CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTPHEADER => ['Authorization: Bearer ' . $this->token, 'User-Agent: LaTurcaTrade-Panel', 'Accept: application/vnd.github+json'],
+            CURLOPT_HTTPHEADER => $headers,
             CURLOPT_TIMEOUT => 600,
+            CURLOPT_CONNECTTIMEOUT => 20,
         ]);
         $ok = curl_exec($ch);
         $code = (int) curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
         fclose($fp);
-        if (!$ok || $code !== 200) throw new RuntimeException('Yayın paketi indirilemedi (HTTP ' . $code . ').');
+        if (!$ok || $code !== 200) throw new RuntimeException('Sürüm paketi indirilemedi (HTTP ' . $code . ').');
+    }
+
+    /** Yayın dalındaki sürümler (en yeni önce). */
+    public function versions(int $n = 20): array
+    {
+        [$code, $d] = $this->req('GET', "/repos/{$this->repo}/commits?sha=yayin&per_page=$n", null, 20);
+        if ($code !== 200 || !is_array($d)) {
+            $msg = is_array($d) && isset($d['message']) ? $d['message'] : 'HTTP ' . $code;
+            throw new RuntimeException('Sürümler alınamadı: ' . $msg);
+        }
+        return array_map(fn($c) => [
+            'sha' => $c['sha'],
+            'message' => strtok((string) $c['commit']['message'], "\n"),
+            'date' => $c['commit']['committer']['date'] ?? ($c['commit']['author']['date'] ?? ''),
+        ], $d);
     }
 }
