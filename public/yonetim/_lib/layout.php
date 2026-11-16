@@ -17,6 +17,7 @@ function page_start(string $title, string $active = '', ?array $c = null, bool $
         'kataloglar' => ['icerik.php?dosya=kataloglar', 'Kataloglar', 'M6 3h9l4 4v14H6zM14 3v5h5M9 13h7M9 17h7'],
         'metinler' => ['icerik.php?dosya=metin-tr', 'Site metinleri', 'M4 6h16M4 12h10M4 18h16'],
         'iletisim' => ['icerik.php?dosya=iletisim', 'İletişim bilgileri', 'M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2'],
+        'surumler' => ['surumler.php', 'Sürümler', 'M12 8v5l3 2M3 12a9 9 0 1 0 3-6.7M3 4v4h4'],
         'ayarlar' => ['ayarlar.php', 'Ayarlar', 'M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19 12l2-1-2-4-2 1-2-2V4h-4v2L9 8 7 7 5 11l2 1v2l-2 1 2 4 2-1 2 2v2h4v-2l2-2 2 1 2-4-2-1z'],
     ];
     ?><!doctype html>

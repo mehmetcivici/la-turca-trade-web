@@ -18,5 +18,6 @@ function default_config(): array
         'branch' => 'main',
         'notify' => 'info@laturcatrade.com',
         'auto_update' => true,
+        'auto_pull' => true,
     ];
 }

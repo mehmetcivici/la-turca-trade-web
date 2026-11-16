@@ -30,17 +30,39 @@ jobs:
         env:
           NEXT_DIST_DIR: .next-prod
 
-      - name: yayin dalına gönder
+      - name: yayin dalına gönder (geçmiş korunur)
+        id: yayin
+        env:
+          MSG: ${{ github.event.head_commit.message }}
+          REPO: ${{ github.repository }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cp cpanel/.htaccess .next-prod/.htaccess
           rm -rf .next-prod/cache .next-prod/types
+          TITLE=$(printf '%s' "${MSG:-Elle başlatılan derleme}" | head -n 1 | cut -c1-120)
+          # Sunucunun doğrulayacağı sürüm bilgisi
+          jq -n --arg sha "$GITHUB_SHA" --arg msg "$TITLE" --arg date "$(date -u +%Y-%m-%dT%H:%M:%SZ)" --arg run "$GITHUB_RUN_ID" \
+            '{kanal:"yayin", kaynak:$sha, kisa:($sha[0:7]), mesaj:$msg, tarih:$date, run:$run}' > .next-prod/surum.json
           cd .next-prod
           git init -q -b yayin
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${TOKEN}@github.com/${REPO}.git"
+          # Önceki yayın sürümünün üstüne ekle (sürüm geçmişi = geri dönüş imkânı)
+          if git fetch -q --depth=1 origin yayin 2>/dev/null; then git reset -q --soft FETCH_HEAD; fi
           git add -A
-          git commit -q -m "Yayın ${GITHUB_SHA::7}: ${{ github.event.head_commit.message && 'main' || 'elle' }}"
-          git push -f -q "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" yayin
+          git commit -q -m "Sürüm ${GITHUB_SHA::7}: ${TITLE}" || { echo "Değişiklik yok"; echo "sha=$(git rev-parse HEAD 2>/dev/null)" >> "$GITHUB_OUTPUT"; exit 0; }
+          git push -q origin yayin
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Sunucuya haber ver (yeni sürümü hemen çeksin)
+        if: steps.yayin.outputs.sha != ''
+        continue-on-error: true
+        env:
+          SITE: ${{ vars.SITE_URL || 'https://laturcatrade.com' }}
+        run: |
+          curl -fsS -m 300 -A "LaTurcaTrade-Actions" "${SITE}/yonetim/otomatik.php?v=${{ steps.yayin.outputs.sha }}" \
+            || echo "::notice::Sunucu yanıt vermedi (site henüz yayında değilse normaldir). Panel veya zamanlanmış görev sürümü çekecek."
 
       - name: Önizleme derlemesi (GitHub Pages)
         run: npm run build
