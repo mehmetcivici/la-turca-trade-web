@@ -1,6 +1,7 @@
 <?php
 /** İçerik düzenleyici için Türkçe etiketler ve alan kuralları. */
 declare(strict_types=1);
+if (realpath((string) ($_SERVER['SCRIPT_FILENAME'] ?? '')) === __FILE__) { http_response_code(404); exit; }
 
 const ICERIK_DOSYALARI = [
     'metin-tr' => ['path' => 'content/dict/tr.json', 'title' => 'Site metinleri', 'lang' => 'tr', 'ref' => 'content/dict/es.json', 'refLang' => 'ES'],

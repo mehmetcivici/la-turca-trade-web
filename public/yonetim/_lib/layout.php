@@ -1,6 +1,7 @@
 <?php
 /** Panel sayfa iskeleti. */
 declare(strict_types=1);
+if (realpath((string) ($_SERVER['SCRIPT_FILENAME'] ?? '')) === __FILE__) { http_response_code(404); exit; }
 
 function page_start(string $title, string $active = '', ?array $c = null, bool $bare = false): void
 {
@@ -29,6 +30,7 @@ function page_start(string $title, string $active = '', ?array $c = null, bool $
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= h($base) ?>/assets/admin.css?v=1">
+<script>window.LTT_PANEL = <?= json_encode(['base' => $base, 'site' => site_base(), 'csrf' => csrf_token(), 'autoUpdate' => (bool) ($c['auto_update'] ?? true)], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;</script>
 </head>
 <body class="<?= $bare ? 'bare' : '' ?>">
 <?php if (!$bare): ?>
@@ -65,17 +67,10 @@ function page_start(string $title, string $active = '', ?array $c = null, bool $
 
 function page_end(?array $c = null, bool $bare = false): void
 {
-    $cfg = [
-        'base' => panel_base(),
-        'site' => site_base(),
-        'csrf' => csrf_token(),
-        'autoUpdate' => (bool) ($c['auto_update'] ?? true),
-    ];
     ?>
 </main>
 <?php if (!$bare): ?>
 <div id="toast" class="toast" hidden></div>
-<script>window.LTT_PANEL = <?= json_encode($cfg, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;</script>
 <script src="<?= h(panel_base()) ?>/assets/admin.js?v=1"></script>
 <?php endif; ?>
 </body>

@@ -1,6 +1,7 @@
 <?php
 /** GitHub REST API: içerik okuma, tek commit'te çok dosya yazma, derleme durumu, yayın paketi indirme. */
 declare(strict_types=1);
+if (realpath((string) ($_SERVER['SCRIPT_FILENAME'] ?? '')) === __FILE__) { http_response_code(404); exit; }
 
 final class GitHub
 {
@@ -28,11 +29,9 @@ final class GitHub
         $raw = curl_exec($ch);
         if ($raw === false) {
             $err = curl_error($ch);
-            curl_close($ch);
             throw new RuntimeException('GitHub bağlantı hatası: ' . $err);
         }
         $code = (int) curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
-        curl_close($ch);
         return [$code, json_decode((string) $raw, true)];
     }
 
@@ -128,7 +127,6 @@ final class GitHub
         ]);
         $ok = curl_exec($ch);
         $code = (int) curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
-        curl_close($ch);
         fclose($fp);
         if (!$ok || $code !== 200) throw new RuntimeException('Yayın paketi indirilemedi (HTTP ' . $code . ').');
     }

@@ -100,7 +100,7 @@ export function ContactForm({ d, locale, compact = false }: { d: Dict; locale: L
           <div className="mt-2 flex flex-wrap gap-x-6 gap-y-2">
             {f.interests.map((t) => (
               <label key={t} className="inline-flex items-center gap-2 text-[0.98rem]">
-                <input type="checkbox" name="interest" value={t} className="h-4 w-4 accent-[#263658]" />
+                <input type="checkbox" name="interest[]" value={t} className="h-4 w-4 accent-[#263658]" />
                 {t}
               </label>
             ))}

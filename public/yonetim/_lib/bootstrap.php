@@ -1,9 +1,13 @@
 <?php
 /** Panel sayfalarının ortak başlangıcı: oturum, CSRF, giriş kontrolü, yardımcılar. */
 declare(strict_types=1);
+if (realpath((string) ($_SERVER['SCRIPT_FILENAME'] ?? '')) === __FILE__) { http_response_code(404); exit; }
 require_once __DIR__ . '/paths.php';
 require_once __DIR__ . '/github.php';
 
+// Uyarılar JSON yanıtlarını bozmasın: ekrana değil kayda yaz
+@ini_set('display_errors', '0');
+@ini_set('log_errors', '1');
 mb_internal_encoding('UTF-8');
 date_default_timezone_set('Europe/Istanbul');
 header('X-Frame-Options: DENY');

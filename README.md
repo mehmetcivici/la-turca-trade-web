@@ -20,9 +20,9 @@ npm run build:cpanel # dist/la-turca-trade-cpanel.zip → cPanel public_html iç
 | --- | --- |
 | `kataloglar/` | **Katalog PDF'leri.** Yeni katalog gelince aynı adla buraya koyun: `star-termos-catalogo-2025.pdf`, `gastroplast-catalogo.pdf`. Sayfa/boyut bilgisi `src/content/site.ts` → `catalogs`. |
 | `brand/` | Logo dosyaları (SVG + PNG). `scripts/make-logo.py` ile üretildi; yazılar vektöre çevrilmiştir, font gerekmez. |
-| `src/content/dict/` | Tüm metinler: `es.ts` (ana dil), `pt.ts`, `en.ts`, `tr.ts`. Yapı birebir aynıdır. |
-| `src/content/site.ts` | E-posta, telefon, WhatsApp, alan adı, katalog listesi. |
-| `src/content/products.ts` | Star Termos serileri, yükleme tablosu, Gastroplast grupları, GN küvet matrisi. |
+| `content/` | **Düzenlenebilir içerik** (panel bunları değiştirir): `dict/{es,pt,en,tr}.json` metinler, `products.json` ürünler, `site.json` iletişim + kataloglar. |
+| `public/yonetim/` | Yönetim paneli (PHP). |
+| `src/content/*.ts` | JSON içeriği okuyan tipli katman. |
 | `src/content/routes.ts` | Harita rotaları ve limanlar. |
 | `public/contact.php` | Form işleyicisi (alıcı adresini dosyanın başında değiştirin). |
 | `cpanel/.htaccess` | HTTPS, kök adreste tarayıcı diline göre yönlendirme, önbellek. |
@@ -40,6 +40,36 @@ npm run build:cpanel # dist/la-turca-trade-cpanel.zip → cPanel public_html iç
 | Kataloglar | `/es/catalogos/` | `/pt/catalogos/` | `/en/catalogs/` | `/tr/kataloglar/` |
 | Hakkımızda | `/es/nosotros/` | `/pt/sobre-nos/` | `/en/about/` | `/tr/hakkimizda/` |
 | İletişim | `/es/contacto/` | `/pt/contato/` | `/en/contact/` | `/tr/iletisim/` |
+
+## Yönetim paneli (`/yonetim`)
+
+Türkçe, kullanıcı adı + şifreyle giriş. Hostinger'de PHP ile çalışır.
+
+| Bölüm | Ne yapar |
+| --- | --- |
+| Talepler | İletişim formundan gelenler (e-postaya ek olarak). Durum (yeni/okundu/yanıtlandı/arşiv), not, CSV indirme. |
+| Ürünler | Star Termos serileri, yükleme tablosu, Gastroplast grupları, GN küvet tablosu. Fotoğraf yükleme, ana sayfada göster işareti. |
+| Kataloglar | PDF ve kapak yükleme; boyut/sayfa sayısı otomatik. |
+| Site metinleri | 4 dilin tüm yazıları; her alanın altında referans dil karşılığı. |
+| İletişim bilgileri | E-posta, telefon, WhatsApp, LinkedIn, Instagram. |
+
+**Nasıl çalışır:** Site statiktir (SEO için). Panelde "Kaydet ve yayınla" → değişiklik GitHub'a commit edilir
+(`content/*.json`, yüklenen görseller `public/img/uploads/`, PDF'ler `kataloglar/`) → GitHub Actions siteyi derleyip
+`yayin` dalına koyar (1–3 dk) → panel bu sürümü indirip `public_html`'e açar (panel açıkken otomatik, ya da
+"Siteyi şimdi güncelle"). Geliştirici `main`'e push ettiğinde de aynı yol izlenir; panele bir kez girmek siteyi günceller.
+
+**İlk kurulum (bir kez):**
+1. GitHub → Settings → Developer settings → **Fine-grained personal access token** oluşturun:
+   Repository access: yalnızca `la-turca-trade-web`; Permissions: **Contents: Read and write**, **Actions: Read-only**.
+2. Siteyi Hostinger'e yükledikten sonra `https://laturcatrade.com/yonetim/` adresini açın → kurulum sayfası.
+   Kullanıcı adı, şifre (en az 10 karakter), anahtar, bildirim e-postası girin.
+   Güvenlik: depoya yazma yetkisi olan bir anahtar girilmeden kurulum tamamlanmaz; kurulumdan sonra sayfa kapanır.
+
+**Veriler:** `public_html`'in bir üstünde `ltt-data/` (ayarlar, şifre özeti, GitHub anahtarı, `talepler.sqlite`).
+Web'den erişilemez. Yedek almak için bu klasörü indirin. Şifre unutulursa: `ltt-data/config.php` silinir → kurulum yeniden açılır
+(talepler korunur).
+
+**Gereksinimler:** PHP 8.1+, cURL, ZipArchive, GD (WebP), PDO SQLite — panel Ayarlar sayfasında kontrol listesi var.
 
 ## SEO
 
