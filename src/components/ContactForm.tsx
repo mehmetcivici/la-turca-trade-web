@@ -44,7 +44,7 @@ export function ContactForm({ d, locale, compact = false }: { d: Dict; locale: L
     );
   }
 
-  const countries = COUNTRY_ORDER.map((c) => ({ c, n: d.countries[c] })).sort((a, b) => a.n.localeCompare(b.n, locale));
+  const countries = COUNTRY_ORDER.map((c) => ({ c, n: (d.countries as Record<string, string>)[c] })).sort((a, b) => a.n.localeCompare(b.n, locale));
 
   return (
     <form onSubmit={onSubmit} className="grid gap-5 sm:grid-cols-2" noValidate={false}>

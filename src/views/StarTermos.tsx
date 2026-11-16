@@ -71,7 +71,7 @@ export function StarTermos({ locale, d }: { locale: Locale; d: Dict }) {
                 </div>
                 <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
                   {starSeries.filter((x) => x.group === g).map((x) => (
-                    <SeriesCard key={x.id} s={x} d={d} />
+                    <SeriesCard key={x.id} s={x} d={d} locale={locale} />
                   ))}
                 </div>
               </div>

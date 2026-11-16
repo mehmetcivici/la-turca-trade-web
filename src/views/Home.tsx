@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
-import { starLoading } from "@/content/products";
+import { starLoading, tx } from "@/content/products";
 import { BadgeDollarSign, ClipboardCheck, FileText, MessagesSquare, PackageOpen, Ship } from "lucide-react";
 import { Arrow, Check, Img, SectionHead, Stats } from "@/components/ui";
 import { ATLANTIC_PORTS, PACIFIC_PORTS } from "@/content/routes";
@@ -27,7 +27,7 @@ export function LoadingTable({ d, locale }: { d: Dict; locale: Locale }) {
           {starLoading.map((r) => (
             <tr key={r.code} className="border-b border-line">
               <td className="tabular py-4 pr-4 text-[0.95rem] text-muted">{r.code}</td>
-              <td className="py-4 pr-4">{d.products.loading[r.key]}</td>
+              <td className="py-4 pr-4">{tx(r.label, locale)}</td>
               <td className="tabular py-4 pr-4 text-right">{r.perBox}</td>
               <td className="tabular py-4 pr-4 text-right">{nf.format(r.boxes40)}</td>
               <td className="tabular py-4 text-right font-serif text-xl text-navy">{nf.format(r.hc40)}</td>
@@ -120,7 +120,7 @@ export function Home({ locale, d }: { locale: Locale; d: Dict }) {
             </Link>
           </div>
           <div className="mt-12">
-            <SeriesGrid d={d} ids={["elegant", "east", "mimoza", "kastel", "horeca", "camping", "trailmate", "thermbox"]} />
+            <SeriesGrid d={d} locale={locale} featured />
           </div>
         </div>
       </section>
@@ -134,7 +134,7 @@ export function Home({ locale, d }: { locale: Locale; d: Dict }) {
           </Link>
         </div>
         <div className="mt-12">
-          <CategoryGrid d={d} ids={["gnPc", "storage", "bakery", "dispensers", "bar", "transport"]} />
+          <CategoryGrid d={d} locale={locale} featured />
         </div>
       </section>
 

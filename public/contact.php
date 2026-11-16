@@ -6,7 +6,7 @@
  */
 declare(strict_types=1);
 
-const ALICI = 'info@laturcatrade.com';          // talepler bu adrese gelir
+const ALICI = 'info@laturcatrade.com';          // talepler bu adrese gelir (panel ayarlarındaki adres önceliklidir)
 const GONDEREN = 'info@laturcatrade.com';       // aynı alan adında, Hostinger'de açılmış bir adres olmalı
 
 header('Content-Type: application/json; charset=utf-8');
@@ -50,6 +50,19 @@ $lock = sys_get_temp_dir() . '/ltt_' . md5($ip);
 if (is_file($lock) && time() - filemtime($lock) < 60) out(429, ['ok' => false]);
 @touch($lock);
 
+// Talebi yönetim paneline kaydet (yonetim/_lib/db.php → ltt-data/talepler.sqlite)
+$alici = ALICI;
+try {
+    require_once __DIR__ . '/yonetim/_lib/db.php';
+    talep_ekle(compact('name', 'company', 'email', 'phone', 'country', 'type', 'interest', 'message', 'lang', 'page', 'ip'));
+    $cfg = config();
+    if (!empty($cfg['notify']) && filter_var($cfg['notify'], FILTER_VALIDATE_EMAIL)) $alici = $cfg['notify'];
+    $saved = true;
+} catch (Throwable $e) {
+    $saved = false;
+    error_log('LTT talep kaydedilemedi: ' . $e->getMessage());
+}
+
 $subject = 'Web talebi: ' . $company . ' (' . $country . ')';
 $body = "Ad soyad: $name\nFirma: $company\nÜlke: $country\nE-posta: $email\nTelefon: $phone\nFirma türü: $type\nİlgi: $interest\nDil: $lang\nSayfa: $page\n\nMesaj:\n$message\n";
 
@@ -60,5 +73,7 @@ $headers = [
     'MIME-Version: 1.0',
 ];
 
-$ok = mail(ALICI, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, implode("\r\n", $headers), '-f' . GONDEREN);
+$mailed = @mail($alici, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, implode("\r\n", $headers), '-f' . GONDEREN);
+// Panele kaydedildiyse e-posta gitmese de ziyaretçiye başarı dönülür
+$ok = $saved || $mailed;
 out($ok ? 200 : 500, ['ok' => $ok]);

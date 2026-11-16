@@ -1,0 +1,50 @@
+{
+  "name": "La Turca Trade",
+  "url": "https://laturcatrade.com",
+  "email": "info@laturcatrade.com",
+  "phone": "",
+  "whatsapp": "",
+  "linkedin": "",
+  "instagram": "",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "formEndpoint": "/contact.php",
+  "areaServed": [
+    "AR",
+    "BO",
+    "BR",
+    "CL",
+    "CO",
+    "EC",
+    "PY",
+    "PE",
+    "UY",
+    "VE"
+  ],
+  "catalogs": [
+    {
+      "id": "star-termos",
+      "brand": "Star Termos",
+      "file": "/catalogs/star-termos-catalogo-2025.pdf",
+      "cover": "/img/catalogs/star-termos-cover.webp",
+      "coverW": 900,
+      "coverH": 679,
+      "pages": 41,
+      "sizeMb": 4.6,
+      "year": 2025,
+      "lang": "EN"
+    },
+    {
+      "id": "gastroplast",
+      "brand": "Gastroplast",
+      "file": "/catalogs/gastroplast-catalogo.pdf",
+      "cover": "/img/catalogs/gastroplast-cover.webp",
+      "coverW": 700,
+      "coverH": 990,
+      "pages": 148,
+      "sizeMb": 20.4,
+      "year": 2024,
+      "lang": "EN · TR"
+    }
+  ]
+}

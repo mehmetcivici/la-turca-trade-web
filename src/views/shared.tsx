@@ -3,11 +3,11 @@ import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
 import { catalogs, site } from "@/content/site";
 import { asset } from "@/lib/asset";
-import { starSeries, gastroCategories, type StarSeries, type GastroCategory } from "@/content/products";
+import { starSeries, gastroCategories, tx, type StarSeries, type GastroCategory } from "@/content/products";
 import { Arrow, Download, Img } from "@/components/ui";
 
-export function SeriesCard({ s, d }: { s: StarSeries; d: Dict }) {
-  const detail = d.products.details[s.id];
+export function SeriesCard({ s, d, locale }: { s: StarSeries; d: Dict; locale: Locale }) {
+  const detail = tx(s.detail, locale);
   return (
     <article className="card card-hover group flex flex-col overflow-hidden">
       <div className="overflow-hidden bg-paper-2">
@@ -27,19 +27,20 @@ export function SeriesCard({ s, d }: { s: StarSeries; d: Dict }) {
   );
 }
 
-export function SeriesGrid({ d, ids }: { d: Dict; ids?: string[] }) {
-  const list = ids ? ids.map((id) => starSeries.find((s) => s.id === id)!).filter(Boolean) : starSeries;
+export function SeriesGrid({ d, locale, featured = false }: { d: Dict; locale: Locale; featured?: boolean }) {
+  const list = featured ? starSeries.filter((s) => s.featured) : starSeries;
   return (
     <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
       {list.map((s) => (
-        <SeriesCard key={s.id} s={s} d={d} />
+        <SeriesCard key={s.id} s={s} d={d} locale={locale} />
       ))}
     </div>
   );
 }
 
-export function CategoryCard({ c, d, showCodes = false }: { c: GastroCategory; d: Dict; showCodes?: boolean }) {
-  const t = d.products.gastro[c.id];
+export function CategoryCard({ c, d, locale, showCodes = false }: { c: GastroCategory; d: Dict; locale: Locale; showCodes?: boolean }) {
+  void d;
+  const t = { t: tx(c.title, locale), d: tx(c.desc, locale) };
   return (
     <article className="card card-hover group flex flex-col overflow-hidden">
       <div className="overflow-hidden bg-white">
@@ -60,12 +61,12 @@ export function CategoryCard({ c, d, showCodes = false }: { c: GastroCategory; d
   );
 }
 
-export function CategoryGrid({ d, ids, showCodes = false }: { d: Dict; ids?: string[]; showCodes?: boolean }) {
-  const list = ids ? gastroCategories.filter((c) => ids.includes(c.id)) : gastroCategories;
+export function CategoryGrid({ d, locale, featured = false, showCodes = false }: { d: Dict; locale: Locale; featured?: boolean; showCodes?: boolean }) {
+  const list = featured ? gastroCategories.filter((c) => c.featured) : gastroCategories;
   return (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
       {list.map((c) => (
-        <CategoryCard key={c.id} c={c} d={d} showCodes={showCodes} />
+        <CategoryCard key={c.id} c={c} d={d} locale={locale} showCodes={showCodes} />
       ))}
     </div>
   );

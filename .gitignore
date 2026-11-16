@@ -9,3 +9,5 @@ next-env.d.ts
 public/catalogs/*.pdf
 .next-pages
 .next-prod
+.next-check
+ltt-data

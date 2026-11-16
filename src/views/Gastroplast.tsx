@@ -3,7 +3,7 @@ import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
 import { catalogs, manufacturers } from "@/content/site";
 import { asset } from "@/lib/asset";
-import { gastroCategories, gnSizes, gnDepths, gnPerBox, gnCode } from "@/content/products";
+import { gastroCategories, gnSizes, gnDepths, gnPerBox, gnCode, tx } from "@/content/products";
 import { Arrow, Check, Download, Img, PageBanner, SectionHead, Stats } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -20,7 +20,7 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
           "@context": "https://schema.org",
           "@type": "ItemList",
           name: g.catsTitle + " — Gastroplast",
-          itemListElement: gastroCategories.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: d.products.gastro[c.id].t })),
+          itemListElement: gastroCategories.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: tx(c.title, locale) })),
         }}
       />
       <PageBanner
@@ -54,7 +54,7 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
           </a>
         </div>
         <div className="lg:col-span-5">
-          <Img src="/img/gastroplast/gn-pc-black.webp" alt={d.products.gastro.gnPc.t} w={800} h={800} className="aspect-square w-full rounded-2xl object-cover shadow-soft" />
+          <Img src="/img/gastroplast/gn-pc-black.webp" alt={g.gnTitle} w={800} h={800} className="aspect-square w-full rounded-2xl object-cover shadow-soft" />
         </div>
       </section>
 
@@ -62,7 +62,7 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
         <div className="wrap">
           <SectionHead id="cats" kicker="Gastroplast" title={g.catsTitle} />
           <div className="mt-10">
-            <CategoryGrid d={d} showCodes />
+            <CategoryGrid d={d} locale={locale} showCodes />
           </div>
         </div>
       </section>

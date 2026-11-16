@@ -1,0 +1,492 @@
+{
+  "starSeries": [
+    {
+      "id": "elegant",
+      "name": "Elegant",
+      "group": "jugs",
+      "material": "doubleGlass",
+      "capacity": "2 L",
+      "image": "/img/star-termos/elegant.webp",
+      "detail": {
+        "es": "Cuerpo con aro cromado",
+        "pt": "Corpo com anel cromado",
+        "en": "Chrome-banded body",
+        "tr": "Krom bantlı gövde"
+      },
+      "featured": true
+    },
+    {
+      "id": "east",
+      "name": "East",
+      "group": "jugs",
+      "material": "doubleGlass",
+      "capacity": "1,5 L",
+      "image": "/img/star-termos/east.webp",
+      "detail": {
+        "es": "Aro en tono oro rosa",
+        "pt": "Anel em tom ouro rosé",
+        "en": "Rose-gold band",
+        "tr": "Rose gold bant"
+      },
+      "featured": true
+    },
+    {
+      "id": "dinamik",
+      "name": "Dinamik",
+      "group": "jugs",
+      "material": "solidBody",
+      "capacity": "1 L · 1,5 L",
+      "image": "/img/star-termos/dinamik.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": false
+    },
+    {
+      "id": "mimoza",
+      "name": "Mimoza",
+      "group": "jugs",
+      "material": "doubleGlass",
+      "capacity": "1 L · 1,5 L",
+      "image": "/img/star-termos/mimoza.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": true
+    },
+    {
+      "id": "kastel",
+      "name": "Kastel",
+      "group": "jugs",
+      "material": "solidBody",
+      "capacity": "1 L · 1,5 L",
+      "image": "/img/star-termos/kastel.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": true
+    },
+    {
+      "id": "zagana",
+      "name": "Zagana",
+      "group": "jugs",
+      "material": "solidBody",
+      "capacity": "1 L · 1,5 L",
+      "image": "/img/star-termos/zagana.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": false
+    },
+    {
+      "id": "morepse",
+      "name": "Morepse",
+      "group": "jugs",
+      "material": "doubleGlass",
+      "capacity": "1 L · 1,5 L",
+      "image": "/img/star-termos/morepse.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": false
+    },
+    {
+      "id": "horeca",
+      "name": "Horeca",
+      "group": "pro",
+      "material": "steel",
+      "capacity": "1,5 L · 2 L",
+      "image": "/img/star-termos/horeca.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": true
+    },
+    {
+      "id": "camping",
+      "name": "Camping",
+      "group": "pro",
+      "material": "steel",
+      "capacity": "8 L",
+      "image": "/img/star-termos/camping.webp",
+      "detail": {
+        "es": "Dispensador con grifo",
+        "pt": "Dispenser com torneira",
+        "en": "Dispenser with tap",
+        "tr": "Musluklu dispenser"
+      },
+      "featured": true
+    },
+    {
+      "id": "soothe",
+      "name": "Soothe",
+      "group": "go",
+      "material": "steel304",
+      "capacity": "350 ml",
+      "image": "/img/star-termos/soothe.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": false
+    },
+    {
+      "id": "locksip",
+      "name": "Locksip",
+      "group": "go",
+      "material": "steel304",
+      "capacity": "380 ml",
+      "image": "/img/star-termos/locksip.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": false
+    },
+    {
+      "id": "trailmate",
+      "name": "Trailmate",
+      "group": "go",
+      "material": "steel304",
+      "capacity": "500 ml",
+      "image": "/img/star-termos/trailmate.webp",
+      "detail": {
+        "es": "Incluye vaso de acero de 140 ml",
+        "pt": "Acompanha copo de aço de 140 ml",
+        "en": "Includes 140 ml steel cup",
+        "tr": "140 ml çelik bardak dahil"
+      },
+      "featured": true
+    },
+    {
+      "id": "aqua",
+      "name": "Aqua",
+      "group": "go",
+      "material": "steel",
+      "capacity": "900 ml",
+      "image": "/img/star-termos/aqua.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": false
+    },
+    {
+      "id": "sport",
+      "name": "Sport",
+      "group": "go",
+      "material": "steel",
+      "capacity": "350 ml",
+      "image": "/img/star-termos/sport.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": false
+    },
+    {
+      "id": "thermbox",
+      "name": "Thermbox",
+      "group": "food",
+      "material": "steelFood",
+      "capacity": "500 ml",
+      "image": "/img/star-termos/thermbox.webp",
+      "detail": {
+        "es": "",
+        "pt": "",
+        "en": "",
+        "tr": ""
+      },
+      "featured": true
+    }
+  ],
+  "starLoading": [
+    {
+      "code": "STM-6166",
+      "label": {
+        "es": "Jarra de vidrio doble 1 L",
+        "pt": "Garrafa de vidro duplo 1 L",
+        "en": "Double-glass jug 1 L",
+        "tr": "Çift cam termos sürahi 1 L"
+      },
+      "perBox": 12,
+      "box": "60 × 45 × 25",
+      "boxes40": 1125,
+      "hc40": 13500
+    },
+    {
+      "code": "STM-6165",
+      "label": {
+        "es": "Jarra de vidrio doble 1,5 L",
+        "pt": "Garrafa de vidro duplo 1,5 L",
+        "en": "Double-glass jug 1.5 L",
+        "tr": "Çift cam termos sürahi 1,5 L"
+      },
+      "perBox": 12,
+      "box": "60 × 45 × 32,5",
+      "boxes40": 814,
+      "hc40": 9768
+    },
+    {
+      "code": "TB-6175",
+      "label": {
+        "es": "Termo para alimentos 500 ml (Thermbox)",
+        "pt": "Pote térmico 500 ml (Thermbox)",
+        "en": "Food jar 500 ml (Thermbox)",
+        "tr": "Yemek termosu 500 ml (Thermbox)"
+      },
+      "perBox": 12,
+      "box": "23 × 33 × 33,5",
+      "boxes40": 2708,
+      "hc40": 32496
+    }
+  ],
+  "gastroCategories": [
+    {
+      "id": "gnPc",
+      "image": "/img/gastroplast/gn-pc-clear.webp",
+      "codes": [
+        "GNP-1165",
+        "GNP-12100",
+        "GNP-13150"
+      ],
+      "title": {
+        "es": "Cubetas gastronorm de policarbonato",
+        "pt": "Cubas gastronorm de policarbonato",
+        "en": "Polycarbonate gastronorm pans",
+        "tr": "Polikarbonat gastronom küvetler"
+      },
+      "desc": {
+        "es": "Transparentes y negras, GN 1/1 a 1/9, de 65 a 200 mm. Tapas lisas, con muesca y con bisagra.",
+        "pt": "Transparentes e pretas, GN 1/1 a 1/9, de 65 a 200 mm. Tampas lisas, com recorte e com dobradiça.",
+        "en": "Clear and black, GN 1/1 to 1/9, 65 to 200 mm deep. Plain, notched and hinged lids.",
+        "tr": "Şeffaf ve siyah, GN 1/1'den 1/9'a, 65–200 mm. Düz, kesik ve menteşeli kapaklar."
+      },
+      "featured": true
+    },
+    {
+      "id": "gnPp",
+      "image": "/img/gastroplast/gn-pp.webp",
+      "codes": [
+        "GNPPLM-12",
+        "GSP-12"
+      ],
+      "title": {
+        "es": "Cubetas gastronorm de polipropileno",
+        "pt": "Cubas gastronorm de polipropileno",
+        "en": "Polypropylene gastronorm pans",
+        "tr": "Polipropilen gastronom küvetler"
+      },
+      "desc": {
+        "es": "Translúcidas y negras, con tapas de colores para identificar alimentos.",
+        "pt": "Translúcidas e pretas, com tampas coloridas para identificar alimentos.",
+        "en": "Translucent and black, with colour-coded lids.",
+        "tr": "Yarı saydam ve siyah, gıdaları ayırt etmek için renkli kapaklar."
+      },
+      "featured": false
+    },
+    {
+      "id": "storage",
+      "image": "/img/gastroplast/square-storage.webp",
+      "codes": [
+        "GIB-01",
+        "GIB-02",
+        "GIB-03"
+      ],
+      "title": {
+        "es": "Almacenamiento",
+        "pt": "Armazenamento",
+        "en": "Storage",
+        "tr": "Saklama"
+      },
+      "desc": {
+        "es": "Recipientes cuadrados y redondos graduados, carros de ingredientes de 62, 82 y 102 litros.",
+        "pt": "Potes quadrados e redondos graduados, carros para ingredientes de 62, 82 e 102 litros.",
+        "en": "Graduated square and round containers, 62, 82 and 102 litre ingredient bins.",
+        "tr": "Ölçekli kare ve yuvarlak kaplar, 62, 82 ve 102 litrelik erzak arabaları."
+      },
+      "featured": true
+    },
+    {
+      "id": "bakery",
+      "image": "/img/gastroplast/dough-boxes.webp",
+      "codes": [
+        "GPHPE-75",
+        "GPHPE-100"
+      ],
+      "title": {
+        "es": "Panadería y pizzería",
+        "pt": "Panificação e pizzaria",
+        "en": "Bakery and pizza",
+        "tr": "Fırın ve pizza"
+      },
+      "desc": {
+        "es": "Cajas para masa en PP y PE de 600 × 400 mm, apilables, con tapa.",
+        "pt": "Caixas para massa em PP e PE de 600 × 400 mm, empilháveis, com tampa.",
+        "en": "600 × 400 mm PP and PE dough boxes, stackable, with lids.",
+        "tr": "600 × 400 mm PP ve PE hamur tekneleri, istiflenebilir, kapaklı."
+      },
+      "featured": true
+    },
+    {
+      "id": "buffet",
+      "image": "/img/gastroplast/dome-covers.webp",
+      "codes": [],
+      "title": {
+        "es": "Buffet y servicio",
+        "pt": "Buffet e serviço",
+        "en": "Buffet and service",
+        "tr": "Büfe ve servis"
+      },
+      "desc": {
+        "es": "Campanas y bandejas, escurridores, cubiertos, salseras, platos y bowls de policarbonato.",
+        "pt": "Cúpulas e bandejas, escorredores, porta-talheres, molheiras, pratos e bowls de policarbonato.",
+        "en": "Dome covers and trays, drain shelves, cutlery boxes, sauce bowls, polycarbonate plates and bowls.",
+        "tr": "Fanus ve tepsiler, süzgeçler, çatal-bıçaklıklar, sosluklar, polikarbonat tabak ve kaseler."
+      },
+      "featured": false
+    },
+    {
+      "id": "dispensers",
+      "image": "/img/gastroplast/dispensers.webp",
+      "codes": [],
+      "title": {
+        "es": "Dispensadores",
+        "pt": "Dispensers",
+        "en": "Dispensers",
+        "tr": "Dispenserler"
+      },
+      "desc": {
+        "es": "Dispensadores de salsa con bomba, biberones para salsas y aceite, recipientes para guarniciones.",
+        "pt": "Dispensers de molho com bomba, bisnagas para molhos e azeite, potes para guarnições.",
+        "en": "Pump sauce dispensers, squeeze bottles for sauce and oil, garnish containers.",
+        "tr": "Pompalı sos dispenserleri, sos ve yağ için sıkma şişeler, garnitür kapları."
+      },
+      "featured": true
+    },
+    {
+      "id": "bar",
+      "image": "/img/gastroplast/glasses-jugs.webp",
+      "codes": [
+        "GC-S01",
+        "GCIB-02",
+        "GSRH-03"
+      ],
+      "title": {
+        "es": "Bar y piscina",
+        "pt": "Bar e piscina",
+        "en": "Bar and pool",
+        "tr": "Bar ve havuz"
+      },
+      "desc": {
+        "es": "Vasos, copas y jarras irrompibles en PC, PP y Tritan. Hieleras de 6 litros.",
+        "pt": "Copos, taças e jarras inquebráveis em PC, PP e Tritan. Baldes de gelo de 6 litros.",
+        "en": "Unbreakable glasses, goblets and pitchers in PC, PP and Tritan. 6 litre ice buckets.",
+        "tr": "PC, PP ve Tritan kırılmaz bardak, kadeh ve sürahiler. 6 litrelik buz kovaları."
+      },
+      "featured": true
+    },
+    {
+      "id": "transport",
+      "image": "/img/gastroplast/carry-box.webp",
+      "codes": [
+        "G-600"
+      ],
+      "title": {
+        "es": "Transporte de alimentos",
+        "pt": "Transporte de alimentos",
+        "en": "Food transport",
+        "tr": "Yemek taşıma"
+      },
+      "desc": {
+        "es": "Caja de transporte GN 1/1 en ABS para catering y delivery.",
+        "pt": "Caixa de transporte GN 1/1 em ABS para catering e delivery.",
+        "en": "GN 1/1 ABS carry box for catering and delivery.",
+        "tr": "Catering ve paket servis için ABS GN 1/1 taşıma kabı."
+      },
+      "featured": true
+    },
+    {
+      "id": "tools",
+      "image": "/img/gastroplast/scoops.webp",
+      "codes": [],
+      "title": {
+        "es": "Palas y medidores",
+        "pt": "Pás e medidores",
+        "en": "Scoops and measures",
+        "tr": "Kürek ve ölçü kapları"
+      },
+      "desc": {
+        "es": "Palas para hielo y harina, jarras medidoras graduadas en PC y PP.",
+        "pt": "Pás para gelo e farinha, jarras medidoras graduadas em PC e PP.",
+        "en": "Ice and flour scoops, graduated measuring jugs in PC and PP.",
+        "tr": "Buz ve un kürekleri, PC ve PP ölçekli ölçü kapları."
+      },
+      "featured": false
+    }
+  ],
+  "gnPerBox": {
+    "1/1": [
+      12,
+      12,
+      6,
+      6
+    ],
+    "1/2": [
+      24,
+      12,
+      12,
+      12
+    ],
+    "1/3": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "1/4": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "1/6": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "1/9": [
+      12,
+      12,
+      12,
+      null
+    ]
+  }
+}

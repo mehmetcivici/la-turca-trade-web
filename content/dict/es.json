@@ -1,0 +1,586 @@
+{
+  "meta": {
+    "siteDescription": "Oficina comercial para Sudamérica de Star Termos y Gastroplast, fabricantes de Estambul. Termos, jarras térmicas y equipamiento gastronómico para importadores y distribuidores."
+  },
+  "nav": {
+    "starTermos": "Star Termos",
+    "gastroplast": "Gastroplast",
+    "distributors": "Distribuidores",
+    "privateLabel": "Marca propia",
+    "catalogs": "Catálogos",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "common": {
+    "quote": "Solicitar cotización",
+    "catalogs": "Descargar catálogos",
+    "priceList": "Pedir lista de precios",
+    "download": "Descargar PDF",
+    "open": "Ver en línea",
+    "pages": "páginas",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "skip": "Ir al contenido",
+    "language": "Idioma",
+    "madeIn": "Productos fabricados en Turquía",
+    "source": "Fuente",
+    "officialSite": "Sitio del fabricante",
+    "seeAll": "Ver toda la línea",
+    "capacity": "Capacidad",
+    "material": "Material",
+    "code": "Código",
+    "perBox": "Unid. por caja",
+    "box": "Caja (cm)",
+    "boxes": "Cajas",
+    "units": "Unidades",
+    "in40hc": "En un 40' HC",
+    "home": "Inicio"
+  },
+  "footer": {
+    "blurb": "Oficina comercial para Sudamérica de Star Termos y Gastroplast. Exportamos desde Estambul a importadores, distribuidores y cadenas de la región.",
+    "brandsNote": "Star Termos y Gastroplast son marcas de sus respectivos fabricantes. Fotografías y datos técnicos: material oficial de cada fábrica.",
+    "rights": "Todos los derechos reservados.",
+    "write": "Escríbanos",
+    "pages": "Páginas",
+    "makers": "Fabricantes"
+  },
+  "home": {
+    "title": "Termos y equipamiento gastronómico de Turquía para distribuidores",
+    "description": "Oficina comercial de Star Termos y Gastroplast para Sudamérica. Termos al vacío, jarras térmicas, cubetas gastronorm y artículos HoReCa a precio de fábrica, en contenedor completo o mixto, con opción de marca propia.",
+    "hero": {
+      "kicker": "Star Termos · Gastroplast · Estambul",
+      "h1": "Termos y equipamiento gastronómico turco, directo de fábrica para Sudamérica",
+      "lead": "La Turca Trade es la oficina comercial de Star Termos y Gastroplast para América del Sur. Atendemos a importadores, distribuidores y cadenas con precio de fábrica, contenedores completos o mixtos y la documentación que pide su aduana.",
+      "caption": "Jarras térmicas de Star Termos, fotografía de la fábrica."
+    },
+    "facts": [
+      {
+        "v": "30 años",
+        "l": "de Star Termos en el sector del menaje, 12 de ellos fabricando termos"
+      },
+      {
+        "v": "ISO 9001 · 14001 · 22000 · 45001",
+        "l": "Sistemas certificados en la planta de Star Termos"
+      },
+      {
+        "v": "NSF",
+        "l": "Cubetas gastronorm de PC y PP de Gastroplast listadas por NSF International"
+      },
+      {
+        "v": "55+ países",
+        "l": "reciben hoy productos de Gastroplast"
+      }
+    ],
+    "makers": {
+      "title": "Dos fábricas en Esenyurt, a 20 km del puerto",
+      "lead": "Star Termos y Gastroplast producen en Esenyurt, en el lado europeo de Estambul, a unos 20 km del puerto de Ambarlı. La cercanía nos permite consolidar productos de ambas plantas en un mismo contenedor y supervisar la carga en persona."
+    },
+    "star": {
+      "lead": "Jarras y termos al vacío desde 250 ml hasta 8 litros: ampollas de vidrio doble, acero inoxidable 304, vasos térmicos y termos para alimentos. Empresa familiar fundada por Mehmet Dinçok.",
+      "facts": [
+        "Exporta a 19 países",
+        "ISO 9001, 14001, 22000 y 45001",
+        "Miembro de Sedex",
+        "Fabricación OEM y ODM"
+      ],
+      "link": "Conocer Star Termos"
+    },
+    "gastro": {
+      "lead": "Equipamiento para hoteles, restaurantes y catering en policarbonato, polipropileno, Tritan y ABS: cubetas gastronorm, contenedores, dispensadores, vasos y bandejas. Diseña y fabrica sus propios moldes.",
+      "facts": [
+        "Exporta a más de 55 países",
+        "Cubetas GN listadas por NSF",
+        "Ensayos de contacto alimentario FDA y UE",
+        "Filial y depósito en Budapest"
+      ],
+      "link": "Conocer Gastroplast"
+    },
+    "starLine": {
+      "title": "Jarras térmicas para la mesa de todos los días",
+      "lead": "Las jarras de vidrio doble mantienen el café y el mate caliente durante horas y son el producto más pedido por cadenas de bazar y menaje. Hay series clásicas, de cuerpo reforzado y de acero para uso profesional."
+    },
+    "gastroLine": {
+      "title": "Lo que usa una cocina profesional, en plástico técnico",
+      "lead": "Cubetas gastronorm en todas las medidas, recipientes de almacenamiento, cajas para masa, dispensadores y vajilla irrompible para bares y piscinas. Productos de reposición constante para el distribuidor HoReCa."
+    },
+    "container": {
+      "title": "Contenedor completo o mixto",
+      "lead": "Puede llenar un contenedor con una sola referencia o combinar termos de Star Termos con artículos de Gastroplast. Consolidamos la carga en Estambul, verificamos cantidades y embalaje antes de cerrar el contenedor y le enviamos fotos de cada etapa.",
+      "tableTitle": "Cuánto entra en un contenedor de 40' HC",
+      "note": "Datos del catálogo 2025 de Star Termos. Las cantidades exactas se confirman en cada proforma.",
+      "figure": "Contenedor 40' HC · medidas interiores aproximadas"
+    },
+    "routes": {
+      "title": "Desde Ambarlı a los puertos de la región",
+      "lead": "Embarcamos desde el puerto de Ambarlı, en Estambul, hacia la costa atlántica y la costa del Pacífico. Cotizamos en FOB, CFR o CIF. El tiempo de tránsito depende de la naviera y de los transbordos, y lo confirmamos en cada oferta.",
+      "atlantic": "Costa atlántica",
+      "pacific": "Pacífico y Caribe",
+      "origin": "Estambul · Ambarlı",
+      "mapAlt": "Mapa de rutas marítimas desde Estambul hacia puertos de Sudamérica"
+    },
+    "pl": {
+      "title": "Su marca en el producto",
+      "lead": "Star Termos fabrica con logotipo y empaque del cliente. Podemos marcar su logo en termos y vasos, aplicar sus colores y producir la caja con su diseño y su código de barras. En Gastroplast evaluamos cada pedido según la pieza y el volumen.",
+      "link": "Cómo funciona la marca propia"
+    },
+    "catalogs": {
+      "title": "Catálogos de fábrica",
+      "lead": "Los catálogos completos con códigos, medidas y unidades por caja. Para precios, escríbanos indicando su país y el puerto de destino."
+    },
+    "how": {
+      "title": "Cómo trabajamos con distribuidores",
+      "items": [
+        {
+          "t": "Precio de fábrica en USD",
+          "d": "FOB Estambul, CFR o CIF a su puerto. Sin intermediarios entre usted y la planta."
+        },
+        {
+          "t": "Muestras antes del primer pedido",
+          "d": "Enviamos muestras de las referencias que le interesan para que las pruebe en su mercado."
+        },
+        {
+          "t": "Inspección antes de la carga",
+          "d": "Revisamos cantidades, embalaje y marcado. Recibe fotos y video del contenedor antes del cierre."
+        },
+        {
+          "t": "Documentos completos",
+          "d": "Proforma, factura comercial, lista de empaque, certificado de origen y conocimiento de embarque."
+        },
+        {
+          "t": "Un solo interlocutor",
+          "d": "Hablamos español, portugués, inglés y turco. Usted trata con una persona, no con dos fábricas."
+        },
+        {
+          "t": "Seguimiento hasta destino",
+          "d": "Le informamos la fecha de zarpe, los transbordos y la llegada estimada a su puerto."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Cuéntenos qué distribuye y a qué puerto llega",
+      "lead": "Respondemos con lista de precios, catálogo y una propuesta de primer pedido."
+    }
+  },
+  "star": {
+    "title": "Star Termos: termos y jarras térmicas fabricados en Estambul",
+    "description": "Jarras térmicas de vidrio doble, termos de acero inoxidable, vasos térmicos y termos para alimentos de Star Termos. Exportación a Sudamérica, contenedor completo o mixto y fabricación con su marca.",
+    "h1": "Star Termos",
+    "sub": "Termos y jarras térmicas, Estambul",
+    "intro": [
+      "Star Termos es un fabricante de Estambul con 30 años en el sector del menaje y 12 años de producción profesional de termos. La empresa fue fundada por Mehmet Dinçok y hoy la dirige la familia Dinçok.",
+      "Fabrica jarras con ampolla de vidrio doble, termos de acero inoxidable, termos HoReCa y de camping, vasos térmicos y termos para alimentos, desde 250 ml hasta 8 litros. Según el modelo, mantiene las bebidas calientes hasta 12 horas y frías hasta 24 horas.",
+      "La planta tiene certificados ISO 9001 (calidad), ISO 14001 (medio ambiente), ISO 22000 (inocuidad alimentaria) e ISO 45001 (seguridad laboral), y es miembro de Sedex. Exporta a 19 países y fabrica con marca del cliente (OEM y ODM)."
+    ],
+    "facts": [
+      {
+        "v": "30",
+        "l": "años en el sector"
+      },
+      {
+        "v": "19",
+        "l": "países de exportación"
+      },
+      {
+        "v": "250 ml – 8 L",
+        "l": "rango de capacidades"
+      },
+      {
+        "v": "2 años",
+        "l": "de garantía de fabricación"
+      }
+    ],
+    "seriesTitle": "Series",
+    "loadingTitle": "Datos de carga",
+    "loadingLead": "Ejemplos del catálogo 2025. Cada referencia tiene su tabla de carga para contenedores de 20' y 40'.",
+    "certTitle": "Certificaciones",
+    "certs": [
+      {
+        "t": "ISO 9001:2015",
+        "d": "Gestión de la calidad"
+      },
+      {
+        "t": "ISO 14001:2015",
+        "d": "Gestión ambiental"
+      },
+      {
+        "t": "ISO 22000:2018",
+        "d": "Inocuidad de los alimentos"
+      },
+      {
+        "t": "ISO 45001:2018",
+        "d": "Seguridad y salud en el trabajo"
+      },
+      {
+        "t": "Sedex",
+        "d": "Plataforma de comercio ético"
+      }
+    ],
+    "certNote": "Certificados emitidos por ASCERT con acreditación IAF, alcance: fabricación y venta de artículos de cocina de acero, hierro, plástico y aluminio.",
+    "faqTitle": "Preguntas frecuentes",
+    "faq": [
+      {
+        "q": "¿Cuánto tiempo mantienen la temperatura los termos Star?",
+        "a": "Depende del modelo. Las bebidas calientes se mantienen hasta 12 horas y las frías hasta 24 horas."
+      },
+      {
+        "q": "¿Qué garantía tienen los productos?",
+        "a": "Star Termos ofrece 2 años de garantía de fabricación y materiales."
+      },
+      {
+        "q": "¿Se puede fabricar con nuestro logotipo?",
+        "a": "Sí. Star Termos trabaja en OEM y ODM: logotipo en el producto, colores y empaque con su marca. Las cantidades mínimas dependen de la referencia."
+      },
+      {
+        "q": "¿Qué ampolla usan las jarras?",
+        "a": "Las series de vidrio usan ampolla de vidrio doble al vacío. Las series de cuerpo reforzado combinan vidrio doble con una carcasa más resistente, y las líneas de acero usan acero inoxidable de doble pared."
+      }
+    ]
+  },
+  "gastro": {
+    "title": "Gastroplast: cubetas gastronorm y equipamiento HoReCa en policarbonato",
+    "description": "Cubetas gastronorm de policarbonato y polipropileno listadas por NSF, contenedores de almacenamiento, dispensadores, vasos y bandejas de Gastroplast. Exportación a Sudamérica desde Estambul.",
+    "h1": "Gastroplast",
+    "sub": "Equipamiento gastronómico, Estambul",
+    "intro": [
+      "Gastroplast es la marca principal de SürPlast Plastik, fabricante de Estambul fundado en 2015 que exporta a más de 55 países. Trabaja para hoteles, restaurantes, catering y la industria alimentaria.",
+      "La empresa diseña y fabrica sus propios moldes. Producir el molde y la pieza en la misma planta reduce costos, mejora el control de calidad y acorta los plazos de entrega de nuevos modelos.",
+      "Las cubetas gastronorm y tapas de PC y PP están listadas por NSF International. El policarbonato utilizado cuenta con ensayos de contacto alimentario según FDA y normativa de la UE. Gastroplast tiene filial y depósito en Budapest, Hungría, y participa en ferias como Ambiente (Fráncfort) y Host (Milán)."
+    ],
+    "facts": [
+      {
+        "v": "55+",
+        "l": "países de exportación"
+      },
+      {
+        "v": "148",
+        "l": "páginas de catálogo"
+      },
+      {
+        "v": "NSF",
+        "l": "cubetas GN de PC y PP"
+      },
+      {
+        "v": "UE",
+        "l": "filial en Budapest"
+      }
+    ],
+    "catsTitle": "Líneas de producto",
+    "gnTitle": "Cubetas gastronorm de policarbonato",
+    "gnLead": "Todas las medidas GN en cuatro profundidades. Código de fábrica y unidades por caja.",
+    "gnDepth": "Profundidad",
+    "gnSize": "Medida",
+    "gnNote": "Fuente: gastroplast.com. También disponibles en PC negro y en PP, con tapas lisas, con muesca y con bisagra.",
+    "certTitle": "Certificaciones y ensayos",
+    "certs": [
+      {
+        "t": "NSF International",
+        "d": "Listado oficial de cubetas GN de PC y PP (NSF/ANSI 2, equipamiento alimentario)"
+      },
+      {
+        "t": "FDA",
+        "d": "Ensayo de contacto alimentario del policarbonato PC-1100"
+      },
+      {
+        "t": "UE",
+        "d": "Ensayo de contacto alimentario según normativa europea"
+      },
+      {
+        "t": "Marca registrada",
+        "d": "Registro de marca en Türk Patent"
+      }
+    ],
+    "fairsTitle": "Ferias",
+    "fairs": [
+      "Ambiente, Fráncfort",
+      "Host, Milán",
+      "Anfaş, Antalya"
+    ],
+    "brands": "Marcas de SürPlast: GastroPlast, GastroCups y GastroCarry."
+  },
+  "dist": {
+    "title": "Para importadores y distribuidores en Sudamérica",
+    "description": "Condiciones para importadores, distribuidores y cadenas de Sudamérica: precio de fábrica en USD, FOB, CFR o CIF, contenedor mixto Star Termos + Gastroplast, muestras, inspección y documentación de exportación.",
+    "h1": "Para importadores y distribuidores",
+    "lead": "Trabajamos con empresas que compran por contenedor o por pallet y revenden en su país. Si distribuye menaje, artículos de bazar, regalos corporativos o equipamiento para hoteles y restaurantes, tenemos productos para su catálogo.",
+    "whoTitle": "A quién atendemos",
+    "who": [
+      {
+        "t": "Importadores y mayoristas",
+        "d": "Que abastecen a ferreterías, bazares y tiendas de menaje."
+      },
+      {
+        "t": "Cadenas minoristas",
+        "d": "Supermercados, tiendas de hogar y bazar con compras centralizadas."
+      },
+      {
+        "t": "Distribuidores HoReCa",
+        "d": "Proveedores de hoteles, restaurantes, cafeterías y catering."
+      },
+      {
+        "t": "Regalos corporativos",
+        "d": "Empresas que necesitan termos y vasos con su logotipo."
+      }
+    ],
+    "stepsTitle": "Del primer contacto al contenedor",
+    "steps": [
+      {
+        "t": "Consulta",
+        "d": "Nos dice qué distribuye, en qué país y a qué puerto llega. Le enviamos catálogos y lista de precios."
+      },
+      {
+        "t": "Muestras",
+        "d": "Seleccionamos las referencias y le enviamos muestras para validar calidad y precio en su mercado."
+      },
+      {
+        "t": "Proforma",
+        "d": "Armamos el contenedor completo o mixto, con cantidades por caja, volumen y peso."
+      },
+      {
+        "t": "Producción",
+        "d": "Con el anticipo confirmado, la fábrica produce. Le informamos el avance y cualquier cambio."
+      },
+      {
+        "t": "Inspección y carga",
+        "d": "Revisamos la mercadería en Estambul. Recibe fotos y video antes de cerrar el contenedor."
+      },
+      {
+        "t": "Embarque y documentos",
+        "d": "Enviamos el conocimiento de embarque y el set documental, y seguimos el envío hasta su puerto."
+      }
+    ],
+    "termsTitle": "Condiciones comerciales",
+    "terms": [
+      {
+        "t": "Moneda",
+        "d": "Precios en dólares estadounidenses."
+      },
+      {
+        "t": "Incoterms",
+        "d": "FOB Estambul, CFR o CIF al puerto de destino."
+      },
+      {
+        "t": "Pago",
+        "d": "Transferencia con anticipo y saldo contra documentos, o carta de crédito. Se acuerda en cada operación."
+      },
+      {
+        "t": "Mínimos",
+        "d": "Dependen de la referencia. Para un primer pedido proponemos un contenedor mixto de 20'."
+      },
+      {
+        "t": "Documentos",
+        "d": "Proforma, factura comercial, lista de empaque, certificado de origen y BL. Otros certificados a pedido."
+      },
+      {
+        "t": "Idiomas",
+        "d": "Español, portugués, inglés y turco."
+      }
+    ],
+    "faqTitle": "Preguntas frecuentes",
+    "faq": [
+      {
+        "q": "¿Puedo combinar productos de Star Termos y Gastroplast en un mismo contenedor?",
+        "a": "Sí. Las dos fábricas están en Esenyurt, Estambul, y consolidamos la carga antes de enviarla al puerto de Ambarlı."
+      },
+      {
+        "q": "¿Venden en cantidades pequeñas?",
+        "a": "Trabajamos con importadores y distribuidores. Para un primer pedido proponemos un contenedor de 20' mixto; las cantidades mínimas exactas dependen de cada referencia."
+      },
+      {
+        "q": "¿Emiten certificado de origen?",
+        "a": "Sí. Los productos son fabricados en Turquía y el certificado de origen se emite con cada embarque."
+      },
+      {
+        "q": "¿Cuánto tarda un pedido?",
+        "a": "Depende de las referencias, del stock de fábrica y de la naviera. Indicamos el plazo de producción y la fecha estimada de zarpe en la proforma."
+      },
+      {
+        "q": "¿Pueden enviar muestras?",
+        "a": "Sí, enviamos muestras de las referencias seleccionadas antes del primer pedido."
+      }
+    ]
+  },
+  "pl": {
+    "title": "Marca propia: termos y artículos HoReCa con su logotipo",
+    "description": "Fabricación con su marca: logotipo en termos, jarras y vasos, colores a medida y empaque con su diseño y código de barras. Producción OEM en Estambul para distribuidores y cadenas de Sudamérica.",
+    "h1": "Marca propia",
+    "lead": "Si su empresa ya tiene una marca reconocida en su país, podemos fabricar con ella. Star Termos produce en OEM y ODM para otras marcas; nosotros coordinamos el diseño, las muestras y la producción.",
+    "whatTitle": "Qué se puede personalizar",
+    "what": [
+      {
+        "t": "Logotipo en el producto",
+        "d": "Grabado láser en acero inoxidable, serigrafía o tampografía en superficies plásticas, según el modelo."
+      },
+      {
+        "t": "Colores",
+        "d": "Cuerpo, tapa y detalles en los colores de su marca, sujeto a cantidades mínimas por color."
+      },
+      {
+        "t": "Caja y embalaje",
+        "d": "Caja individual con su diseño, textos en español o portugués y su código de barras EAN. Caja máster con su marcado."
+      },
+      {
+        "t": "Instrucciones y etiquetas",
+        "d": "Manual de uso y etiquetado según lo que exija la normativa de su país."
+      }
+    ],
+    "stepsTitle": "Cómo se desarrolla",
+    "steps": [
+      {
+        "t": "Briefing",
+        "d": "Nos envía su logotipo en vector, los modelos que le interesan y las cantidades estimadas."
+      },
+      {
+        "t": "Propuesta",
+        "d": "Preparamos una visualización del producto y el empaque, con precio y mínimos por referencia."
+      },
+      {
+        "t": "Muestra",
+        "d": "Fabricamos una muestra física para su aprobación antes de producir."
+      },
+      {
+        "t": "Producción y control",
+        "d": "Producción en serie con inspección de marcado, color y embalaje antes de la carga."
+      }
+    ],
+    "note": "Las cantidades mínimas para marca propia son mayores que para el producto estándar y se confirman por referencia.",
+    "gastroNote": "Para artículos de Gastroplast la personalización se estudia caso a caso, según la pieza y el volumen.",
+    "mock": "SU MARCA"
+  },
+  "cat": {
+    "title": "Catálogos Star Termos y Gastroplast (PDF)",
+    "description": "Descargue los catálogos de fábrica de Star Termos (2025) y Gastroplast con códigos, capacidades, medidas y unidades por caja.",
+    "h1": "Catálogos",
+    "lead": "Catálogos oficiales de cada fábrica. Incluyen códigos, capacidades, medidas de caja y, en el caso de Star Termos, datos de carga por contenedor.",
+    "langLabel": "Idioma del catálogo",
+    "yearLabel": "Edición",
+    "priceTitle": "¿Necesita precios?",
+    "priceLead": "La lista de precios se envía por país y puerto de destino. Complete el formulario y la recibe por correo."
+  },
+  "about": {
+    "title": "Sobre La Turca Trade",
+    "description": "La Turca Trade es la oficina comercial con base en Estambul que representa a Star Termos y Gastroplast ante importadores y distribuidores de Sudamérica.",
+    "h1": "La Turca Trade",
+    "lead": "Somos una oficina comercial con base en Estambul dedicada a llevar productos de fábricas turcas a importadores y distribuidores de América del Sur. Representamos a Star Termos y Gastroplast en la región.",
+    "body": [
+      "Elegimos trabajar con pocas fábricas y conocerlas bien. Visitamos las plantas, conocemos a quienes las dirigen y sabemos qué puede producir cada una y en qué plazo. Eso nos permite cotizar con precisión y cumplir lo que prometemos.",
+      "Para el distribuidor, la diferencia es tener un interlocutor que habla su idioma, entiende cómo se importa en su país y está físicamente cerca de la producción. Negociamos con la fábrica, seguimos el pedido y estamos presentes el día de la carga."
+    ],
+    "commitTitle": "Lo que puede esperar de nosotros",
+    "commits": [
+      {
+        "t": "Lo cotizado es lo que se carga",
+        "d": "Referencias, cantidades y embalaje coinciden con la proforma firmada."
+      },
+      {
+        "t": "Fotos de cada carga",
+        "d": "Antes de cerrar el contenedor recibe fotos y video de la mercadería."
+      },
+      {
+        "t": "Respuesta en un día hábil",
+        "d": "Contestamos cada consulta comercial en un día hábil, en su idioma."
+      },
+      {
+        "t": "Transparencia sobre plazos",
+        "d": "Si la fábrica o la naviera cambian una fecha, se lo informamos el mismo día."
+      }
+    ],
+    "whyTitle": "Por qué productos turcos",
+    "why": [
+      "Turquía tiene una industria de menaje y plásticos con décadas de experiencia exportadora hacia Europa, Medio Oriente y África, y estándares de calidad pensados para esos mercados.",
+      "Estambul está conectada con las principales navieras que operan hacia la costa este y oeste de Sudamérica, y los productos turcos cuentan con certificado de origen reconocido."
+    ]
+  },
+  "contact": {
+    "title": "Contacto: cotizaciones para importadores y distribuidores",
+    "description": "Solicite lista de precios, catálogos y muestras de Star Termos y Gastroplast. Atención en español, portugués, inglés y turco.",
+    "h1": "Contacto",
+    "lead": "Cuéntenos qué distribuye, en qué país y a qué puerto llega. Le respondemos en un día hábil con precios y catálogos.",
+    "direct": "Contacto directo",
+    "office": "Oficina",
+    "hours": "Lunes a viernes, 9:00 a 18:00 (hora de Estambul, GMT+3)"
+  },
+  "form": {
+    "name": "Nombre y apellido",
+    "company": "Empresa",
+    "country": "País",
+    "countryPlaceholder": "Seleccione",
+    "otherCountry": "Otro país",
+    "email": "Correo electrónico",
+    "phone": "WhatsApp / teléfono",
+    "type": "Tipo de empresa",
+    "types": [
+      "Importador / mayorista",
+      "Distribuidor HoReCa",
+      "Cadena minorista",
+      "Regalos corporativos",
+      "Otro"
+    ],
+    "interest": "Le interesa",
+    "interests": [
+      "Star Termos",
+      "Gastroplast",
+      "Marca propia"
+    ],
+    "message": "Mensaje",
+    "messagePlaceholder": "Productos, cantidades aproximadas, puerto de destino…",
+    "consent": "Acepto que La Turca Trade use estos datos para responder mi consulta.",
+    "send": "Enviar consulta",
+    "sending": "Enviando…",
+    "ok": "Gracias. Recibimos su consulta y le responderemos en un día hábil.",
+    "error": "No pudimos enviar el formulario. Escríbanos directamente a",
+    "required": "Obligatorio"
+  },
+  "countries": {
+    "AR": "Argentina",
+    "BO": "Bolivia",
+    "BR": "Brasil",
+    "CL": "Chile",
+    "CO": "Colombia",
+    "EC": "Ecuador",
+    "PY": "Paraguay",
+    "PE": "Perú",
+    "UY": "Uruguay",
+    "VE": "Venezuela",
+    "MX": "México",
+    "PA": "Panamá",
+    "CR": "Costa Rica",
+    "DO": "República Dominicana",
+    "GT": "Guatemala"
+  },
+  "products": {
+    "groups": {
+      "jugs": {
+        "t": "Jarras térmicas de vidrio",
+        "d": "Ampolla de vidrio doble al vacío. Para café, té y mate en casa y en la oficina."
+      },
+      "pro": {
+        "t": "HoReCa y camping",
+        "d": "Acero inoxidable para servicio de café en hoteles, eventos y uso al aire libre."
+      },
+      "go": {
+        "t": "Vasos y termos para llevar",
+        "d": "Acero inoxidable de doble pared, tapas herméticas, del auto a la oficina."
+      },
+      "food": {
+        "t": "Termos para alimentos",
+        "d": "Conservan comidas calientes o frías fuera de casa."
+      }
+    },
+    "materials": {
+      "doubleGlass": "Ampolla de vidrio doble al vacío",
+      "solidBody": "Vidrio doble con cuerpo reforzado",
+      "steel": "Acero inoxidable de doble pared",
+      "steel304": "Acero inoxidable 304, tapa hermética",
+      "steelFood": "Acero inoxidable, apto para alimentos"
+    }
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "lead": "La dirección no existe o fue movida.",
+    "back": "Volver al inicio"
+  },
+  "langPage": {
+    "title": "La Turca Trade",
+    "lead": "Elija su idioma"
+  }
+}

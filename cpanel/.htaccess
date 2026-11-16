@@ -1,6 +1,6 @@
 # La Turca Trade — cPanel / Apache
 Options -Indexes
-DirectoryIndex index.html contact.php
+DirectoryIndex index.html index.php
 AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
