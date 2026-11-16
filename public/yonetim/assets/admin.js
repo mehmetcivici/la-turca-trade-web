@@ -20,7 +20,7 @@
     toastEl._t = setTimeout(() => (toastEl.hidden = true), bad ? 9000 : 5000);
   };
 
-  const CLS = { live: "ok", building: "wait", ready: "wait", failed: "bad", error: "bad" };
+  const CLS = { live: "ok", building: "wait", ready: "wait", failed: "bad", error: "bad", nogit: "bad" };
 
   function show(d) {
     const text = deploying ? "Site güncelleniyor…" : d.label;

@@ -59,6 +59,8 @@ function page_start(string $title, string $active = '', ?array $c = null, bool $
     <h1><?= h($title) ?></h1>
     <div id="pubstate" class="pill" title="Sitenin yayın durumu">Yayın durumu…</div>
   </header>
+  <?php if ($c && !empty($c['default_pass'])): ?><div class="flash warnbox">Varsayılan şifreyle giriş yaptınız. Güvenliğiniz için <a href="<?= h($base) ?>/ayarlar.php">Ayarlar</a> sayfasından şifrenizi değiştirin.</div><?php endif; ?>
+  <?php if ($c && trim((string) ($c['token'] ?? '')) === '' && $active !== 'ayarlar' && $active !== 'talepler' && $active !== 'panel'): ?><div class="flash warnbox">İçerik düzenlemek için önce <a href="<?= h($base) ?>/ayarlar.php">Ayarlar</a> sayfasından GitHub erişim anahtarını girin.</div><?php endif; ?>
   <?php $f = flash(); if ($f): ?><div class="flash <?= h($f['type']) ?>"><?= h($f['msg']) ?></div><?php endif; ?>
 <?php else: ?>
 <main class="bare-main">

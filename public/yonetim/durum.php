@@ -8,6 +8,7 @@ $c = require_login();
 $cache = $_SESSION['durum_cache'] ?? null;
 if ($cache && time() - $cache['t'] < 8 && empty($_GET['taze'])) json_out($cache['d']);
 
+if (!has_git($c)) json_out(['ok' => true, 'state' => 'nogit', 'label' => 'GitHub bağlantısı yok', 'run' => null, 'ready' => null, 'deployed' => deployed()]);
 try {
     $g = gh($c);
     $run = $g->latestRun();

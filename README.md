@@ -58,16 +58,18 @@ Türkçe, kullanıcı adı + şifreyle giriş. Hostinger'de PHP ile çalışır.
 `yayin` dalına koyar (1–3 dk) → panel bu sürümü indirip `public_html`'e açar (panel açıkken otomatik, ya da
 "Siteyi şimdi güncelle"). Geliştirici `main`'e push ettiğinde de aynı yol izlenir; panele bir kez girmek siteyi günceller.
 
-**İlk kurulum (bir kez):**
-1. GitHub → Settings → Developer settings → **Fine-grained personal access token** oluşturun:
-   Repository access: yalnızca `la-turca-trade-web`; Permissions: **Contents: Read and write**, **Actions: Read-only**.
-2. Siteyi Hostinger'e yükledikten sonra `https://laturcatrade.com/yonetim/` adresini açın → kurulum sayfası.
-   Kullanıcı adı, şifre (en az 10 karakter), anahtar, bildirim e-postası girin.
-   Güvenlik: depoya yazma yetkisi olan bir anahtar girilmeden kurulum tamamlanmaz; kurulumdan sonra sayfa kapanır.
+**Giriş:** `https://laturcatrade.com/yonetim/` — kullanıcı adı `admin`. Varsayılan şifre depoda yoktur
+(`_lib/defaults.php` yalnızca bcrypt özetini tutar); şifre site sahibine ayrıca iletilmiştir. İlk girişte panel
+şifre değişikliği için uyarı gösterir: **Ayarlar → Giriş bilgileri**.
+
+**GitHub bağlantısı (içerik düzenlemek için, bir kez):** Talepler bunsuz çalışır. Ürün/katalog/metin düzenlemek için
+GitHub → Settings → Developer settings → **Fine-grained personal access token**: Repository access yalnızca
+`la-turca-trade-web`; Permissions **Contents: Read and write**, **Actions: Read-only**. Anahtarı panelde
+**Ayarlar → GitHub bağlantısı**na girin (yazma yetkisi doğrulanır).
 
 **Veriler:** `public_html`'in bir üstünde `ltt-data/` (ayarlar, şifre özeti, GitHub anahtarı, `talepler.sqlite`).
-Web'den erişilemez. Yedek almak için bu klasörü indirin. Şifre unutulursa: `ltt-data/config.php` silinir → kurulum yeniden açılır
-(talepler korunur).
+Web'den erişilemez. Yedek almak için bu klasörü indirin. Şifre unutulursa: `ltt-data/config.php` silinir → varsayılan giriş bilgileri geri gelir
+(talepler korunur; GitHub anahtarı yeniden girilir).
 
 **Gereksinimler:** PHP 8.1+, cURL, ZipArchive, GD (WebP), PDO SQLite — panel Ayarlar sayfasında kontrol listesi var.
 

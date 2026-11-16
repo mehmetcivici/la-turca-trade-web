@@ -24,12 +24,14 @@ function data_dir(): string
     return $dir = $alt;
 }
 
-function config(): ?array
+/** Ayarlar. Ayar dosyası yoksa varsayılanlar (_lib/defaults.php) kullanılır. */
+function config(): array
 {
+    require_once __DIR__ . '/defaults.php';
     $f = data_dir() . '/config.php';
-    if (!is_file($f)) return null;
+    if (!is_file($f)) return default_config();
     $c = require $f;
-    return is_array($c) ? $c : null;
+    return is_array($c) ? array_merge(default_config(), $c) : default_config();
 }
 
 function save_config(array $c): void

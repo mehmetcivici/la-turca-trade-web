@@ -13,7 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!password_verify($old, $c['pass'])) flash('Mevcut şifre hatalı.', 'err');
         elseif (mb_strlen($new) < 10) flash('Yeni şifre en az 10 karakter olmalı.', 'err');
         elseif ($new !== ($_POST['new2'] ?? '')) flash('Yeni şifreler aynı değil.', 'err');
-        else { $c['pass'] = password_hash($new, PASSWORD_DEFAULT); save_config($c); flash('Şifre değiştirildi.'); }
+        elseif (!preg_match('/^[\p{L}0-9_.@-]{3,40}$/u', trim((string) ($_POST['newuser'] ?? '')))) flash('Kullanıcı adı 3–40 karakter olmalı.', 'err');
+        else { $c['pass'] = password_hash($new, PASSWORD_DEFAULT); $c['default_pass'] = false; $c['user'] = trim((string) $_POST['newuser']); $_SESSION['user'] = $c['user']; save_config($c); flash('Giriş bilgileri değiştirildi.'); }
     } elseif ($islem === 'genel') {
         $notify = trim((string) ($_POST['notify'] ?? ''));
         if ($notify !== '' && !filter_var($notify, FILTER_VALIDATE_EMAIL)) flash('E-posta geçersiz.', 'err');
@@ -41,7 +42,8 @@ page_start('Ayarlar', 'ayarlar', $c);
   </form>
   <form class="card form" method="post">
     <?= csrf_field() ?><input type="hidden" name="islem" value="sifre">
-    <h2>Şifre değiştir</h2>
+    <h2>Giriş bilgileri</h2>
+    <label>Kullanıcı adı<input name="newuser" value="<?= h($c['user']) ?>" autocomplete="username"></label>
     <label>Mevcut şifre<input type="password" name="old" required autocomplete="current-password"></label>
     <label>Yeni şifre<input type="password" name="new" required minlength="10" autocomplete="new-password"></label>
     <label>Yeni şifre tekrar<input type="password" name="new2" required minlength="10" autocomplete="new-password"></label>
@@ -51,10 +53,13 @@ page_start('Ayarlar', 'ayarlar', $c);
 <section class="cols">
   <form class="card form" method="post">
     <?= csrf_field() ?><input type="hidden" name="islem" value="token">
-    <h2>GitHub bağlantısı</h2>
-    <p class="muted small">Depo: <b><?= h($c['repo']) ?></b> · Dal: <b><?= h($c['branch']) ?></b>. Anahtarın süresi dolarsa yenisini buraya girin.</p>
+    <h2>GitHub bağlantısı <?= has_git($c) ? '<span class="tag yanitlandi">Bağlı</span>' : '<span class="tag yeni">Kurulmadı</span>' ?></h2>
+    <p class="muted small">Ürün, katalog, metin ve iletişim bilgisi değişikliklerinin yayınlanması için gerekir (talepler bunsuz da çalışır).
+      Depo: <b><?= h($c['repo']) ?></b> · Dal: <b><?= h($c['branch']) ?></b>.</p>
+    <p class="muted small"><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Yeni ince ayarlı (fine-grained) anahtar oluşturun</a>:
+      Repository access → yalnızca <b>la-turca-trade-web</b>; Permissions → <b>Contents: Read and write</b>, <b>Actions: Read-only</b>.</p>
     <label>Yeni erişim anahtarı<input type="password" name="token" required autocomplete="off" placeholder="github_pat_…"></label>
-    <button class="btn">Anahtarı güncelle</button>
+    <button class="btn primary"><?= has_git($c) ? 'Anahtarı güncelle' : 'Bağlantıyı kur' ?></button>
   </form>
   <div class="card">
     <h2>Sunucu</h2>

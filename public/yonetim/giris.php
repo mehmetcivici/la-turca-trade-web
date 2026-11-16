@@ -4,7 +4,6 @@ require __DIR__ . '/_lib/bootstrap.php';
 require __DIR__ . '/_lib/layout.php';
 
 $c = config();
-if (!$c) redirect(panel_base() . '/kurulum.php');
 if (!empty($_SESSION['user']) && $_SESSION['user'] === $c['user']) redirect(panel_base() . '/');
 
 /** Basit kaba kuvvet koruması: IP başına 15 dakikada 6 hatalı deneme. */

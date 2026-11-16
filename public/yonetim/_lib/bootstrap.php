@@ -94,7 +94,6 @@ function flash(?string $msg = null, string $type = 'ok'): ?array
 function require_login(): array
 {
     $c = config();
-    if (!$c) redirect(panel_base() . '/kurulum.php');
     if (empty($_SESSION['user']) || ($_SESSION['user'] !== ($c['user'] ?? null))) {
         if (wants_json()) json_out(['ok' => false, 'error' => 'Oturum kapandı, yeniden giriş yapın.'], 401);
         redirect(panel_base() . '/giris.php');
@@ -108,8 +107,14 @@ function require_login(): array
     return $c;
 }
 
+function has_git(array $c): bool
+{
+    return trim((string) ($c['token'] ?? '')) !== '';
+}
+
 function gh(array $c): GitHub
 {
+    if (!has_git($c)) throw new RuntimeException('GitHub bağlantısı kurulmadı. Ayarlar sayfasından erişim anahtarını girin.');
     return new GitHub($c['token'], $c['repo'], $c['branch'] ?? 'main');
 }
 

@@ -217,3 +217,5 @@ legend { font-weight: 800; color: var(--navy); padding: 0 6px; }
   .search input { width: 100%; }
   .table th:nth-child(3), .table td:nth-child(3), .table th:nth-child(5), .table td:nth-child(5) { display: none; }
 }
+.flash.warnbox { background: #fbf0d9; color: #7a5200; font-weight: 600; }
+.flash.warnbox a { color: inherit; }

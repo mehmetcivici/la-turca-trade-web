@@ -9,7 +9,6 @@ $c = require_login();
 $key = (string) ($_GET['dosya'] ?? 'metin-tr');
 if (!isset(ICERIK_DOSYALARI[$key])) { flash('Bilinmeyen içerik.', 'err'); redirect('./'); }
 $def = ICERIK_DOSYALARI[$key];
-$g = gh($c);
 
 function json_pretty(mixed $v): string
 {
@@ -33,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $in = json_decode((string) file_get_contents('php://input'));
     if (!is_object($in) || !isset($in->data) || !is_object($in->data)) json_out(['ok' => false, 'error' => 'Geçersiz veri.'], 400);
     try {
+        $g = gh($c);
         $cur = $g->getFile($def['path']);
         if (($in->sha ?? '') !== $cur['sha']) {
             json_out(['ok' => false, 'error' => 'Bu dosya siz düzenlerken başka biri tarafından değiştirildi. Sayfayı yenileyip tekrar deneyin (değişiklikleriniz kaybolacak).'], 409);
@@ -56,8 +56,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // ---- Sayfa ----
+if (!has_git($c)) {
+    page_start($def['title'], $def['active'] ?? 'metinler', $c);
+    echo '<div class="card"><h2>GitHub bağlantısı gerekli</h2><p class="muted">İçerik GitHub\'daki site deposunda tutulur. Düzenleme yapabilmek için <a href="ayarlar.php">Ayarlar</a> sayfasından erişim anahtarını bir kez girin.</p><p><a class="btn primary" href="ayarlar.php">Ayarlar\'a git</a></p></div>';
+    page_end($c);
+    exit;
+}
 $err = '';
 $data = null; $ref = null; $sha = '';
+$g = gh($c);
 try {
     $f = $g->getFile($def['path']);
     $sha = $f['sha'];
