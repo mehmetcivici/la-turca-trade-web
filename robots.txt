@@ -1,6 +1,5 @@
 User-Agent: *
 Allow: /
-Disallow: /contact.php
+Disallow: /yonetim/
 
-Host: https://laturcatrade.com
 Sitemap: https://laturcatrade.com/sitemap.xml

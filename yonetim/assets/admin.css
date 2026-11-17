@@ -221,3 +221,5 @@ legend { font-weight: 800; color: var(--navy); padding: 0 6px; }
 .flash.warnbox a { color: inherit; }
 
 pre.code { background: #18233a; color: #f4ecda; padding: 10px 12px; border-radius: 8px; overflow-x: auto; font-size: .82rem; white-space: pre-wrap; word-break: break-all; }
+.count { font-weight: 600; font-size: .78rem; color: var(--muted); }
+.count.over { color: var(--bad); }

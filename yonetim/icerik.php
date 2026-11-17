@@ -111,7 +111,7 @@ page_start($def['title'], $def['active'] ?? 'metinler', $c);
         'openFirst' => !$isText,
     ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP) ?>;
   </script>
-  <script src="<?= h(panel_base()) ?>/assets/editor.js?v=1"></script>
+  <script src="<?= h(panel_base()) ?>/assets/editor.js?v=2"></script>
 <?php endif; ?>
 <?php
 page_end($c);
