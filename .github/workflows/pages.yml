@@ -48,6 +48,8 @@ jobs:
         run: |
           cp cpanel/.htaccess .next-prod/.htaccess
           rm -rf .next-prod/cache .next-prod/types
+          # PDF kataloglar GitHub Pages'ten sunulur (asset() → ASSET_CDN); sunucu paketine girmez
+          rm -rf .next-prod/catalogs
           TITLE=$(printf '%s' "${MSG:-Elle başlatılan derleme}" | head -n 1 | cut -c1-120)
           # Sunucunun doğrulayacağı sürüm bilgisi
           jq -n --arg sha "$GITHUB_SHA" --arg msg "$TITLE" --arg date "$(date -u +%Y-%m-%dT%H:%M:%SZ)" --arg run "$GITHUB_RUN_ID" \

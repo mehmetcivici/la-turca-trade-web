@@ -27,26 +27,38 @@
     {
       "id": "star-termos",
       "brand": "Star Termos",
-      "file": "/catalogs/star-termos-catalogo-2025.pdf",
+      "file": "/catalogs/star-termos-catalogo-2025-en.pdf",
       "cover": "/img/catalogs/star-termos-cover.webp",
       "coverW": 900,
       "coverH": 679,
       "pages": 41,
-      "sizeMb": 4.6,
+      "sizeMb": 5.2,
       "year": 2025,
-      "lang": "EN"
+      "lang": "EN",
+      "fileEs": "/catalogs/star-termos-catalogo-2025-es.pdf",
+      "sizeMbEs": 5.5,
+      "filePt": "/catalogs/star-termos-catalogo-2025-pt.pdf",
+      "sizeMbPt": 5.5,
+      "langEs": "ES",
+      "langPt": "PT"
     },
     {
       "id": "gastroplast",
       "brand": "Gastroplast",
-      "file": "/catalogs/gastroplast-catalogo.pdf",
+      "file": "/catalogs/gastroplast-catalogo-en.pdf",
       "cover": "/img/catalogs/gastroplast-cover.webp",
       "coverW": 700,
       "coverH": 990,
       "pages": 148,
-      "sizeMb": 20.4,
+      "sizeMb": 19.1,
       "year": 2024,
-      "lang": "EN · TR"
+      "lang": "EN · TR",
+      "fileEs": "/catalogs/gastroplast-catalogo-es.pdf",
+      "sizeMbEs": 20.1,
+      "filePt": "/catalogs/gastroplast-catalogo-pt.pdf",
+      "sizeMbPt": 20.1,
+      "langEs": "ES · EN",
+      "langPt": "PT · EN"
     }
   ],
   "googleVerification": "iKXG7V9qp91NsjXTXhomTYzYyFmcZuciePpUyDFUzes"

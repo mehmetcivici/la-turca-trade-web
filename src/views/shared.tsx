@@ -1,7 +1,7 @@
 import Link from "@/components/L";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
-import { catalogs, site } from "@/content/site";
+import { catalogFor, catalogs, site } from "@/content/site";
 import { asset } from "@/lib/asset";
 import { starSeries, gastroCategories, tx, type StarSeries, type GastroCategory } from "@/content/products";
 import { Arrow, Download, Img } from "@/components/ui";
@@ -75,9 +75,9 @@ export function CategoryGrid({ d, locale, featured = false, showCodes = false }:
 export function CatalogCards({ d, locale }: { d: Dict; locale: Locale }) {
   return (
     <div className="grid gap-6 md:grid-cols-2">
-      {catalogs.map((c) => (
+      {catalogs.map((c) => ({ c, f: catalogFor(c, locale) })).map(({ c, f }) => (
         <article key={c.id} className="card card-hover grid grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] items-center gap-6 p-6">
-          <a href={asset(c.file)} target="_blank" rel="noopener" className="block overflow-hidden rounded-lg bg-paper-2 shadow-soft">
+          <a href={asset(f.file)} target="_blank" rel="noopener" className="block overflow-hidden rounded-lg bg-paper-2 shadow-soft">
             <Img src={c.cover} alt={`${c.brand} — ${d.nav.catalogs}`} w={c.coverW} h={c.coverH} className="w-full" />
           </a>
           <div>
@@ -85,17 +85,17 @@ export function CatalogCards({ d, locale }: { d: Dict; locale: Locale }) {
             <h3 className="mt-2 font-serif text-2xl leading-tight text-navy">{c.brand}</h3>
             <ul className="mt-3 space-y-1 text-[0.93rem] text-muted">
               <li>
-                {d.cat.langLabel}: <span className="font-semibold text-ink">{c.lang}</span>
+                {d.cat.langLabel}: <span className="font-semibold text-ink">{f.lang}</span>
               </li>
               <li className="tabular">
-                {c.pages} {d.common.pages} · {String(c.sizeMb).replace(".", locale === "en" ? "." : ",")} MB
+                {c.pages} {d.common.pages} · {String(f.sizeMb).replace(".", locale === "en" ? "." : ",")} MB
               </li>
             </ul>
             <div className="mt-5 flex flex-col items-start gap-3">
-              <a href={asset(c.file)} download className="btn btn-dark !py-2.5">
+              <a href={asset(f.file)} download target="_blank" rel="noopener" className="btn btn-dark !py-2.5">
                 <Download /> {d.common.download}
               </a>
-              <a href={asset(c.file)} target="_blank" rel="noopener" className="link-arrow text-[0.93rem] text-navy">
+              <a href={asset(f.file)} target="_blank" rel="noopener" className="link-arrow text-[0.93rem] text-navy">
                 {d.common.open} <Arrow />
               </a>
             </div>

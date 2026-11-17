@@ -56,6 +56,8 @@ function editor_hints(): array
         'email' => 'E-posta', 'phone' => 'Telefon', 'whatsapp' => 'WhatsApp numarası', 'linkedin' => 'LinkedIn adresi', 'instagram' => 'Instagram adresi',
         'city' => 'Şehir', 'country' => 'Ülke', 'brand' => 'Marka', 'file' => 'PDF dosyası', 'cover' => 'Kapak görseli', 'coverW' => 'Kapak genişliği (px)',
         'coverH' => 'Kapak yüksekliği (px)', 'sizeMb' => 'Dosya boyutu (MB)', 'year' => 'Baskı yılı', 'lang' => 'Katalog dili',
+        'fileEs' => 'İspanyolca PDF dosyası', 'filePt' => 'Portekizce PDF dosyası', 'sizeMbEs' => 'İspanyolca dosya boyutu (MB)',
+        'sizeMbPt' => 'Portekizce dosya boyutu (MB)', 'langEs' => 'İspanyolca katalog dili yazısı', 'langPt' => 'Portekizce katalog dili yazısı',
         'address' => 'Açık adres', 'postalCode' => 'Posta kodu', 'googleVerification' => 'Google Search Console doğrulama kodu',
         'loadables' => 'Konteyner hesaplayıcı ürünleri', 'brand' => 'Marka', 'calc' => 'Konteyner hesaplayıcı',
     ];

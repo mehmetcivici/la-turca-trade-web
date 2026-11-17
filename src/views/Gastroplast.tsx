@@ -1,7 +1,7 @@
 import Link from "@/components/L";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
-import { catalogs, manufacturers } from "@/content/site";
+import { catalogFor, catalogs, manufacturers } from "@/content/site";
 import { asset } from "@/lib/asset";
 import { gastroCategories, gnSizes, gnDepths, gnPerBox, gnCode, tx } from "@/content/products";
 import { Arrow, Check, Download, Img, PageBanner, SectionHead, Stats } from "@/components/ui";
@@ -11,7 +11,7 @@ import { CategoryGrid, CtaBand, crumbs } from "./shared";
 
 export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
   const g = d.gastro;
-  const cat = catalogs.find((c) => c.id === "gastroplast")!;
+  const cat = catalogFor(catalogs.find((c) => c.id === "gastroplast")!, locale);
   return (
     <>
       <JsonLd data={breadcrumbSchema(locale, d, "gastroplast", "Gastroplast")} />
@@ -31,7 +31,7 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
         crumbs={crumbs(d, locale, "Gastroplast")}
       >
         <div className="mt-8 flex flex-wrap gap-3">
-          <a href={asset(cat.file)} download className="btn btn-amber">
+          <a href={asset(cat.file)} download target="_blank" rel="noopener" className="btn btn-amber">
             <Download /> {d.common.download}
           </a>
           <Link href={href(locale, "contact")} className="btn btn-light">

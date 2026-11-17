@@ -1,7 +1,7 @@
 import Link from "@/components/L";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
-import { catalogs, manufacturers } from "@/content/site";
+import { catalogFor, catalogs, manufacturers } from "@/content/site";
 import { asset } from "@/lib/asset";
 import { starGroups, starSeries } from "@/content/products";
 import { Arrow, Check, Download, Faq, Img, PageBanner, SectionHead, Stats } from "@/components/ui";
@@ -12,7 +12,7 @@ import { LoadingTable } from "./Home";
 
 export function StarTermos({ locale, d }: { locale: Locale; d: Dict }) {
   const s = d.star;
-  const cat = catalogs.find((c) => c.id === "star-termos")!;
+  const cat = catalogFor(catalogs.find((c) => c.id === "star-termos")!, locale);
   return (
     <>
       <JsonLd data={breadcrumbSchema(locale, d, "starTermos", "Star Termos")} />
@@ -33,7 +33,7 @@ export function StarTermos({ locale, d }: { locale: Locale; d: Dict }) {
         crumbs={crumbs(d, locale, "Star Termos")}
       >
         <div className="mt-8 flex flex-wrap gap-3">
-          <a href={asset(cat.file)} download className="btn btn-amber">
+          <a href={asset(cat.file)} download target="_blank" rel="noopener" className="btn btn-amber">
             <Download /> {d.common.download}
           </a>
           <Link href={href(locale, "contact")} className="btn btn-light">
