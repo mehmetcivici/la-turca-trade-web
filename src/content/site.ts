@@ -24,6 +24,8 @@ export const site = rest as {
   url: string;
   email: string;
   phone: string;
+  address: string;
+  postalCode: string;
   whatsapp: string;
   linkedin: string;
   instagram: string;
@@ -31,6 +33,7 @@ export const site = rest as {
   country: string;
   formEndpoint: string;
   areaServed: string[];
+  googleVerification: string;
 };
 
 export const catalogs = rawCatalogs as Catalog[];

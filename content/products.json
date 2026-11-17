@@ -488,5 +488,160 @@
       12,
       null
     ]
-  }
+  },
+  "loadables": [
+    {
+      "id": "stm-6166",
+      "code": "STM-6166",
+      "brand": "Star Termos",
+      "name": {
+        "es": "Jarra térmica vidrio doble 1 L",
+        "pt": "Garrafa térmica vidro duplo 1 L",
+        "en": "Double-glass thermal jug 1 L",
+        "tr": "Çift cam termos sürahi 1 L"
+      },
+      "perBox": 12,
+      "box": [
+        60,
+        45,
+        25
+      ]
+    },
+    {
+      "id": "stm-6165",
+      "code": "STM-6165",
+      "brand": "Star Termos",
+      "name": {
+        "es": "Jarra térmica vidrio doble 1,5 L",
+        "pt": "Garrafa térmica vidro duplo 1,5 L",
+        "en": "Double-glass thermal jug 1.5 L",
+        "tr": "Çift cam termos sürahi 1,5 L"
+      },
+      "perBox": 12,
+      "box": [
+        60,
+        45,
+        32.5
+      ]
+    },
+    {
+      "id": "st-6173",
+      "code": "ST-6173",
+      "brand": "Star Termos",
+      "name": {
+        "es": "Vaso térmico Soothe / Sport 350–500 ml",
+        "pt": "Copo térmico Soothe / Sport 350–500 ml",
+        "en": "Soothe / Sport tumbler 350–500 ml",
+        "tr": "Soothe / Sport termos bardak 350–500 ml"
+      },
+      "perBox": 24,
+      "box": [
+        50,
+        33,
+        19
+      ]
+    },
+    {
+      "id": "ls-6172",
+      "code": "LS-6172",
+      "brand": "Star Termos",
+      "name": {
+        "es": "Vaso térmico Locksip 380 ml",
+        "pt": "Copo térmico Locksip 380 ml",
+        "en": "Locksip tumbler 380 ml",
+        "tr": "Locksip termos bardak 380 ml"
+      },
+      "perBox": 24,
+      "box": [
+        50,
+        33,
+        19
+      ]
+    },
+    {
+      "id": "trl-6174",
+      "code": "TRL-6174",
+      "brand": "Star Termos",
+      "name": {
+        "es": "Termo Trailmate 500 ml",
+        "pt": "Garrafa Trailmate 500 ml",
+        "en": "Trailmate flask 500 ml",
+        "tr": "Trailmate termos 500 ml"
+      },
+      "perBox": 12,
+      "box": [
+        60,
+        45,
+        32.5
+      ]
+    },
+    {
+      "id": "aq",
+      "code": "AQ",
+      "brand": "Star Termos",
+      "name": {
+        "es": "Vaso térmico Aqua 900 ml",
+        "pt": "Copo térmico Aqua 900 ml",
+        "en": "Aqua tumbler 900 ml",
+        "tr": "Aqua termos bardak 900 ml"
+      },
+      "perBox": 14,
+      "box": [
+        39.5,
+        56.5,
+        26.5
+      ]
+    },
+    {
+      "id": "tb-6175",
+      "code": "TB-6175",
+      "brand": "Star Termos",
+      "name": {
+        "es": "Termo para alimentos Thermbox 500 ml",
+        "pt": "Pote térmico Thermbox 500 ml",
+        "en": "Thermbox food jar 500 ml",
+        "tr": "Thermbox yemek termosu 500 ml"
+      },
+      "perBox": 12,
+      "box": [
+        23,
+        33,
+        33.5
+      ]
+    },
+    {
+      "id": "xs",
+      "code": "XS",
+      "brand": "Star Termos",
+      "name": {
+        "es": "Termo de acero XS 2–3 L",
+        "pt": "Garrafa de aço XS 2–3 L",
+        "en": "XS steel flask 2–3 L",
+        "tr": "XS çelik termos 2–3 L"
+      },
+      "perBox": 12,
+      "box": [
+        60,
+        45,
+        32.5
+      ]
+    },
+    {
+      "id": "g-600",
+      "code": "G-600",
+      "brand": "Gastroplast",
+      "name": {
+        "es": "Caja de transporte GN 1/1 ABS",
+        "pt": "Caixa de transporte GN 1/1 ABS",
+        "en": "GN 1/1 ABS carry box",
+        "tr": "GN 1/1 ABS taşıma kabı"
+      },
+      "perBox": 1,
+      "box": [
+        41,
+        59,
+        59
+      ]
+    }
+  ]
 }

@@ -1,11 +1,12 @@
-import Link from "next/link";
+import Link from "@/components/L";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
-import { starLoading, tx } from "@/content/products";
+import { starLoading, tx, loadables } from "@/content/products";
+import { LoadCalculator } from "@/components/LoadCalculator";
+import { asset } from "@/lib/asset";
 import { BadgeDollarSign, ClipboardCheck, FileText, MessagesSquare, PackageOpen, Ship } from "lucide-react";
 import { Arrow, Check, Img, SectionHead, Stats } from "@/components/ui";
 import { ATLANTIC_PORTS, PACIFIC_PORTS } from "@/content/routes";
-import { ContainerFigure } from "@/components/ContainerFigure";
 import { BoxDieline } from "@/components/BoxDieline";
 import { CatalogCards, CategoryGrid, CtaBand, SeriesGrid } from "./shared";
 
@@ -41,7 +42,6 @@ export function LoadingTable({ d, locale }: { d: Dict; locale: Locale }) {
 
 export function Home({ locale, d }: { locale: Locale; d: Dict }) {
   const h = d.home;
-  const dec = locale === "en" ? "." : ",";
   const icons = [BadgeDollarSign, PackageOpen, ClipboardCheck, FileText, MessagesSquare, Ship];
   const makers = [
     { key: "starTermos" as const, logo: "/img/brands/star-termos.webp", lw: 500, lh: 150, img: "/img/star-termos/scene-tea-table.webp", iw: 1378, ih: 919, data: h.star },
@@ -141,20 +141,9 @@ export function Home({ locale, d }: { locale: Locale; d: Dict }) {
       {/* Konteyner */}
       <section className="bg-navy py-20 text-white md:py-28" aria-labelledby="container">
         <div className="wrap">
-          <SectionHead id="container" kicker="40' HC" title={h.container.title} lead={h.container.lead} light />
-          <div className="mt-12 rounded-2xl bg-white p-6 text-ink md:p-10">
-            <div className="-mx-2 overflow-x-auto px-2">
-              <div className="min-w-[640px]">
-                <ContainerFigure dec={dec} caption={h.container.figure} />
-              </div>
-            </div>
-            <div className="mt-10 grid gap-6 border-t border-line pt-8 lg:grid-cols-12">
-              <h3 className="font-serif text-2xl leading-tight text-navy lg:col-span-4">{h.container.tableTitle}</h3>
-              <div className="lg:col-span-8">
-                <LoadingTable d={d} locale={locale} />
-                <p className="mt-4 text-sm text-muted">{h.container.note}</p>
-              </div>
-            </div>
+          <SectionHead id="container" kicker={d.calc.title} title={h.container.title} lead={h.container.lead} light />
+          <div className="mt-12">
+            <LoadCalculator t={d.calc} items={loadables} locale={locale} contactHref={asset(href(locale, "contact"))} />
           </div>
         </div>
       </section>

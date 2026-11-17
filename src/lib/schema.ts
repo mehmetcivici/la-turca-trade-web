@@ -14,7 +14,21 @@ export function orgSchema(locale: Locale, d: Dict) {
     description: d.meta.siteDescription,
     email: site.email || undefined,
     telephone: site.phone || undefined,
-    address: { "@type": "PostalAddress", addressLocality: site.city, addressCountry: "TR" },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: site.address || undefined,
+      postalCode: site.postalCode || undefined,
+      addressLocality: site.city,
+      addressCountry: "TR",
+    },
+    contactPoint: site.email || site.phone ? [{
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: site.email || undefined,
+      telephone: site.phone || undefined,
+      availableLanguage: ["Spanish", "Portuguese", "English", "Turkish"],
+      areaServed: site.areaServed,
+    }] : undefined,
     areaServed: site.areaServed.map((c) => ({ "@type": "Country", name: c })),
     knowsLanguage: ["es", "pt", "en", "tr"],
     brand: [

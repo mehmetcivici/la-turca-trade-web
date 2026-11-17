@@ -6,8 +6,10 @@ const basePath = process.env.PAGES_BASE_PATH || "";
 
 const nextConfig: NextConfig = {
   basePath,
+  // Hostinger derlemesinde JS/CSS/fontlar GitHub Pages'ten (paylaşımlı sunucuya yük binmesin)
+  assetPrefix: process.env.ASSET_PREFIX || undefined,
   distDir: process.env.NEXT_DIST_DIR || ".next",
-  env: { NEXT_PUBLIC_BASE_PATH: basePath, NEXT_PUBLIC_PREVIEW: process.env.PREVIEW || "" },
+  env: { NEXT_PUBLIC_BASE_PATH: basePath, NEXT_PUBLIC_PREVIEW: process.env.PREVIEW || "", NEXT_PUBLIC_ASSET_CDN: process.env.ASSET_CDN || "" },
   reactStrictMode: true,
   poweredByHeader: false,
   output: "export",

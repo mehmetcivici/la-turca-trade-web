@@ -17,8 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      yayin: ${{ steps.yayin.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # sitemap lastmod = sayfanın gerçek son değişikliği (git geçmişi)
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -26,9 +30,14 @@ jobs:
       - run: npm ci
 
       - name: Hostinger derlemesi
-        run: npm run build
+        run: |
+          # Statik dosyalar (JS/CSS/font) ve görseller GitHub Pages'ten sunulur; Hostinger yalnızca HTML verir.
+          export ASSET_PREFIX="${PAGES_URL}/_prod"
+          export ASSET_CDN="${PAGES_URL}"
+          npm run build
         env:
           NEXT_DIST_DIR: .next-prod
+          PAGES_URL: https://mehmetcivici.github.io/la-turca-trade-web
 
       - name: yayin dalına gönder (geçmiş korunur)
         id: yayin
@@ -55,23 +64,17 @@ jobs:
           git push -q origin yayin
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - name: Sunucuya haber ver (yeni sürümü hemen çeksin)
-        if: steps.yayin.outputs.sha != ''
-        continue-on-error: true
-        env:
-          SITE: ${{ vars.SITE_URL || 'https://laturcatrade.com' }}
-        run: |
-          curl -fsS -m 300 -A "LaTurcaTrade-Actions" "${SITE}/yonetim/otomatik.php?v=${{ steps.yayin.outputs.sha }}" \
-            || echo "::notice::Sunucu yanıt vermedi (site henüz yayında değilse normaldir). Panel veya zamanlanmış görev sürümü çekecek."
-
       - name: Önizleme derlemesi (GitHub Pages)
         run: npm run build
         env:
           PAGES_BASE_PATH: /la-turca-trade-web
           PREVIEW: "1"
 
-      - name: Önizlemeden sunucu dosyalarını çıkar
-        run: rm -rf out/yonetim out/contact.php
+      - name: Önizlemeden sunucu dosyalarını çıkar, Hostinger derlemesinin statik dosyalarını ekle
+        run: |
+          rm -rf out/yonetim out/contact.php
+          mkdir -p out/_prod
+          cp -R .next-prod/_next out/_prod/_next
 
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -89,3 +92,14 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      # Pages yayını bitti → yeni HTML'in istediği dosyalar hazır; sunucu şimdi yeni sürümü çeksin
+      - name: Sunucuya haber ver (yeni sürümü hemen çeksin)
+        if: needs.build.outputs.yayin != ''
+        continue-on-error: true
+        env:
+          SITE: ${{ vars.SITE_URL || 'https://laturcatrade.com' }}
+        run: |
+          curl -fsS -m 300 -A "LaTurcaTrade-Actions" "${SITE}/yonetim/otomatik.php?v=${{ needs.build.outputs.yayin }}" \
+            || echo "::notice::Sunucu yanıt vermedi (site henüz yayında değilse normaldir). Panel veya zamanlanmış görev sürümü çekecek."
+

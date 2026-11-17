@@ -45,8 +45,8 @@
     "makers": "Fabricantes"
   },
   "home": {
-    "title": "Termos y equipamiento gastronómico de Turquía para distribuidores",
-    "description": "Oficina comercial de Star Termos y Gastroplast para Sudamérica. Termos al vacío, jarras térmicas, cubetas gastronorm y artículos HoReCa a precio de fábrica, en contenedor completo o mixto, con opción de marca propia.",
+    "title": "Termos y equipos HoReCa de Turquía",
+    "description": "Oficina de Star Termos y Gastroplast para Sudamérica: termos, jarras térmicas y cubetas GN a precio de fábrica. Contenedor mixto y marca propia.",
     "hero": {
       "kicker": "Star Termos · Gastroplast · Estambul",
       "h1": "Termos y equipamiento gastronómico turco, directo de fábrica para Sudamérica",
@@ -162,8 +162,8 @@
     }
   },
   "star": {
-    "title": "Star Termos: termos y jarras térmicas fabricados en Estambul",
-    "description": "Jarras térmicas de vidrio doble, termos de acero inoxidable, vasos térmicos y termos para alimentos de Star Termos. Exportación a Sudamérica, contenedor completo o mixto y fabricación con su marca.",
+    "title": "Star Termos: termos y jarras térmicas",
+    "description": "Jarras térmicas de vidrio doble, termos de acero, vasos y termos para alimentos Star Termos. Exportación a Sudamérica y fabricación con su marca.",
     "h1": "Star Termos",
     "sub": "Termos y jarras térmicas, Estambul",
     "intro": [
@@ -237,8 +237,8 @@
     ]
   },
   "gastro": {
-    "title": "Gastroplast: cubetas gastronorm y equipamiento HoReCa en policarbonato",
-    "description": "Cubetas gastronorm de policarbonato y polipropileno listadas por NSF, contenedores de almacenamiento, dispensadores, vasos y bandejas de Gastroplast. Exportación a Sudamérica desde Estambul.",
+    "title": "Gastroplast: cubetas GN y equipos HoReCa",
+    "description": "Cubetas gastronorm de policarbonato y PP listadas NSF, recipientes, dispensadores y vajilla irrompible Gastroplast. Envío de Estambul a Sudamérica.",
     "h1": "Gastroplast",
     "sub": "Equipamiento gastronómico, Estambul",
     "intro": [
@@ -298,8 +298,8 @@
     "brands": "Marcas de SürPlast: GastroPlast, GastroCups y GastroCarry."
   },
   "dist": {
-    "title": "Para importadores y distribuidores en Sudamérica",
-    "description": "Condiciones para importadores, distribuidores y cadenas de Sudamérica: precio de fábrica en USD, FOB, CFR o CIF, contenedor mixto Star Termos + Gastroplast, muestras, inspección y documentación de exportación.",
+    "title": "Para importadores y distribuidores",
+    "description": "Precio de fábrica en USD, FOB/CFR/CIF, contenedor mixto Star Termos + Gastroplast, muestras e inspección antes de la carga. Atención en español.",
     "h1": "Para importadores y distribuidores",
     "lead": "Trabajamos con empresas que compran por contenedor o por pallet y revenden en su país. Si distribuye menaje, artículos de bazar, regalos corporativos o equipamiento para hoteles y restaurantes, tenemos productos para su catálogo.",
     "whoTitle": "A quién atendemos",
@@ -400,8 +400,8 @@
     ]
   },
   "pl": {
-    "title": "Marca propia: termos y artículos HoReCa con su logotipo",
-    "description": "Fabricación con su marca: logotipo en termos, jarras y vasos, colores a medida y empaque con su diseño y código de barras. Producción OEM en Estambul para distribuidores y cadenas de Sudamérica.",
+    "title": "Marca propia: termos con su logotipo",
+    "description": "Fabricamos termos, jarras y vasos con su logotipo, colores y empaque con código de barras. Producción OEM en Estambul para Sudamérica.",
     "h1": "Marca propia",
     "lead": "Si su empresa ya tiene una marca reconocida en su país, podemos fabricar con ella. Star Termos produce en OEM y ODM para otras marcas; nosotros coordinamos el diseño, las muestras y la producción.",
     "whatTitle": "Qué se puede personalizar",
@@ -447,8 +447,8 @@
     "mock": "SU MARCA"
   },
   "cat": {
-    "title": "Catálogos Star Termos y Gastroplast (PDF)",
-    "description": "Descargue los catálogos de fábrica de Star Termos (2025) y Gastroplast con códigos, capacidades, medidas y unidades por caja.",
+    "title": "Catálogos Star Termos y Gastroplast",
+    "description": "Descargue los catálogos de fábrica en PDF con códigos, capacidades, medidas y unidades por caja de Star Termos y Gastroplast.",
     "h1": "Catálogos",
     "lead": "Catálogos oficiales de cada fábrica. Incluyen códigos, capacidades, medidas de caja y, en el caso de Star Termos, datos de carga por contenedor.",
     "langLabel": "Idioma del catálogo",
@@ -458,7 +458,7 @@
   },
   "about": {
     "title": "Sobre La Turca Trade",
-    "description": "La Turca Trade es la oficina comercial con base en Estambul que representa a Star Termos y Gastroplast ante importadores y distribuidores de Sudamérica.",
+    "description": "Oficina comercial en Estambul que representa a Star Termos y Gastroplast ante importadores y distribuidores de Sudamérica.",
     "h1": "La Turca Trade",
     "lead": "Somos una oficina comercial con base en Estambul dedicada a llevar productos de fábricas turcas a importadores y distribuidores de América del Sur. Representamos a Star Termos y Gastroplast en la región.",
     "body": [
@@ -491,8 +491,8 @@
     ]
   },
   "contact": {
-    "title": "Contacto: cotizaciones para importadores y distribuidores",
-    "description": "Solicite lista de precios, catálogos y muestras de Star Termos y Gastroplast. Atención en español, portugués, inglés y turco.",
+    "title": "Contacto y cotizaciones",
+    "description": "Pida lista de precios, catálogos y muestras de Star Termos y Gastroplast. Respondemos en un día hábil en español, portugués, inglés y turco.",
     "h1": "Contacto",
     "lead": "Cuéntenos qué distribuye, en qué país y a qué puerto llega. Le respondemos en un día hábil con precios y catálogos.",
     "direct": "Contacto directo",
@@ -582,5 +582,33 @@
   "langPage": {
     "title": "La Turca Trade",
     "lead": "Elija su idioma"
+  },
+  "calc": {
+    "title": "Calculadora de contenedor",
+    "lead": "Agregue productos y cantidades para ver cuánto espacio ocupan. Puede combinar Star Termos y Gastroplast en un mismo contenedor.",
+    "container": "Contenedor",
+    "product": "Producto",
+    "custom": "Otro producto (ingresar medidas de caja)",
+    "customName": "Descripción",
+    "qty": "Cantidad",
+    "unitPcs": "unidades",
+    "unitBoxes": "cajas",
+    "perBox": "Unid. por caja",
+    "boxCm": "Caja L × A × H (cm)",
+    "boxes": "Cajas",
+    "volume": "Volumen",
+    "add": "+ Agregar producto",
+    "remove": "Quitar",
+    "total": "Total",
+    "used": "ocupado",
+    "free": "Espacio libre",
+    "fits": "Entra en un {c}.",
+    "tight": "Carga ajustada: por encima del 85 % la fábrica confirma la distribución.",
+    "over": "No entra en un {c}: se necesitan {n} contenedores o uno más grande.",
+    "fillMore": "En el espacio libre caben aprox. {n} unidades más de {p}.",
+    "note": "Estimación por volumen con las medidas de caja del catálogo de fábrica. El plan de carga definitivo se confirma en la proforma.",
+    "quote": "Pedir cotización para esta carga",
+    "empty": "Agregue al menos un producto.",
+    "loadText": "Carga estimada"
   }
 }

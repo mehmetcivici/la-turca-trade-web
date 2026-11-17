@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/L";
 import { href, subPages, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
 import { site, manufacturers } from "@/content/site";
@@ -19,6 +19,12 @@ export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
               <a href={`mailto:${site.email}`} className="font-serif text-xl hover:text-copper-l">
                 {site.email}
               </a>
+            </p>
+          )}
+          {(site.address || site.city) && (
+            <p className="mt-4 text-paper/70">
+              {site.address && <>{site.address}<br /></>}
+              {site.postalCode && `${site.postalCode} `}{site.city}, {site.country}
             </p>
           )}
           {site.phone && (

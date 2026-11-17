@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/L";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
 import { catalogs, manufacturers } from "@/content/site";

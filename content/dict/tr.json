@@ -45,8 +45,8 @@
     "makers": "Üreticiler"
   },
   "home": {
-    "title": "Distribütörler için Türkiye'den termos ve endüstriyel mutfak ürünleri",
-    "description": "Star Termos ve Gastroplast'ın Güney Amerika satış ofisi. Vakumlu termos, termos sürahi, gastronom küvet ve HoReCa ürünleri; fabrika fiyatı, tam veya karışık konteyner ve özel marka seçeneği.",
+    "title": "Türkiye'den termos ve HoReCa ürünleri",
+    "description": "Star Termos ve Gastroplast'ın Güney Amerika satış ofisi: termos, termos sürahi ve GN küvet; fabrika fiyatı, karışık konteyner ve özel marka.",
     "hero": {
       "kicker": "Star Termos · Gastroplast · İstanbul",
       "h1": "Türk termosları ve endüstriyel mutfak ürünleri, fabrikadan doğrudan Güney Amerika'ya",
@@ -162,8 +162,8 @@
     }
   },
   "star": {
-    "title": "Star Termos: İstanbul'da üretilen termos ve termos sürahiler",
-    "description": "Star Termos çift cam termos sürahiler, paslanmaz çelik termoslar, termos bardaklar ve yemek termosları. Güney Amerika'ya ihracat, tam veya karışık konteyner ve özel marka üretim.",
+    "title": "Star Termos: termos ve termos sürahi",
+    "description": "Star Termos çift cam termos sürahi, çelik termos, termos bardak ve yemek termosları. Güney Amerika'ya ihracat ve özel marka üretim.",
     "h1": "Star Termos",
     "sub": "Termos ve termos sürahi, İstanbul",
     "intro": [
@@ -237,8 +237,8 @@
     ]
   },
   "gastro": {
-    "title": "Gastroplast: polikarbonat gastronom küvetler ve HoReCa ekipmanları",
-    "description": "NSF listeli polikarbonat ve polipropilen gastronom küvetler, saklama kapları, dispenserler, bardaklar ve tepsiler. Gastroplast ürünlerinin İstanbul'dan Güney Amerika'ya ihracatı.",
+    "title": "Gastroplast: GN küvet ve HoReCa ürünleri",
+    "description": "NSF listeli polikarbonat ve PP gastronom küvetler, saklama kapları, dispenserler ve kırılmaz bardaklar. İstanbul'dan Güney Amerika'ya sevkiyat.",
     "h1": "Gastroplast",
     "sub": "Endüstriyel mutfak ekipmanları, İstanbul",
     "intro": [
@@ -298,8 +298,8 @@
     "brands": "SürPlast markaları: GastroPlast, GastroCups ve GastroCarry."
   },
   "dist": {
-    "title": "Güney Amerika'daki ithalatçı ve distribütörler için",
-    "description": "Güney Amerika'daki ithalatçı, distribütör ve zincirler için koşullar: USD fabrika fiyatı, FOB, CFR veya CIF, Star Termos + Gastroplast karışık konteyner, numune, yükleme kontrolü ve ihracat belgeleri.",
+    "title": "İthalatçı ve distribütörler için",
+    "description": "USD fabrika fiyatı, FOB/CFR/CIF, Star Termos + Gastroplast karışık konteyner, numune ve yükleme öncesi kontrol. Dört dilde hizmet.",
     "h1": "İthalatçı ve distribütörler için",
     "lead": "Konteyner veya palet bazında alım yapıp kendi ülkesinde satan firmalarla çalışıyoruz. Züccaciye, ev gereçleri, promosyon ürünleri ya da otel ve restoran ekipmanı dağıtıyorsanız portföyünüze uygun ürünlerimiz var.",
     "whoTitle": "Kimlerle çalışıyoruz",
@@ -400,8 +400,8 @@
     ]
   },
   "pl": {
-    "title": "Özel marka: kendi logonuzla termos ve HoReCa ürünleri",
-    "description": "Markanız adına üretim: termos, sürahi ve bardaklarda logo, özel renkler, kendi tasarımınız ve barkodunuzla ambalaj. Güney Amerika'daki distribütör ve zincirler için İstanbul'da OEM üretim.",
+    "title": "Özel marka: logolu termos üretimi",
+    "description": "Logonuzla termos, sürahi ve bardak; kendi renkleriniz ve barkodlu ambalaj. Güney Amerika'daki distribütörler için İstanbul'da OEM üretim.",
     "h1": "Özel marka",
     "lead": "Firmanızın ülkenizde tanınan bir markası varsa onunla üretim yapabiliriz. Star Termos başka markalar için OEM ve ODM üretim yapıyor; tasarımı, numuneyi ve üretimi biz koordine ediyoruz.",
     "whatTitle": "Neler kişiselleştirilebilir",
@@ -447,8 +447,8 @@
     "mock": "MARKANIZ"
   },
   "cat": {
-    "title": "Star Termos ve Gastroplast katalogları (PDF)",
-    "description": "Star Termos (2025) ve Gastroplast fabrika kataloglarını indirin: kodlar, hacimler, ölçüler ve koli içi adetler.",
+    "title": "Star Termos ve Gastroplast katalogları",
+    "description": "Star Termos ve Gastroplast fabrika kataloglarını PDF olarak indirin: kodlar, hacimler, ölçüler ve koli içi adetler.",
     "h1": "Kataloglar",
     "lead": "Her fabrikanın resmî kataloğu. Kodları, hacimleri, koli ölçülerini ve Star Termos için konteyner yükleme verilerini içerir.",
     "langLabel": "Katalog dili",
@@ -458,7 +458,7 @@
   },
   "about": {
     "title": "La Turca Trade hakkında",
-    "description": "La Turca Trade, Star Termos ve Gastroplast'ı Güney Amerika'daki ithalatçı ve distribütörlere karşı temsil eden, İstanbul merkezli satış ofisidir.",
+    "description": "Star Termos ve Gastroplast'ı Güney Amerika'daki ithalatçı ve distribütörlere karşı temsil eden İstanbul merkezli satış ofisi.",
     "h1": "La Turca Trade",
     "lead": "Türk fabrikalarının ürünlerini Güney Amerika'daki ithalatçı ve distribütörlere ulaştıran, İstanbul merkezli bir satış ofisiyiz. Bölgede Star Termos ve Gastroplast'ı temsil ediyoruz.",
     "body": [
@@ -491,8 +491,8 @@
     ]
   },
   "contact": {
-    "title": "İletişim: ithalatçı ve distribütörler için teklif",
-    "description": "Star Termos ve Gastroplast için fiyat listesi, katalog ve numune isteyin. İspanyolca, Portekizce, İngilizce ve Türkçe hizmet.",
+    "title": "İletişim ve teklif",
+    "description": "Star Termos ve Gastroplast için fiyat listesi, katalog ve numune isteyin. Bir iş günü içinde dört dilde yanıt veriyoruz.",
     "h1": "İletişim",
     "lead": "Neyin dağıtımını yaptığınızı, ülkenizi ve limanınızı yazın. Bir iş günü içinde fiyat ve kataloglarla dönüş yapıyoruz.",
     "direct": "Doğrudan iletişim",
@@ -582,5 +582,33 @@
   "langPage": {
     "title": "La Turca Trade",
     "lead": "Dilinizi seçin"
+  },
+  "calc": {
+    "title": "Konteyner hesaplayıcı",
+    "lead": "Ürünleri ve adetleri girin, konteynerde ne kadar yer kapladığını görün. Star Termos ve Gastroplast ürünlerini aynı konteynerde birleştirebilirsiniz.",
+    "container": "Konteyner",
+    "product": "Ürün",
+    "custom": "Diğer ürün (koli ölçüsü girin)",
+    "customName": "Açıklama",
+    "qty": "Miktar",
+    "unitPcs": "adet",
+    "unitBoxes": "koli",
+    "perBox": "Koli içi adet",
+    "boxCm": "Koli U × G × Y (cm)",
+    "boxes": "Koli",
+    "volume": "Hacim",
+    "add": "+ Ürün ekle",
+    "remove": "Kaldır",
+    "total": "Toplam",
+    "used": "dolu",
+    "free": "Boş alan",
+    "fits": "Bir {c} konteynere sığar.",
+    "tight": "Sıkı yükleme: %85'in üzerinde istifi fabrika teyit eder.",
+    "over": "Bir {c} konteynere sığmaz: {n} konteyner ya da daha büyüğü gerekir.",
+    "fillMore": "Boş alana yaklaşık {n} adet daha {p} sığar.",
+    "note": "Fabrika kataloğundaki koli ölçülerine göre hacimsel tahmindir. Kesin yükleme planı proformada teyit edilir.",
+    "quote": "Bu yük için teklif isteyin",
+    "empty": "En az bir ürün ekleyin.",
+    "loadText": "Tahmini yük"
   }
 }

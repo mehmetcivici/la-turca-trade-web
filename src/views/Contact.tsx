@@ -55,7 +55,8 @@ export function Contact({ locale, d }: { locale: Locale; d: Dict }) {
             <div>
               <dt className="text-sm text-muted">{c.office}</dt>
               <dd className="mt-1 text-lg">
-                {site.city}, {site.country}
+                {site.address && <>{site.address}<br /></>}
+                {site.postalCode && `${site.postalCode} `}{site.city}, {site.country}
               </dd>
               <dd className="mt-1 text-[0.95rem] text-muted">{c.hours}</dd>
             </div>

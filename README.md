@@ -80,6 +80,17 @@ Web'den erişilemez. Yedek almak için bu klasörü indirin. Şifre unutulursa: 
 
 **Gereksinimler:** PHP 8.1+, cURL, ZipArchive, GD (WebP), PDO SQLite — panel Ayarlar sayfasında kontrol listesi var.
 
+## Barındırma ve hız
+
+Hostinger paylaşımlı sunucusu aynı anda gelen istekleri sıraya dizdiği için (Kas 2026 ölçümü: 16 dosya ≈ 30 sn)
+statik dosyalar oradan sunulmaz:
+- **JS/CSS/fontlar** → GitHub Pages: `https://mehmetcivici.github.io/la-turca-trade-web/_prod/_next/…` (`ASSET_PREFIX`)
+- **Görseller/logolar** → GitHub Pages: `…/la-turca-trade-web/img/…` (`ASSET_CDN`, `src/lib/asset.ts`)
+- **Hostinger** yalnızca HTML, panel (PHP), form ve katalog PDF'lerini verir.
+
+Bu yüzden depo herkese açık ve GitHub Pages açık kalmalıdır. Sunucuya haber verme adımı Pages yayınından **sonra** çalışır.
+Yerel `npm run build:cpanel` paketi her şeyi kendi sunucusundan verir (bu değişkenler yalnızca GitHub Actions'ta).
+
 ## SEO
 
 - Her sayfada dile özel başlık/açıklama, `canonical`, `hreflang` (es, pt-BR, en, tr, x-default → es), Open Graph.

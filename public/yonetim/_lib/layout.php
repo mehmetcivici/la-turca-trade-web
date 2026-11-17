@@ -30,7 +30,7 @@ function page_start(string $title, string $active = '', ?array $c = null, bool $
 <link rel="icon" href="<?= h(site_base()) ?>/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?= h($base) ?>/assets/admin.css?v=1">
+<link rel="stylesheet" href="<?= h($base) ?>/assets/admin.css?v=2">
 <script>window.LTT_PANEL = <?= json_encode(['base' => $base, 'site' => site_base(), 'csrf' => csrf_token(), 'autoUpdate' => (bool) ($c['auto_update'] ?? true)], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;</script>
 </head>
 <body class="<?= $bare ? 'bare' : '' ?>">

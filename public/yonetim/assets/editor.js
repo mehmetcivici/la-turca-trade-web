@@ -89,6 +89,22 @@
     return input;
   }
 
+  const LIMITS = { title: 44, description: 155 };
+  function counter(path, input) {
+    const k = path[path.length - 1];
+    const max = LIMITS[k];
+    if (!max || path.length !== 2) return null; // yalnızca sayfa başlık/açıklaması
+    const c = el("small", { class: "count" });
+    const upd = () => {
+      const n = input.value.length;
+      c.textContent = n + " / " + max + " karakter" + (n > max ? " — Google kısaltabilir" : "");
+      c.className = "count" + (n > max ? " over" : "");
+    };
+    input.addEventListener("input", upd);
+    upd();
+    return c;
+  }
+
   function fieldString(container, path, value, refVal) {
     const kind = fileKind(path);
     const opts = enumFor(path);
@@ -100,7 +116,10 @@
     } else if (kind) {
       wrap.append(fileField(path, value, kind));
     } else {
-      wrap.append(textInput(path, value, (v) => setAt(path, v)));
+      const inp = textInput(path, value, (v) => setAt(path, v));
+      wrap.append(inp);
+      const cnt = counter(path, inp);
+      if (cnt) wrap.append(cnt);
     }
     const help = helpFor(path);
     if (help) wrap.append(el("small", { class: "help", text: help }));

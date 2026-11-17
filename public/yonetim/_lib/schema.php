@@ -10,7 +10,7 @@ const ICERIK_DOSYALARI = [
     'metin-en' => ['path' => 'content/dict/en.json', 'title' => 'Site metinleri', 'lang' => 'en', 'ref' => 'content/dict/tr.json', 'refLang' => 'TR'],
     'urunler' => ['path' => 'content/products.json', 'title' => 'Ürünler', 'active' => 'urunler'],
     'kataloglar' => ['path' => 'content/site.json', 'title' => 'Kataloglar', 'only' => ['catalogs'], 'active' => 'kataloglar'],
-    'iletisim' => ['path' => 'content/site.json', 'title' => 'İletişim bilgileri', 'only' => ['email', 'phone', 'whatsapp', 'linkedin', 'instagram', 'city', 'country'], 'active' => 'iletisim'],
+    'iletisim' => ['path' => 'content/site.json', 'title' => 'İletişim bilgileri', 'only' => ['email', 'phone', 'whatsapp', 'address', 'postalCode', 'city', 'country', 'linkedin', 'instagram', 'googleVerification'], 'active' => 'iletisim'],
 ];
 
 function editor_hints(): array
@@ -54,6 +54,8 @@ function editor_hints(): array
         'email' => 'E-posta', 'phone' => 'Telefon', 'whatsapp' => 'WhatsApp numarası', 'linkedin' => 'LinkedIn adresi', 'instagram' => 'Instagram adresi',
         'city' => 'Şehir', 'country' => 'Ülke', 'brand' => 'Marka', 'file' => 'PDF dosyası', 'cover' => 'Kapak görseli', 'coverW' => 'Kapak genişliği (px)',
         'coverH' => 'Kapak yüksekliği (px)', 'sizeMb' => 'Dosya boyutu (MB)', 'year' => 'Baskı yılı', 'lang' => 'Katalog dili',
+        'address' => 'Açık adres', 'postalCode' => 'Posta kodu', 'googleVerification' => 'Google Search Console doğrulama kodu',
+        'loadables' => 'Konteyner hesaplayıcı ürünleri', 'brand' => 'Marka', 'calc' => 'Konteyner hesaplayıcı',
     ];
     // Yola özel etiketler
     $pathLabels = [
@@ -70,10 +72,14 @@ function editor_hints(): array
         'email' => 'Sitede görünen e-posta adresi.',
         'id' => 'Sistem kimliği; küçük harf, boşluksuz. Mevcut kayıtlarda değiştirmeyin.',
         'featured' => 'İşaretliyse ana sayfadaki seçkide görünür.',
-        'title' => 'Google sonuçlarında ve tarayıcı sekmesinde görünür. 60 karakter civarı ideal.',
+        'title' => 'Google sonuçlarında görünür. Sonuna " | La Turca Trade" eklenir; 44 karakteri geçmeyin.',
         'description' => 'Google sonuçlarında başlığın altında görünür. 150–160 karakter ideal.',
         'image' => 'JPG, PNG veya WebP. Sunucu otomatik küçültür.',
         'file' => 'PDF yükleyin; boyut ve sayfa sayısı otomatik doldurulur.',
+        'address' => 'Sokak, numara, ilçe. Sitede ve Google için firma bilgisinde görünür.',
+        'googleVerification' => 'Search Console → HTML etiketi yöntemindeki content="…" değeri. Yalnızca kodu yapıştırın.',
+        'box' => 'Koli ölçüsü cm cinsinden: uzunluk, genişlik, yükseklik (3 değer).',
+        'loadables' => 'Koli ölçüsü ve koli içi adedi bilinen ürünler. Gastroplast ürünleri fabrikadan koli ölçüsü gelince eklenebilir.',
     ];
     $enums = [
         'starSeries.*.group' => [['jugs', 'Cam termos sürahiler'], ['pro', 'HoReCa ve kamp'], ['go', 'Termos bardak ve matara'], ['food', 'Yemek termosları']],

@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import Link from "next/link";
+import Link from "@/components/L";
 import { asset } from "@/lib/asset";
 
 export function Arrow({ className = "h-4 w-4" }: { className?: string }) {

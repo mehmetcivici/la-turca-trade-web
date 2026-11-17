@@ -12,9 +12,9 @@ export function Logo({ tone = "dark", className = "", title = "La Turca Trade" }
   const main = tone === "dark" ? "text-navy" : "text-white";
   const sub = tone === "dark" ? "text-copper" : "text-copper-l";
   return (
-    <span role="img" aria-label={title} className={`inline-flex items-center gap-[0.55em] leading-none ${className}`}>
-      <img src={asset(mark)} alt="" width={375} height={229} className="h-[2.55em] w-auto" />
-      <span className="flex flex-col">
+    <span className={`inline-flex items-center gap-[0.55em] leading-none ${className}`}>
+      <img src={asset(mark)} alt={title} width={375} height={229} className="h-[2.55em] w-auto" />
+      <span className="flex flex-col" aria-hidden="true">
         <span className={`font-serif text-[1.5em] font-semibold tracking-[0.01em] ${main}`}>LA TURCA</span>
         <span className={`mt-[0.3em] text-[0.62em] font-bold tracking-[0.58em] ${sub}`}>TRADE</span>
       </span>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/L";
 import { ShieldCheck, Camera, Clock, CalendarCheck } from "lucide-react";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";

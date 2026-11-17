@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { asset } from "@/lib/asset";
 import type { Dict } from "@/content/dict";
 import type { Locale } from "@/i18n/config";
@@ -16,7 +16,14 @@ const lab = "block text-[0.95rem] font-medium";
 
 export function ContactForm({ d, locale, compact = false }: { d: Dict; locale: Locale; compact?: boolean }) {
   const [state, setState] = useState<State>("idle");
+  const msgRef = useRef<HTMLTextAreaElement>(null);
   const f = d.form;
+
+  // Konteyner hesaplayıcıdan gelen yük (?carga=…) mesaj alanına yazılır
+  useEffect(() => {
+    const carga = new URLSearchParams(window.location.search).get("carga");
+    if (carga && msgRef.current && !msgRef.current.value) msgRef.current.value = carga.slice(0, 3000) + "\n\n";
+  }, []);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -110,7 +117,7 @@ export function ContactForm({ d, locale, compact = false }: { d: Dict; locale: L
 
       <label className={`${lab} sm:col-span-2`}>
         {f.message}
-        <textarea name="message" rows={compact ? 3 : 5} placeholder={f.messagePlaceholder} className={field} />
+        <textarea ref={msgRef} name="message" rows={compact ? 3 : 8} placeholder={f.messagePlaceholder} className={field} />
       </label>
 
       <label className="flex items-start gap-3 text-[0.93rem] text-muted sm:col-span-2">

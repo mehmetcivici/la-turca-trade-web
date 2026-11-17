@@ -8,6 +8,8 @@ import { getDict } from "@/content/dict";
 import { site } from "@/content/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { LangSuggest } from "@/components/LangSuggest";
+import { ASSET_CDN } from "@/lib/asset";
 import { JsonLd } from "@/components/JsonLd";
 import { orgSchema, websiteSchema } from "@/lib/schema";
 
@@ -21,6 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   applicationName: site.name,
   formatDetection: { telephone: false },
+  verification: site.googleVerification ? { google: site.googleVerification } : undefined,
 };
 
 export const viewport: Viewport = {
@@ -33,7 +36,9 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const d = getDict(locale);
   return (
     <html lang={hrefLang[locale]} className={`${serif.variable} ${sans.variable}`}>
+      <head>{ASSET_CDN && <link rel="preconnect" href={new URL(ASSET_CDN).origin} crossOrigin="anonymous" />}</head>
       <body>
+        <LangSuggest locale={locale} />
         <JsonLd data={orgSchema(locale, d)} />
         <JsonLd data={websiteSchema(locale)} />
         <Header locale={locale} d={d} />

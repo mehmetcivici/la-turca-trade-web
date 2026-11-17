@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/L";
 import { Building2, ShoppingCart, Store, UtensilsCrossed, Gift } from "lucide-react";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";

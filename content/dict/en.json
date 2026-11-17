@@ -45,8 +45,8 @@
     "makers": "Manufacturers"
   },
   "home": {
-    "title": "Turkish vacuum flasks and food service equipment for distributors",
-    "description": "Star Termos and Gastroplast sales office for South America. Vacuum flasks, thermal jugs, gastronorm pans and HoReCa items at factory prices, full or mixed containers, private label available.",
+    "title": "Turkish vacuum flasks and HoReCa supplies",
+    "description": "Star Termos and Gastroplast sales office for South America: vacuum flasks, thermal jugs and GN pans at factory prices, mixed containers, private label.",
     "hero": {
       "kicker": "Star Termos · Gastroplast · Istanbul",
       "h1": "Turkish vacuum flasks and food service equipment, factory-direct to South America",
@@ -162,8 +162,8 @@
     }
   },
   "star": {
-    "title": "Star Termos: vacuum flasks and thermal jugs made in Istanbul",
-    "description": "Double-glass thermal jugs, stainless steel flasks, travel tumblers and food jars by Star Termos. Export to South America, full or mixed containers and private label manufacturing.",
+    "title": "Star Termos: vacuum flasks and jugs",
+    "description": "Double-glass thermal jugs, stainless steel flasks, tumblers and food jars by Star Termos. Export to South America and private label manufacturing.",
     "h1": "Star Termos",
     "sub": "Vacuum flasks and thermal jugs, Istanbul",
     "intro": [
@@ -237,8 +237,8 @@
     ]
   },
   "gastro": {
-    "title": "Gastroplast: polycarbonate gastronorm pans and HoReCa equipment",
-    "description": "NSF-listed polycarbonate and polypropylene gastronorm pans, storage containers, dispensers, drinkware and trays by Gastroplast. Export to South America from Istanbul.",
+    "title": "Gastroplast: GN pans and HoReCa equipment",
+    "description": "NSF-listed polycarbonate and PP gastronorm pans, storage containers, dispensers and unbreakable drinkware by Gastroplast, shipped from Istanbul.",
     "h1": "Gastroplast",
     "sub": "Food service equipment, Istanbul",
     "intro": [
@@ -298,8 +298,8 @@
     "brands": "SürPlast brands: GastroPlast, GastroCups and GastroCarry."
   },
   "dist": {
-    "title": "For importers and distributors in South America",
-    "description": "Terms for South American importers, distributors and chains: factory prices in USD, FOB, CFR or CIF, mixed Star Termos + Gastroplast containers, samples, inspection and export documents.",
+    "title": "For importers and distributors",
+    "description": "Factory prices in USD, FOB/CFR/CIF, mixed Star Termos + Gastroplast containers, samples and pre-shipment inspection for South American buyers.",
     "h1": "For importers and distributors",
     "lead": "We work with companies that buy by the container or pallet and resell in their country. If you distribute housewares, bazaar goods, corporate gifts or hotel and restaurant equipment, we have products for your range.",
     "whoTitle": "Who we work with",
@@ -400,8 +400,8 @@
     ]
   },
   "pl": {
-    "title": "Private label: flasks and HoReCa items with your logo",
-    "description": "Manufacturing under your brand: logo on flasks, jugs and tumblers, custom colours and packaging with your artwork and barcode. OEM production in Istanbul for South American distributors and chains.",
+    "title": "Private label flasks with your logo",
+    "description": "We make flasks, jugs and tumblers with your logo, colours and barcoded packaging. OEM production in Istanbul for South American distributors.",
     "h1": "Private label",
     "lead": "If your company already has a recognised brand in your country, we can manufacture under it. Star Termos produces OEM and ODM for other brands; we coordinate design, samples and production.",
     "whatTitle": "What can be customised",
@@ -447,8 +447,8 @@
     "mock": "YOUR BRAND"
   },
   "cat": {
-    "title": "Star Termos and Gastroplast catalogs (PDF)",
-    "description": "Download the factory catalogs of Star Termos (2025) and Gastroplast with codes, capacities, sizes and units per carton.",
+    "title": "Star Termos and Gastroplast catalogs",
+    "description": "Download the factory PDF catalogs of Star Termos and Gastroplast with codes, capacities, sizes and units per carton.",
     "h1": "Catalogs",
     "lead": "Official catalogs from each factory, with codes, capacities, carton sizes and, for Star Termos, container loading data.",
     "langLabel": "Catalog language",
@@ -458,7 +458,7 @@
   },
   "about": {
     "title": "About La Turca Trade",
-    "description": "La Turca Trade is the Istanbul-based sales office representing Star Termos and Gastroplast to importers and distributors in South America.",
+    "description": "Istanbul-based sales office representing Star Termos and Gastroplast to importers and distributors in South America.",
     "h1": "La Turca Trade",
     "lead": "We are an Istanbul-based sales office that brings products from Turkish factories to importers and distributors in South America. We represent Star Termos and Gastroplast in the region.",
     "body": [
@@ -491,8 +491,8 @@
     ]
   },
   "contact": {
-    "title": "Contact: quotes for importers and distributors",
-    "description": "Request price lists, catalogs and samples of Star Termos and Gastroplast. Service in Spanish, Portuguese, English and Turkish.",
+    "title": "Contact and quotes",
+    "description": "Request price lists, catalogs and samples of Star Termos and Gastroplast. We reply within one business day in Spanish, Portuguese or English.",
     "h1": "Contact",
     "lead": "Tell us what you distribute, in which country and to which port. We reply within one business day with prices and catalogs.",
     "direct": "Direct contact",
@@ -582,5 +582,33 @@
   "langPage": {
     "title": "La Turca Trade",
     "lead": "Choose your language"
+  },
+  "calc": {
+    "title": "Container calculator",
+    "lead": "Add products and quantities to see how much space they take. You can combine Star Termos and Gastroplast in the same container.",
+    "container": "Container",
+    "product": "Product",
+    "custom": "Other product (enter carton size)",
+    "customName": "Description",
+    "qty": "Quantity",
+    "unitPcs": "units",
+    "unitBoxes": "cartons",
+    "perBox": "Units per carton",
+    "boxCm": "Carton L × W × H (cm)",
+    "boxes": "Cartons",
+    "volume": "Volume",
+    "add": "+ Add product",
+    "remove": "Remove",
+    "total": "Total",
+    "used": "used",
+    "free": "Free space",
+    "fits": "Fits in one {c}.",
+    "tight": "Tight load: above 85% the factory confirms the stowage.",
+    "over": "Does not fit in one {c}: {n} containers or a larger one are needed.",
+    "fillMore": "The free space holds approx. {n} more units of {p}.",
+    "note": "Volume estimate based on carton sizes from the factory catalog. The final loading plan is confirmed on the proforma.",
+    "quote": "Request a quote for this load",
+    "empty": "Add at least one product.",
+    "loadText": "Estimated load"
   }
 }

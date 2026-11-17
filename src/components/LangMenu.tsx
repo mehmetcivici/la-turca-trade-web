@@ -19,7 +19,7 @@ export function LangMenu({ locale, label, tone = "dark", compact = false }: { lo
         <ul className="absolute right-0 top-full z-50 mt-2 w-44 overflow-hidden rounded-md border border-line bg-paper py-1 shadow-lg">
           {locales.map((l) => (
             <li key={l}>
-              <a href={asset(href(l, key))} hrefLang={l} lang={l} aria-current={l === locale ? "true" : undefined} className={"flex items-center justify-between px-4 py-2 text-[0.95rem] hover:bg-paper-2 " + (l === locale ? "font-bold text-navy" : "text-ink")}>
+              <a href={asset(href(l, key))} onClick={() => { try { localStorage.setItem("ltt-lang-ok", "1"); } catch {} }} hrefLang={l} lang={l} aria-current={l === locale ? "true" : undefined} className={"flex items-center justify-between px-4 py-2 text-[0.95rem] hover:bg-paper-2 " + (l === locale ? "font-bold text-navy" : "text-ink")}>
                 {localeNames[l]}
                 <span className="text-xs uppercase text-muted">{l}</span>
               </a>
@@ -35,6 +35,7 @@ export function LangMenu({ locale, label, tone = "dark", compact = false }: { lo
         <a
           key={l}
           href={asset(href(l, key))}
+          onClick={() => { try { localStorage.setItem("ltt-lang-ok", "1"); } catch {} }}
           hrefLang={l}
           lang={l}
           title={localeNames[l]}

@@ -38,7 +38,18 @@ export interface GastroCategory {
   featured?: boolean;
 }
 
+export interface Loadable {
+  id: string;
+  code: string;
+  brand: string;
+  name: I18n;
+  perBox: number;
+  box: number[];
+}
+
 export const starSeries = data.starSeries as StarSeries[];
+/** Konteyner hesaplayıcı: koli ölçüsü (cm) ve koli içi adet bilinen ürünler. */
+export const loadables = (data.loadables ?? []) as Loadable[];
 export const starGroups: StarGroup[] = ["jugs", "pro", "go", "food"];
 export const starLoading = data.starLoading as LoadingRow[];
 export const gastroCategories = data.gastroCategories as GastroCategory[];
