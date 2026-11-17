@@ -28,6 +28,6 @@ Star Termos sayfalarının bir kısmı vektör çizimdir. Bu yüzden macOS Visio
 3. Çıktıları sayfa sayfa kontrol edin.
 4. `content/site.json` içindeki boyut ve sayfa sayısı bilgilerini güncelleyin.
 
-`scripts/sync-catalogs.mjs` dile göre hazırlanmış sürümler varsa özgün dosyayı yayımlamaz. PDF'ler GitHub Pages'ten sunulur, sunucu paketine girmez.
+`scripts/sync-catalogs.mjs` dile göre hazırlanmış sürümler varsa özgün dosyayı yayımlamaz. PDF'ler GitHub Pages'ten sunulur, sunucu paketine girmez; sunucu güncellemesi `catalogs/` altında kalan eski PDF'leri siler.
 
 Yazı tipleri SIL Open Font License ile dağıtılır (`fonts/LICENSE.txt`).
