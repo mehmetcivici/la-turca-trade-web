@@ -21,7 +21,9 @@ function editor_hints(): array
         'home' => 'Ana sayfa', 'star' => 'Star Termos sayfası', 'gastro' => 'Gastroplast sayfası', 'dist' => 'Distribütörler sayfası',
         'pl' => 'Özel marka sayfası', 'cat' => 'Kataloglar sayfası', 'about' => 'Hakkımızda sayfası', 'contact' => 'İletişim sayfası',
         'form' => 'İletişim formu', 'countries' => 'Ülke adları', 'products' => 'Ürün grubu ve malzeme adları', 'notFound' => '404 (bulunamadı) sayfası',
-        'langPage' => 'Dil seçim sayfası',
+        'langPage' => 'Dil seçim sayfası', 'guide' => 'Türk üreticiler rehberi sayfası',
+        'why' => 'Nedenler', 'makersTitle' => 'Üreticiler başlığı', 'makersLead' => 'Üreticiler açıklaması', 'rangeTitle' => 'Ürün yelpazesi başlığı',
+        'rangeLead' => 'Ürün yelpazesi açıklaması', 'calcTitle' => 'Hesaplayıcı kutusu başlığı', 'calcLead' => 'Hesaplayıcı kutusu metni', 'calcLink' => 'Hesaplayıcı bağlantı yazısı',
         // Sık alanlar
         'title' => 'Başlık (Google\'da görünen)', 'description' => 'Açıklama (Google\'da görünen)', 'siteDescription' => 'Site açıklaması',
         'h1' => 'Sayfa başlığı', 'sub' => 'Alt başlık', 'lead' => 'Giriş metni', 'kicker' => 'Üst etiket', 'intro' => 'Tanıtım paragrafları',
@@ -61,7 +63,7 @@ function editor_hints(): array
     $pathLabels = [
         'home.star' => 'Star Termos kartı', 'home.gastro' => 'Gastroplast kartı', 'home.pl' => 'Özel marka bölümü', 'home.catalogs' => 'Kataloglar bölümü',
         'nav.starTermos' => 'Star Termos', 'nav.gastroplast' => 'Gastroplast', 'nav.distributors' => 'Distribütörler', 'nav.privateLabel' => 'Özel marka',
-        'nav.catalogs' => 'Kataloglar', 'nav.about' => 'Hakkımızda', 'nav.contact' => 'İletişim',
+        'nav.catalogs' => 'Kataloglar', 'nav.about' => 'Hakkımızda', 'nav.contact' => 'İletişim', 'nav.guide' => 'Türk üreticiler (rehber)',
         'form.name' => 'Ad soyad', 'form.company' => 'Firma', 'form.country' => 'Ülke', 'form.email' => 'E-posta', 'form.phone' => 'Telefon',
         'form.type' => 'Firma türü', 'form.interest' => 'İlgi', 'form.message' => 'Mesaj',
         'contact.title' => 'Başlık (Google\'da görünen)', 'contact.h1' => 'Sayfa başlığı',
