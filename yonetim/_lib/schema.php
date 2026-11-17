@@ -79,7 +79,9 @@ function editor_hints(): array
         'title' => 'Google sonuçlarında görünür. Sonuna " | La Turca Trade" eklenir; 44 karakteri geçmeyin.',
         'description' => 'Google sonuçlarında başlığın altında görünür. 150–160 karakter ideal.',
         'image' => 'JPG, PNG veya WebP. Sunucu otomatik küçültür.',
-        'file' => 'PDF yükleyin; boyut ve sayfa sayısı otomatik doldurulur.',
+        'file' => 'İngilizce (ve Türkçe sayfalar için) PDF. Dosya yalnız sunucuya kaydedilir, GitHub\'a gitmez; boyut ve sayfa sayısı otomatik doldurulur.',
+        'fileEs' => 'İspanyolca sayfalarda indirilen PDF. Boşsa İngilizce dosya kullanılır.',
+        'filePt' => 'Portekizce sayfalarda indirilen PDF. Boşsa İngilizce dosya kullanılır.',
         'address' => 'Sokak, numara, ilçe. Sitede ve Google için firma bilgisinde görünür.',
         'googleVerification' => 'Search Console → HTML etiketi yöntemindeki content="…" değeri. Yalnızca kodu yapıştırın.',
         'box' => 'Koli ölçüsü cm cinsinden: uzunluk, genişlik, yükseklik (3 değer).',
@@ -89,6 +91,6 @@ function editor_hints(): array
         'starSeries.*.group' => [['jugs', 'Cam termos sürahiler'], ['pro', 'HoReCa ve kamp'], ['go', 'Termos bardak ve matara'], ['food', 'Yemek termosları']],
         'starSeries.*.material' => [['doubleGlass', 'Çift cam vakum ampul'], ['solidBody', 'Güçlendirilmiş gövde, çift cam'], ['steel', 'Çift cidarlı paslanmaz çelik'], ['steel304', '304 paslanmaz çelik, sızdırmaz kapak'], ['steelFood', 'Gıdaya uygun paslanmaz çelik']],
     ];
-    $files = ['image' => 'image', 'cover' => 'image', 'file' => 'pdf'];
+    $files = ['image' => 'image', 'cover' => 'image', 'file' => 'pdf', 'fileEs' => 'pdf', 'filePt' => 'pdf'];
     return compact('labels', 'pathLabels', 'help', 'enums', 'files');
 }

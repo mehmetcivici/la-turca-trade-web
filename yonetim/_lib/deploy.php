@@ -61,7 +61,7 @@ function deploy_version(array $c, string $sha, string $kaynak, bool $auto, bool 
         }
 
         $root = rtrim(SITE_ROOT, '/');
-        $n = 0;
+        $n = 0; // Not: pakette olmayan dosyalar silinmez (ör. panelden yüklenen catalogs/*.pdf sunucuda kalır)
         for ($i = 0; $i < $zip->numFiles; $i++) {
             $name = (string) $zip->getNameIndex($i);
             $rel = substr($name, strlen($prefix));
@@ -75,11 +75,6 @@ function deploy_version(array $c, string $sha, string $kaynak, bool $auto, bool 
             $part = $dest . '.ltt-tmp';
             if (file_put_contents($part, $data) === false || !rename($part, $dest)) throw new RuntimeException('Yazılamadı: ' . $rel);
             $n++;
-        }
-        // PDF kataloglar GitHub Pages'ten sunuluyor ve pakette yok: sunucuda kalan eski PDF'leri kaldır
-        // (özgün üretici kataloglarında üreticinin iletişim bilgileri var, yayında kalmamalı)
-        if ($zip->locateName($prefix . 'catalogs/') === false) {
-            foreach (glob($root . '/catalogs/*.pdf') ?: [] as $eski) { if (@unlink($eski)) $n++; }
         }
         $zip->close();
         if (function_exists('opcache_reset')) @opcache_reset();

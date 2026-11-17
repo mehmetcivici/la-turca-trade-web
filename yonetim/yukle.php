@@ -1,5 +1,5 @@
 <?php
-/** Görsel / PDF yükleme: görselleri küçültüp WebP'ye çevirir, dosyayı depoya commit eder. */
+/** Görsel / PDF yükleme: görselleri küçültüp WebP'ye çevirip depoya commit eder; PDF kataloglar yalnız sunucuya kaydedilir (GitHub'a gitmez). */
 declare(strict_types=1);
 require __DIR__ . '/_lib/bootstrap.php';
 $c = require_login();
@@ -31,10 +31,13 @@ $base = slug(pathinfo((string) $f['name'], PATHINFO_FILENAME));
 try {
     if ($kind === 'pdf') {
         if (!str_starts_with($bytes, '%PDF')) throw new RuntimeException('Bu dosya PDF değil.');
-        $repoPath = 'kataloglar/' . $base . '.pdf';
+        $dir = rtrim(SITE_ROOT, '/') . '/catalogs';
+        if (!is_dir($dir) && !@mkdir($dir, 0755, true)) throw new RuntimeException('catalogs klasörü oluşturulamadı.');
+        $dest = $dir . '/' . $base . '.pdf';
+        $part = $dest . '.ltt-tmp';
+        if (file_put_contents($part, $bytes) === false || !rename($part, $dest)) throw new RuntimeException('PDF sunucuya yazılamadı.');
         $pages = preg_match_all('#/Type\s*/Page(?!s)#', $bytes);
-        $sha = gh($c)->commit([$repoPath => $bytes], 'Panel: katalog yüklendi (' . $base . '.pdf)');
-        json_out(['ok' => true, 'path' => '/catalogs/' . $base . '.pdf', 'sizeMb' => round(strlen($bytes) / 1048576, 1), 'pages' => $pages ?: null, 'commit' => substr($sha, 0, 7)]);
+        json_out(['ok' => true, 'path' => '/catalogs/' . $base . '.pdf', 'sizeMb' => round(strlen($bytes) / 1e6, 1), 'pages' => $pages ?: null]);
     }
     if (!function_exists('imagecreatefromstring')) throw new RuntimeException('Sunucuda GD yok; görsel işlenemiyor.');
     $info = @getimagesizefromstring($bytes);
