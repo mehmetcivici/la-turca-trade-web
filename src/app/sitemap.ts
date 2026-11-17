@@ -15,6 +15,7 @@ const SOURCES: Record<PageKey, string[]> = {
   catalogs: ["content/site.json", "kataloglar", "src/views/Catalogs.tsx"],
   about: ["src/views/About.tsx"],
   contact: ["content/site.json", "src/views/Contact.tsx"],
+  guide: ["content/products.json", "src/views/Guide.tsx"],
 };
 
 const cache = new Map<string, Date | undefined>();
@@ -43,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: abs(href(l, key)),
       lastModified: lastmod(key, l),
       changeFrequency: key === "home" || key === "catalogs" ? ("monthly" as const) : ("yearly" as const),
-      priority: key === "home" ? 1 : key === "starTermos" || key === "gastroplast" || key === "distributors" ? 0.8 : 0.6,
+      priority: key === "home" ? 1 : key === "starTermos" || key === "gastroplast" || key === "distributors" || key === "guide" ? 0.8 : 0.6,
       alternates: {
         languages: Object.fromEntries([...locales.map((x) => [hrefLang[x], abs(href(x, key))]), ["x-default", abs(href("es", key))]]),
       },

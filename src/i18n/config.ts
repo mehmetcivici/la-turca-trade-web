@@ -21,7 +21,8 @@ export type PageKey =
   | "privateLabel"
   | "catalogs"
   | "about"
-  | "contact";
+  | "contact"
+  | "guide";
 
 export type SubPageKey = Exclude<PageKey, "home">;
 
@@ -34,6 +35,7 @@ export const slugs: Record<SubPageKey, Record<Locale, string>> = {
   catalogs: { es: "catalogos", pt: "catalogos", en: "catalogs", tr: "kataloglar" },
   about: { es: "nosotros", pt: "sobre-nos", en: "about", tr: "hakkimizda" },
   contact: { es: "contacto", pt: "contato", en: "contact", tr: "iletisim" },
+  guide: { es: "fabricantes-turcos-de-termos", pt: "fabricantes-turcos-de-garrafas-termicas", en: "turkish-thermos-manufacturers", tr: "turk-termos-ureticileri" },
 };
 
 export const subPages = Object.keys(slugs) as SubPageKey[];

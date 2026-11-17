@@ -9,7 +9,8 @@
     "privateLabel": "Marca propia",
     "catalogs": "Catálogos",
     "about": "Nosotros",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "guide": "Fabricantes turcos"
   },
   "common": {
     "quote": "Solicitar cotización",
@@ -162,7 +163,7 @@
     }
   },
   "star": {
-    "title": "Star Termos: termos y jarras térmicas",
+    "title": "Termos por mayor de Turquía: Star Termos",
     "description": "Jarras térmicas de vidrio doble, termos de acero, vasos y termos para alimentos Star Termos. Exportación a Sudamérica y fabricación con su marca.",
     "h1": "Star Termos",
     "sub": "Termos y jarras térmicas, Estambul",
@@ -237,7 +238,7 @@
     ]
   },
   "gastro": {
-    "title": "Gastroplast: cubetas GN y equipos HoReCa",
+    "title": "Cubetas gastronorm de policarbonato",
     "description": "Cubetas gastronorm de policarbonato y PP listadas NSF, recipientes, dispensadores y vajilla irrompible Gastroplast. Envío de Estambul a Sudamérica.",
     "h1": "Gastroplast",
     "sub": "Equipamiento gastronómico, Estambul",
@@ -610,5 +611,97 @@
     "quote": "Pedir cotización para esta carga",
     "empty": "Agregue al menos un producto.",
     "loadText": "Carga estimada"
+  },
+  "guide": {
+    "title": "Fabricantes turcos de termos: guía de compra",
+    "description": "Cómo comprar termos y equipos HoReCa directo de fábricas turcas: Star Termos y Gastroplast, precio FOB/CIF, contenedor mixto, muestras y documentos.",
+    "kicker": "Guía para importadores",
+    "h1": "Fabricantes turcos de termos y equipamiento gastronómico",
+    "lead": "Qué fabrican Star Termos y Gastroplast en Estambul, cómo se compra directo de fábrica y qué necesita un importador sudamericano para su primer contenedor.",
+    "whyTitle": "Por qué comprar termos en Turquía",
+    "why": [
+      {
+        "t": "Precio de fábrica y trazabilidad",
+        "d": "Star Termos fabrica sus jarras y termos en Estambul y Gastroplast diseña y produce sus propios moldes. Usted compra con precio de planta y sabe dónde se hizo cada pieza."
+      },
+      {
+        "t": "Calidad certificada",
+        "d": "Star Termos tiene ISO 9001, 14001, 22000 y 45001 y es miembro de Sedex. Las cubetas GN de Gastroplast están listadas por NSF International."
+      },
+      {
+        "t": "Pedidos flexibles",
+        "d": "Contenedores mixtos con productos de las dos fábricas, colores por referencia y fabricación con su marca (OEM y ODM)."
+      },
+      {
+        "t": "Logística desde Estambul",
+        "d": "Las dos plantas están en Esenyurt, a unos 20 km del puerto de Ambarlı, desde donde embarcamos hacia la costa atlántica y la del Pacífico."
+      }
+    ],
+    "makersTitle": "Los fabricantes que representamos",
+    "makersLead": "La Turca Trade es la oficina comercial para Sudamérica de dos fabricantes de Estambul. Cada uno tiene su propia línea y sus certificaciones.",
+    "rangeTitle": "Qué se puede importar",
+    "rangeLead": "Desde jarras térmicas para el hogar hasta equipamiento para cocinas profesionales. Los catálogos completos están en PDF.",
+    "stepsTitle": "Cómo importar desde Turquía, paso a paso",
+    "steps": [
+      {
+        "t": "Surtido y cantidades",
+        "d": "Elija referencias de los catálogos y calcule el volumen con la calculadora de contenedor. Puede combinar productos de las dos fábricas."
+      },
+      {
+        "t": "Cotización y muestras",
+        "d": "Le enviamos precios en USD (FOB Estambul, CFR o CIF a su puerto) y muestras de las referencias elegidas."
+      },
+      {
+        "t": "Proforma y anticipo",
+        "d": "La proforma confirma unidades por caja, volumen, peso y plazo de producción. La fábrica produce con el anticipo acordado."
+      },
+      {
+        "t": "Producción e inspección",
+        "d": "Seguimos la producción y revisamos cantidades, embalaje y marcado antes de la carga. Usted recibe fotos y video."
+      },
+      {
+        "t": "Embarque y documentos",
+        "d": "Enviamos factura comercial, lista de empaque, certificado de origen y conocimiento de embarque (BL)."
+      },
+      {
+        "t": "Despacho en destino",
+        "d": "Su agente de aduanas nacionaliza la mercadería con esos documentos; le damos la información técnica que necesite."
+      }
+    ],
+    "termsTitle": "Condiciones habituales",
+    "calcTitle": "¿Cuánto entra en un contenedor?",
+    "calcLead": "Pruebe la calculadora con las medidas de caja del catálogo de fábrica: 20' DC, 40' DC o 40' HC, con uno o varios productos.",
+    "calcLink": "Abrir la calculadora",
+    "faqTitle": "Preguntas frecuentes",
+    "faq": [
+      {
+        "q": "¿Por qué comprar termos a fabricantes turcos?",
+        "a": "Por la combinación de calidad certificada, precio de fábrica y flexibilidad: contenedores mixtos, colores por referencia y fabricación con marca propia. Star Termos tiene 30 años en el sector y exporta a 19 países."
+      },
+      {
+        "q": "¿Qué fabricante turco de termos representan?",
+        "a": "Representamos a Star Termos, fabricante de Estambul de jarras térmicas de vidrio doble, termos de acero, vasos térmicos y termos para alimentos. Para equipamiento gastronómico representamos a Gastroplast."
+      },
+      {
+        "q": "¿Cuál es el pedido mínimo?",
+        "a": "Depende de la referencia. Para un primer pedido proponemos un contenedor mixto de 20'; con la calculadora puede estimar cuántas unidades entran."
+      },
+      {
+        "q": "¿Cuánto tarda un pedido de Turquía a Sudamérica?",
+        "a": "Es la suma del plazo de producción y del tránsito marítimo, que depende de la naviera y de los transbordos. Ambos se indican en la proforma."
+      },
+      {
+        "q": "¿Los termos turcos tienen certificaciones?",
+        "a": "La planta de Star Termos está certificada ISO 9001, ISO 14001, ISO 22000 (inocuidad alimentaria) e ISO 45001 y es miembro de Sedex. Los productos tienen 2 años de garantía de fabricación."
+      },
+      {
+        "q": "¿Puedo poner mi marca en los termos?",
+        "a": "Sí. Star Termos fabrica en OEM y ODM: logotipo en el producto, colores y caja con su diseño y código de barras."
+      },
+      {
+        "q": "¿Cómo se paga?",
+        "a": "Normalmente por transferencia con anticipo y saldo contra documentos, o con carta de crédito. Se acuerda en cada operación."
+      }
+    ]
   }
 }

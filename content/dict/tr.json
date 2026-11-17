@@ -9,7 +9,8 @@
     "privateLabel": "Özel marka",
     "catalogs": "Kataloglar",
     "about": "Hakkımızda",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "guide": "Türk üreticiler"
   },
   "common": {
     "quote": "Teklif isteyin",
@@ -162,7 +163,7 @@
     }
   },
   "star": {
-    "title": "Star Termos: termos ve termos sürahi",
+    "title": "Toptan termos ihracatı: Star Termos",
     "description": "Star Termos çift cam termos sürahi, çelik termos, termos bardak ve yemek termosları. Güney Amerika'ya ihracat ve özel marka üretim.",
     "h1": "Star Termos",
     "sub": "Termos ve termos sürahi, İstanbul",
@@ -237,7 +238,7 @@
     ]
   },
   "gastro": {
-    "title": "Gastroplast: GN küvet ve HoReCa ürünleri",
+    "title": "Polikarbonat gastronom küvet: Gastroplast",
     "description": "NSF listeli polikarbonat ve PP gastronom küvetler, saklama kapları, dispenserler ve kırılmaz bardaklar. İstanbul'dan Güney Amerika'ya sevkiyat.",
     "h1": "Gastroplast",
     "sub": "Endüstriyel mutfak ekipmanları, İstanbul",
@@ -610,5 +611,97 @@
     "quote": "Bu yük için teklif isteyin",
     "empty": "En az bir ürün ekleyin.",
     "loadText": "Tahmini yük"
+  },
+  "guide": {
+    "title": "Türk termos üreticileri: alım rehberi",
+    "description": "Türk fabrikalarından doğrudan termos ve HoReCa ürünü almanın yolu: Star Termos ve Gastroplast, FOB/CIF, karışık konteyner, numune ve belgeler.",
+    "kicker": "İthalatçılar için rehber",
+    "h1": "Türk termos ve endüstriyel mutfak ürünleri üreticileri",
+    "lead": "Star Termos ve Gastroplast'ın İstanbul'da neler ürettiği, fabrikadan doğrudan nasıl alım yapıldığı ve Güney Amerikalı bir ithalatçının ilk konteyneri için nelere ihtiyaç duyduğu.",
+    "whyTitle": "Neden Türkiye'den termos",
+    "why": [
+      {
+        "t": "Fabrika fiyatı ve izlenebilirlik",
+        "d": "Star Termos sürahi ve termoslarını İstanbul'da üretir, Gastroplast kalıplarını kendisi tasarlayıp üretir. Fabrika fiyatıyla alır, her parçanın nerede üretildiğini bilirsiniz."
+      },
+      {
+        "t": "Belgeli kalite",
+        "d": "Star Termos ISO 9001, 14001, 22000 ve 45001 belgelerine sahiptir ve Sedex üyesidir. Gastroplast GN küvetleri NSF International listesindedir."
+      },
+      {
+        "t": "Esnek sipariş",
+        "d": "İki fabrikanın ürünleriyle karışık konteyner, ürün bazında renk seçimi ve kendi markanızla üretim (OEM ve ODM)."
+      },
+      {
+        "t": "İstanbul'dan lojistik",
+        "d": "İki tesis de Ambarlı Limanı'na yaklaşık 20 km uzaklıktaki Esenyurt'ta; oradan Atlantik ve Pasifik kıyılarına sevkiyat yapıyoruz."
+      }
+    ],
+    "makersTitle": "Temsil ettiğimiz üreticiler",
+    "makersLead": "La Turca Trade, iki İstanbul üreticisinin Güney Amerika satış ofisidir. Her birinin kendi ürün yelpazesi ve belgeleri vardır.",
+    "rangeTitle": "Neler ithal edilebilir",
+    "rangeLead": "Ev için termos sürahilerden profesyonel mutfak ekipmanlarına. Kataloglar PDF olarak mevcut.",
+    "stepsTitle": "Türkiye'den adım adım ithalat",
+    "steps": [
+      {
+        "t": "Ürün seçimi ve adetler",
+        "d": "Kataloglardan ürünleri seçin, hacmi konteyner hesaplayıcıyla hesaplayın. İki fabrikanın ürünlerini birleştirebilirsiniz."
+      },
+      {
+        "t": "Teklif ve numune",
+        "d": "USD cinsinden fiyat (FOB İstanbul, CFR veya CIF limanınız) ve seçilen ürünlerin numunelerini gönderiyoruz."
+      },
+      {
+        "t": "Proforma ve avans",
+        "d": "Proforma koli içi adet, hacim, ağırlık ve üretim süresini teyit eder. Fabrika anlaşılan avansla üretime başlar."
+      },
+      {
+        "t": "Üretim ve kontrol",
+        "d": "Üretimi takip ediyor, yüklemeden önce adet, ambalaj ve markalamayı kontrol ediyoruz. Fotoğraf ve video alırsınız."
+      },
+      {
+        "t": "Sevkiyat ve belgeler",
+        "d": "Ticari fatura, çeki listesi, menşe şahadetnamesi ve konşimentoyu gönderiyoruz."
+      },
+      {
+        "t": "Varışta gümrükleme",
+        "d": "Gümrük müşaviriniz malı bu belgelerle çeker; ihtiyaç duyulan teknik bilgileri biz sağlarız."
+      }
+    ],
+    "termsTitle": "Olağan koşullar",
+    "calcTitle": "Bir konteynere ne kadar sığar?",
+    "calcLead": "Fabrika kataloğundaki koli ölçüleriyle hesaplayıcıyı deneyin: 20' DC, 40' DC veya 40' HC, tek ya da çok ürünlü.",
+    "calcLink": "Hesaplayıcıyı aç",
+    "faqTitle": "Sık sorulan sorular",
+    "faq": [
+      {
+        "q": "Neden Türk termos üreticilerinden alım yapılmalı?",
+        "a": "Belgeli kalite, fabrika fiyatı ve esneklik bir arada: karışık konteyner, ürün bazında renk ve özel marka. Star Termos sektörde 30 yıllık ve 19 ülkeye ihracat yapıyor."
+      },
+      {
+        "q": "Hangi Türk termos üreticisini temsil ediyorsunuz?",
+        "a": "Çift cam termos sürahi, çelik termos, termos bardak ve yemek termosu üreten İstanbullu Star Termos'u temsil ediyoruz. Endüstriyel mutfak ekipmanında Gastroplast'ı temsil ediyoruz."
+      },
+      {
+        "q": "Minimum sipariş nedir?",
+        "a": "Ürüne göre değişir. İlk sipariş için 20' karışık konteyner öneriyoruz; hesaplayıcıyla kaç adet sığacağını görebilirsiniz."
+      },
+      {
+        "q": "Türkiye'den Güney Amerika'ya sipariş ne kadar sürer?",
+        "a": "Üretim süresi ile deniz yolu transit süresinin toplamıdır; transit armatöre ve aktarmalara göre değişir. İkisi de proformada yazılır."
+      },
+      {
+        "q": "Türk termoslarının belgeleri var mı?",
+        "a": "Star Termos tesisi ISO 9001, ISO 14001, ISO 22000 (gıda güvenliği) ve ISO 45001 belgelidir ve Sedex üyesidir. Ürünler 2 yıl üretim garantilidir."
+      },
+      {
+        "q": "Termoslara kendi markamı koyabilir miyim?",
+        "a": "Evet. Star Termos OEM ve ODM üretim yapar: ürün üzerinde logo, özel renkler, tasarımınız ve barkodunuzla kutu."
+      },
+      {
+        "q": "Ödeme nasıl yapılır?",
+        "a": "Genellikle avanslı havale ve bakiye belge karşılığı ya da akreditif. Her işlemde ayrıca belirlenir."
+      }
+    ]
   }
 }

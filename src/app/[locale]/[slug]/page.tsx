@@ -10,6 +10,7 @@ import { PrivateLabel } from "@/views/PrivateLabel";
 import { Catalogs } from "@/views/Catalogs";
 import { About } from "@/views/About";
 import { Contact } from "@/views/Contact";
+import { Guide } from "@/views/Guide";
 
 export const dynamicParams = false;
 
@@ -26,6 +27,7 @@ function meta(key: SubPageKey, d: Dict) {
     case "catalogs": return { t: d.cat.title, s: d.cat.description, img: "/img/catalogs/gastroplast-cover.webp" };
     case "about": return { t: d.about.title, s: d.about.description, img: "/img/star-termos/scene-jugs-stone.webp" };
     case "contact": return { t: d.contact.title, s: d.contact.description, img: "/img/star-termos/lineup.webp" };
+    case "guide": return { t: d.guide.title, s: d.guide.description, img: "/img/star-termos/scene-jugs-stone.webp" };
   }
 }
 
@@ -58,5 +60,6 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
     case "catalogs": return <Catalogs {...props} />;
     case "about": return <About {...props} />;
     case "contact": return <Contact {...props} />;
+    case "guide": return <Guide {...props} />;
   }
 }

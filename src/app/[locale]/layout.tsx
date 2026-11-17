@@ -36,7 +36,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const d = getDict(locale);
   return (
     <html lang={hrefLang[locale]} className={`${serif.variable} ${sans.variable}`}>
-      <head>{ASSET_CDN && <link rel="preconnect" href={new URL(ASSET_CDN).origin} crossOrigin="anonymous" />}</head>
+      <head>{ASSET_CDN ? <link rel="preconnect" href={new URL(ASSET_CDN).origin} crossOrigin="anonymous" /> : null}</head>
       <body>
         <LangSuggest locale={locale} />
         <JsonLd data={orgSchema(locale, d)} />

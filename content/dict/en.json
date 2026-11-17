@@ -9,7 +9,8 @@
     "privateLabel": "Private label",
     "catalogs": "Catalogs",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "guide": "Turkish manufacturers"
   },
   "common": {
     "quote": "Request a quote",
@@ -162,7 +163,7 @@
     }
   },
   "star": {
-    "title": "Star Termos: vacuum flasks and jugs",
+    "title": "Star Termos wholesale vacuum flasks",
     "description": "Double-glass thermal jugs, stainless steel flasks, tumblers and food jars by Star Termos. Export to South America and private label manufacturing.",
     "h1": "Star Termos",
     "sub": "Vacuum flasks and thermal jugs, Istanbul",
@@ -237,7 +238,7 @@
     ]
   },
   "gastro": {
-    "title": "Gastroplast: GN pans and HoReCa equipment",
+    "title": "Polycarbonate gastronorm pans: Gastroplast",
     "description": "NSF-listed polycarbonate and PP gastronorm pans, storage containers, dispensers and unbreakable drinkware by Gastroplast, shipped from Istanbul.",
     "h1": "Gastroplast",
     "sub": "Food service equipment, Istanbul",
@@ -610,5 +611,97 @@
     "quote": "Request a quote for this load",
     "empty": "Add at least one product.",
     "loadText": "Estimated load"
+  },
+  "guide": {
+    "title": "Turkish thermos manufacturers: buyer guide",
+    "description": "How to buy vacuum flasks and HoReCa supplies direct from Turkish factories: Star Termos and Gastroplast, FOB/CIF, mixed containers, samples, documents.",
+    "kicker": "Guide for importers",
+    "h1": "Turkish thermos and food service equipment manufacturers",
+    "lead": "What Star Termos and Gastroplast make in Istanbul, how to buy factory-direct and what a South American importer needs for a first container.",
+    "whyTitle": "Why buy vacuum flasks from Türkiye",
+    "why": [
+      {
+        "t": "Factory price and traceability",
+        "d": "Star Termos makes its jugs and flasks in Istanbul and Gastroplast designs and builds its own moulds. You buy at plant price and know where every piece was made."
+      },
+      {
+        "t": "Certified quality",
+        "d": "Star Termos holds ISO 9001, 14001, 22000 and 45001 and is a Sedex member. Gastroplast GN pans are listed by NSF International."
+      },
+      {
+        "t": "Flexible orders",
+        "d": "Mixed containers from both factories, colours per item and manufacturing under your brand (OEM and ODM)."
+      },
+      {
+        "t": "Logistics from Istanbul",
+        "d": "Both plants are in Esenyurt, about 20 km from Ambarlı port, where we ship to the Atlantic and Pacific coasts."
+      }
+    ],
+    "makersTitle": "The manufacturers we represent",
+    "makersLead": "La Turca Trade is the South America sales office of two Istanbul manufacturers, each with its own range and certifications.",
+    "rangeTitle": "What you can import",
+    "rangeLead": "From thermal jugs for the home to equipment for professional kitchens. Full catalogs are available as PDF.",
+    "stepsTitle": "How to import from Türkiye, step by step",
+    "steps": [
+      {
+        "t": "Range and quantities",
+        "d": "Pick items from the catalogs and check the volume with the container calculator. You can combine products from both factories."
+      },
+      {
+        "t": "Quote and samples",
+        "d": "We send prices in USD (FOB Istanbul, CFR or CIF to your port) and samples of the chosen items."
+      },
+      {
+        "t": "Proforma and deposit",
+        "d": "The proforma confirms units per carton, volume, weight and production time. The factory starts on the agreed deposit."
+      },
+      {
+        "t": "Production and inspection",
+        "d": "We follow production and check quantities, packing and marking before loading. You receive photos and video."
+      },
+      {
+        "t": "Shipping and documents",
+        "d": "We send the commercial invoice, packing list, certificate of origin and bill of lading."
+      },
+      {
+        "t": "Clearance at destination",
+        "d": "Your customs broker clears the goods with those documents; we supply any technical information needed."
+      }
+    ],
+    "termsTitle": "Usual terms",
+    "calcTitle": "How much fits in a container?",
+    "calcLead": "Try the calculator with carton sizes from the factory catalog: 20' DC, 40' DC or 40' HC, with one or several products.",
+    "calcLink": "Open the calculator",
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "Why buy vacuum flasks from Turkish manufacturers?",
+        "a": "For the mix of certified quality, factory prices and flexibility: mixed containers, colours per item and private label. Star Termos has 30 years in the industry and exports to 19 countries."
+      },
+      {
+        "q": "Which Turkish thermos manufacturer do you represent?",
+        "a": "We represent Star Termos, an Istanbul maker of double-glass thermal jugs, steel flasks, tumblers and food jars. For food service equipment we represent Gastroplast."
+      },
+      {
+        "q": "What is the minimum order?",
+        "a": "It depends on the item. For a first order we suggest a mixed 20' container; the calculator shows how many units fit."
+      },
+      {
+        "q": "How long does an order from Türkiye to South America take?",
+        "a": "Production time plus sea transit, which depends on the carrier and transshipments. Both are stated on the proforma."
+      },
+      {
+        "q": "Are Turkish vacuum flasks certified?",
+        "a": "The Star Termos plant is certified to ISO 9001, ISO 14001, ISO 22000 (food safety) and ISO 45001 and is a Sedex member. Products carry a 2-year manufacturing warranty."
+      },
+      {
+        "q": "Can I put my brand on the flasks?",
+        "a": "Yes. Star Termos manufactures OEM and ODM: logo on the product, custom colours and a gift box with your artwork and barcode."
+      },
+      {
+        "q": "How is payment handled?",
+        "a": "Usually bank transfer with deposit and balance against documents, or letter of credit. Agreed per order."
+      }
+    ]
   }
 }

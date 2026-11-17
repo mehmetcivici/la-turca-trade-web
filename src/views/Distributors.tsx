@@ -65,6 +65,9 @@ export function Distributors({ locale, d }: { locale: Locale; d: Dict }) {
         </div>
         <div className="lg:col-span-8">
           <DefList items={x.terms} />
+          <Link href={href(locale, "guide")} className="link-arrow mt-8 text-navy">
+            {d.guide.stepsTitle} <Arrow />
+          </Link>
         </div>
       </section>
 

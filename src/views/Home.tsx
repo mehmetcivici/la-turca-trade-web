@@ -77,6 +77,11 @@ export function Home({ locale, d }: { locale: Locale; d: Dict }) {
       {/* Üreticiler */}
       <section className="wrap py-20 md:py-28" aria-labelledby="makers">
         <SectionHead id="makers" kicker="Star Termos · Gastroplast" title={h.makers.title} lead={h.makers.lead} center />
+        <p className="mt-5 text-center">
+          <Link href={href(locale, "guide")} className="link-arrow text-navy">
+            {d.guide.h1} <Arrow />
+          </Link>
+        </p>
         <div className="mt-14 grid gap-6 lg:grid-cols-2 lg:gap-8">
           {makers.map((m) => (
             <article key={m.key} className="card card-hover flex flex-col overflow-hidden">

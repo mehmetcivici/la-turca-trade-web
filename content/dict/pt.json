@@ -9,7 +9,8 @@
     "privateLabel": "Marca própria",
     "catalogs": "Catálogos",
     "about": "Quem somos",
-    "contact": "Contato"
+    "contact": "Contato",
+    "guide": "Fabricantes turcos"
   },
   "common": {
     "quote": "Solicitar cotação",
@@ -162,7 +163,7 @@
     }
   },
   "star": {
-    "title": "Star Termos: garrafas e jarras térmicas",
+    "title": "Garrafas térmicas no atacado: Star Termos",
     "description": "Garrafas térmicas de vidro duplo, garrafas de aço inox, copos e potes térmicos Star Termos. Exportação para a América do Sul e marca própria.",
     "h1": "Star Termos",
     "sub": "Garrafas térmicas, Istambul",
@@ -237,7 +238,7 @@
     ]
   },
   "gastro": {
-    "title": "Gastroplast: cubas GN e food service",
+    "title": "Cubas gastronorm de policarbonato",
     "description": "Cubas gastronorm de policarbonato e PP listadas pela NSF, potes, dispensers e louça inquebrável Gastroplast. Envio de Istambul ao Brasil.",
     "h1": "Gastroplast",
     "sub": "Equipamentos para food service, Istambul",
@@ -610,5 +611,97 @@
     "quote": "Pedir cotação para esta carga",
     "empty": "Adicione pelo menos um produto.",
     "loadText": "Carga estimada"
+  },
+  "guide": {
+    "title": "Fabricantes turcos de garrafas térmicas",
+    "description": "Como comprar garrafas térmicas e itens de food service direto de fábricas turcas: Star Termos e Gastroplast, FOB/CIF, contêiner misto e amostras.",
+    "kicker": "Guia para importadores",
+    "h1": "Fabricantes turcos de garrafas térmicas e equipamentos para food service",
+    "lead": "O que a Star Termos e a Gastroplast fabricam em Istambul, como comprar direto da fábrica e o que um importador sul-americano precisa para o primeiro contêiner.",
+    "whyTitle": "Por que comprar garrafas térmicas na Turquia",
+    "why": [
+      {
+        "t": "Preço de fábrica e rastreabilidade",
+        "d": "A Star Termos fabrica suas garrafas em Istambul e a Gastroplast projeta e produz os próprios moldes. Você compra a preço de fábrica e sabe onde cada peça foi feita."
+      },
+      {
+        "t": "Qualidade certificada",
+        "d": "A Star Termos tem ISO 9001, 14001, 22000 e 45001 e é membro da Sedex. As cubas GN da Gastroplast são listadas pela NSF International."
+      },
+      {
+        "t": "Pedidos flexíveis",
+        "d": "Contêineres mistos com produtos das duas fábricas, cores por referência e fabricação com a sua marca (OEM e ODM)."
+      },
+      {
+        "t": "Logística a partir de Istambul",
+        "d": "As duas fábricas ficam em Esenyurt, a cerca de 20 km do porto de Ambarlı, de onde embarcamos para a costa atlântica e a do Pacífico."
+      }
+    ],
+    "makersTitle": "Os fabricantes que representamos",
+    "makersLead": "A La Turca Trade é o escritório comercial para a América do Sul de dois fabricantes de Istambul. Cada um tem sua linha e suas certificações.",
+    "rangeTitle": "O que dá para importar",
+    "rangeLead": "De garrafas térmicas para casa a equipamentos para cozinhas profissionais. Os catálogos completos estão em PDF.",
+    "stepsTitle": "Como importar da Turquia, passo a passo",
+    "steps": [
+      {
+        "t": "Mix e quantidades",
+        "d": "Escolha as referências nos catálogos e calcule o volume com a calculadora de contêiner. Dá para combinar produtos das duas fábricas."
+      },
+      {
+        "t": "Cotação e amostras",
+        "d": "Enviamos preços em USD (FOB Istambul, CFR ou CIF no seu porto) e amostras das referências escolhidas."
+      },
+      {
+        "t": "Proforma e sinal",
+        "d": "A proforma confirma unidades por caixa, volume, peso e prazo de produção. A fábrica produz com o sinal combinado."
+      },
+      {
+        "t": "Produção e inspeção",
+        "d": "Acompanhamos a produção e conferimos quantidades, embalagem e marcação antes do carregamento. Você recebe fotos e vídeo."
+      },
+      {
+        "t": "Embarque e documentos",
+        "d": "Enviamos fatura comercial, packing list, certificado de origem e conhecimento de embarque (BL)."
+      },
+      {
+        "t": "Desembaraço no destino",
+        "d": "Seu despachante nacionaliza a mercadoria com esses documentos; fornecemos as informações técnicas necessárias."
+      }
+    ],
+    "termsTitle": "Condições habituais",
+    "calcTitle": "Quanto cabe em um contêiner?",
+    "calcLead": "Teste a calculadora com as medidas de caixa do catálogo de fábrica: 20' DC, 40' DC ou 40' HC, com um ou vários produtos.",
+    "calcLink": "Abrir a calculadora",
+    "faqTitle": "Perguntas frequentes",
+    "faq": [
+      {
+        "q": "Por que comprar garrafas térmicas de fabricantes turcos?",
+        "a": "Pela combinação de qualidade certificada, preço de fábrica e flexibilidade: contêineres mistos, cores por referência e fabricação com marca própria. A Star Termos tem 30 anos no setor e exporta para 19 países."
+      },
+      {
+        "q": "Qual fabricante turco de garrafas térmicas vocês representam?",
+        "a": "Representamos a Star Termos, fabricante de Istambul de garrafas com ampola de vidro duplo, garrafas de aço, copos e potes térmicos. Para food service representamos a Gastroplast."
+      },
+      {
+        "q": "Qual é o pedido mínimo?",
+        "a": "Depende da referência. Para o primeiro pedido propomos um contêiner misto de 20'; com a calculadora você estima quantas unidades cabem."
+      },
+      {
+        "q": "Quanto tempo leva um pedido da Turquia para a América do Sul?",
+        "a": "É a soma do prazo de produção e do trânsito marítimo, que depende do armador e dos transbordos. Ambos constam na proforma."
+      },
+      {
+        "q": "As garrafas térmicas turcas têm certificações?",
+        "a": "A fábrica da Star Termos é certificada ISO 9001, ISO 14001, ISO 22000 (segurança de alimentos) e ISO 45001 e é membro da Sedex. Os produtos têm 2 anos de garantia de fabricação."
+      },
+      {
+        "q": "Posso colocar minha marca nas garrafas?",
+        "a": "Sim. A Star Termos fabrica em OEM e ODM: logotipo no produto, cores e caixa com seu layout e código de barras."
+      },
+      {
+        "q": "Como é o pagamento?",
+        "a": "Normalmente por transferência com sinal e saldo contra documentos, ou por carta de crédito. Definido em cada operação."
+      }
+    ]
   }
 }
