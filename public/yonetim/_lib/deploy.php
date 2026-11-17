@@ -76,6 +76,11 @@ function deploy_version(array $c, string $sha, string $kaynak, bool $auto, bool 
             if (file_put_contents($part, $data) === false || !rename($part, $dest)) throw new RuntimeException('Yazılamadı: ' . $rel);
             $n++;
         }
+        // PDF kataloglar GitHub Pages'ten sunuluyor ve pakette yok: sunucuda kalan eski PDF'leri kaldır
+        // (özgün üretici kataloglarında üreticinin iletişim bilgileri var, yayında kalmamalı)
+        if ($zip->locateName($prefix . 'catalogs/') === false) {
+            foreach (glob($root . '/catalogs/*.pdf') ?: [] as $eski) { if (@unlink($eski)) $n++; }
+        }
         $zip->close();
         if (function_exists('opcache_reset')) @opcache_reset();
 
