@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: "La Turca Trade — Star Termos · Gastroplast",
   robots: { index: false, follow: true },
+  verification: site.googleVerification ? { google: site.googleVerification } : undefined,
   alternates: {
     languages: { es: "/es/", "pt-BR": "/pt/", en: "/en/", tr: "/tr/", "x-default": "/es/" },
   },
