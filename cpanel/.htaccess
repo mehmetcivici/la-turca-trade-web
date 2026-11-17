@@ -15,9 +15,8 @@ AddDefaultCharset utf-8
   # Kök adres (/) → ana dil (/es/), kalıcı. Hedef sabit olduğu için CDN önbelleğinde güvenli.
   # Dil önerisi sayfalarda tarayıcı tarafında yapılır (LangSuggest). Accept-Language'e göre
   # sunucu yönlendirmesi YAPILMAZ: CDN tek dilin yönlendirmesini herkese dağıtabilir.
-  # Google doğrulama robotu kök sayfayı (doğrulama etiketli) yönlendirmesiz görsün
-  RewriteCond %{HTTP_USER_AGENT} !Google-Site-Verification [NC]
-  RewriteRule ^$ /es/ [L,R=301,E=LTT_KOK:1]
+  # Yönlendirmeyi kok.php yapar (CDN önbelleğine alınmayan 301 + Google doğrulama robotu istisnası)
+  RewriteRule ^$ /kok.php [L]
 </IfModule>
 
 ErrorDocument 404 /404.html
@@ -42,8 +41,6 @@ ErrorDocument 404 /404.html
   <FilesMatch "\.(html|txt|json|xml)$">
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
-  # Kök yönlendirmesi CDN'de önbelleğe alınmasın (doğrulama robotu istisnası her seferinde çalışsın)
-  Header always set Cache-Control "no-store, max-age=0" env=LTT_KOK
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set X-Frame-Options "SAMEORIGIN"

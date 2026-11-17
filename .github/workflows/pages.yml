@@ -72,7 +72,7 @@ jobs:
 
       - name: Önizlemeden sunucu dosyalarını çıkar, Hostinger derlemesinin statik dosyalarını ekle
         run: |
-          rm -rf out/yonetim out/contact.php
+          rm -rf out/yonetim out/contact.php out/kok.php
           mkdir -p out/_prod
           cp -R .next-prod/_next out/_prod/_next
 
