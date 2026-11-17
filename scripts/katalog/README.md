@@ -26,8 +26,8 @@ Star Termos sayfalarının bir kısmı vektör çizimdir. Bu yüzden macOS Visio
    - Gastroplast için çevirisi olmayan Türkçe satırlar ekrana listelenir; bunları `ceviri/gastro-*.json` dosyalarına ekleyin.
    - Star Termos için yeni ifadeler `star.py` içindeki sözlüklere (`TAM`, `ACIKLAMA`, `IFADE`, `MALZEME`) eklenir.
 3. Çıktıları sayfa sayfa kontrol edin.
-4. `content/site.json` içindeki boyut ve sayfa sayısı bilgilerini güncelleyin.
+4. Yönetim panelinde **Kataloglar** bölümünü açın. Her katalog için üç dosyayı ilgili alana **PDF yükle** ile yükleyin: `file` (İngilizce), `fileEs` (İspanyolca), `filePt` (Portekizce). Ardından **Kaydet ve yayınla**'ya basın. Boyut ve sayfa sayısı otomatik dolar.
 
-`scripts/sync-catalogs.mjs` dile göre hazırlanmış sürümler varsa özgün dosyayı yayımlamaz. PDF'ler GitHub Pages'ten sunulur, sunucu paketine girmez; sunucu güncellemesi `catalogs/` altında kalan eski PDF'leri siler.
+PDF'ler GitHub'a konmaz (`.gitignore`). Ne depoda ne de GitHub Pages'te bulunurlar; yalnız bu bilgisayarda (`kataloglar/`) ve sunucuda (`public_html/catalogs/`) dururlar. Panel PDF'i doğrudan sunucuya kaydeder. Site güncellemeleri bu dosyalara dokunmaz. Yerelde `npm run dev`, `scripts/sync-catalogs.mjs` ile dile göre hazırlanmış sürümleri kopyalar; bu sürümler varsa özgün dosya kopyalanmaz.
 
 Yazı tipleri SIL Open Font License ile dağıtılır (`fonts/LICENSE.txt`).

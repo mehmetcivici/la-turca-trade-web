@@ -1,6 +1,7 @@
 // kataloglar/ klasöründeki PDF'leri public/catalogs/ altına kopyalar.
 // - Dile göre hazırlanmış sürümler (…-es.pdf, …-pt.pdf, …-en.pdf) varsa üreticinin özgün dosyası yayımlanmaz
 //   (özgün dosyada üreticinin iletişim bilgileri var; kaynak olarak kataloglar/ içinde kalır).
+// - PDF'ler GitHub'a konmaz (.gitignore). Canlı sitede panelden (Kataloglar → PDF yükle) sunucuya yüklenir.
 // - Yeni katalog: kataloglar/ içine koyun; La Turca Trade sürümleri için scripts/katalog/README.md.
 import { mkdirSync, readdirSync, copyFileSync, statSync, existsSync, rmSync } from "node:fs";
 import { join } from "node:path";
@@ -8,7 +9,8 @@ import { join } from "node:path";
 const src = "kataloglar";
 const dst = join("public", "catalogs");
 mkdirSync(dst, { recursive: true });
-const pdfs = readdirSync(src).filter((f) => f.toLowerCase().endsWith(".pdf"));
+// PDF'ler depoda yok (yalnız yerelde ve sunucuda); klasör yoksa yapılacak bir şey yok
+const pdfs = (existsSync(src) ? readdirSync(src) : []).filter((f) => f.toLowerCase().endsWith(".pdf"));
 const yerel = /-(es|pt|en)\.pdf$/i;
 const yayinla = pdfs.filter((f) => yerel.test(f) || !pdfs.some((g) => yerel.test(g) && g.replace(yerel, ".pdf") === f));
 for (const f of yayinla) {

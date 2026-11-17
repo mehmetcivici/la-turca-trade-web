@@ -11,3 +11,6 @@ public/catalogs/*.pdf
 .next-prod
 .next-check
 ltt-data
+
+# PDF kataloglar GitHub'a konmaz: yalnız yerelde (kaynak/çıktı) ve sunucuda (panelden yüklenir)
+kataloglar/*.pdf

@@ -48,7 +48,7 @@ jobs:
         run: |
           cp cpanel/.htaccess .next-prod/.htaccess
           rm -rf .next-prod/cache .next-prod/types
-          # PDF kataloglar GitHub Pages'ten sunulur (asset() → ASSET_CDN); sunucu paketine girmez
+          # PDF kataloglar depoda yok, yalnız sunucuda (panelden yüklenir); pakette boş klasör de olmasın
           rm -rf .next-prod/catalogs
           TITLE=$(printf '%s' "${MSG:-Elle başlatılan derleme}" | head -n 1 | cut -c1-120)
           # Sunucunun doğrulayacağı sürüm bilgisi
@@ -74,7 +74,7 @@ jobs:
 
       - name: Önizlemeden sunucu dosyalarını çıkar, Hostinger derlemesinin statik dosyalarını ekle
         run: |
-          rm -rf out/yonetim out/contact.php out/kok.php
+          rm -rf out/yonetim out/contact.php out/kok.php out/catalogs
           mkdir -p out/_prod
           cp -R .next-prod/_next out/_prod/_next
 

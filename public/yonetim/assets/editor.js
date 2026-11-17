@@ -189,7 +189,11 @@
         const parent = getAt(state, path.slice(0, -1));
         const key = path[path.length - 1];
         if (kind === "image" && key === "cover" && "coverW" in parent) { parent.coverW = j.w; parent.coverH = j.h; }
-        if (kind === "pdf") { if ("sizeMb" in parent) parent.sizeMb = j.sizeMb; if ("pages" in parent && j.pages) parent.pages = j.pages; }
+        if (kind === "pdf") {
+          const sk = "sizeMb" + key.replace(/^file/, ""); // file → sizeMb, fileEs → sizeMbEs
+          parent[sk] = j.sizeMb;
+          if (key === "file" && "pages" in parent && j.pages) parent.pages = j.pages;
+        }
         status.textContent = "Yüklendi. Kaydetmeyi unutmayın.";
         render();
         toast("Dosya yüklendi. Değişikliği yayınlamak için \"Kaydet ve yayınla\"ya basın.");
