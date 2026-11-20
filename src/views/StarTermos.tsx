@@ -1,7 +1,7 @@
 import Link from "@/components/L";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
-import { catalogFor, catalogs, manufacturers } from "@/content/site";
+import { catalogFor, catalogs } from "@/content/site";
 import { asset } from "@/lib/asset";
 import { starGroups, starSeries } from "@/content/products";
 import { Arrow, Check, Download, Faq, Img, PageBanner, SectionHead, Stats } from "@/components/ui";
@@ -51,9 +51,6 @@ export function StarTermos({ locale, d }: { locale: Locale; d: Dict }) {
           {s.intro.map((p) => (
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
-          <a href={manufacturers.starTermos.web} target="_blank" rel="noopener" className="link-arrow text-navy">
-            {d.common.officialSite} <Arrow />
-          </a>
         </div>
         <div className="lg:col-span-5">
           <Img src="/img/star-termos/elegant-garden.webp" alt="Star Termos Elegant" w={1100} h={1650} className="aspect-[4/5] w-full rounded-2xl object-cover shadow-soft" />
@@ -121,11 +118,7 @@ export function StarTermos({ locale, d }: { locale: Locale; d: Dict }) {
         <div className="lg:col-span-4">
           <SectionHead id="faq" kicker="FAQ" title={s.faqTitle} />
           <p className="mt-6 text-sm text-muted">
-            {d.common.source}:{" "}
-            <a href={manufacturers.starTermos.web} target="_blank" rel="noopener" className="underline hover:text-copper">
-              startermos.com
-            </a>{" "}
-            · Star Termos E-Katalog 2025
+            {d.common.source}: Star Termos E-Katalog 2025
           </p>
           <Link href={href(locale, "privateLabel")} className="btn btn-dark mt-6">
             {d.nav.privateLabel} <Arrow />

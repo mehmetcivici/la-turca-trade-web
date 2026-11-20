@@ -14,7 +14,7 @@ export function Header({ locale, d }: { locale: Locale; d: Dict }) {
         {d.common.skip}
       </a>
       <div className="wrap flex h-[72px] items-center justify-between gap-6">
-        <Link href={href(locale, "home")} className="shrink-0" aria-label="La Turca Trade">
+        <Link href={href(locale, "home")} className="shrink-0">
           <Logo className="text-[15px] md:text-[16px]" />
         </Link>
 

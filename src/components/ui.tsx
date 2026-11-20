@@ -26,10 +26,22 @@ export function Check({ className = "h-4 w-4" }: { className?: string }) {
   );
 }
 
-export function Img({ src, alt, w, h, className = "", priority = false }: { src: string; alt: string; w: number; h: number; className?: string; priority?: boolean }) {
+/** scripts/make-responsive.py ile aynı kural: /img altındaki WebP'lerin 640 ve 1080 px sürümleri. */
+const VARIANTS = [640, 1080];
+function srcSet(src: string, w: number): string | undefined {
+  if (!src.startsWith("/img/") || !src.endsWith(".webp")) return undefined;
+  const vs = VARIANTS.filter((v) => w > v + 100);
+  if (!vs.length) return undefined;
+  return [...vs.map((v) => `${asset(src.replace(/\.webp$/, `-${v}w.webp`))} ${v}w`), `${asset(src)} ${w}w`].join(", ");
+}
+
+export function Img({
+  src, alt, w, h, className = "", priority = false, sizes = "100vw",
+}: { src: string; alt: string; w: number; h: number; className?: string; priority?: boolean; sizes?: string }) {
+  const set = srcSet(src, w);
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src={asset(src)} alt={alt} width={w} height={h} className={className} loading={priority ? "eager" : "lazy"} decoding="async" fetchPriority={priority ? "high" : undefined} />
+    <img src={asset(src)} srcSet={set} sizes={set ? sizes : undefined} alt={alt} width={w} height={h} className={className} loading={priority ? "eager" : "lazy"} decoding="async" fetchPriority={priority ? "high" : undefined} />
   );
 }
 

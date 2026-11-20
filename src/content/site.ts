@@ -52,17 +52,11 @@ export function catalogFor(c: Catalog, locale: string): { file: string; sizeMb: 
   return { file: c.file, sizeMb: c.sizeMb, lang: c.lang };
 }
 
+/**
+ * Temsil edilen üreticiler. Sitede üreticilerin kendi web sitelerine, adreslerine veya iletişim bilgilerine
+ * bağlantı verilmez (kullanıcı kararı, 20 Kas 2026): alıcı her zaman La Turca Trade üzerinden ilerler.
+ */
 export const manufacturers = {
-  starTermos: {
-    name: "Star Termos",
-    web: "https://startermos.com",
-    legal: "Mehmet Dinçok Yıldız Çelik",
-    address: "Akçaburgaz, Esenyurt, İstanbul",
-  },
-  gastroplast: {
-    name: "Gastroplast",
-    web: "https://www.gastroplast.com",
-    legal: "SürPlast Plastik San. ve Dış Tic. Ltd. Şti.",
-    address: "Kıraç, Esenyurt, İstanbul",
-  },
+  starTermos: { name: "Star Termos", page: "starTermos" as const },
+  gastroplast: { name: "Gastroplast", page: "gastroplast" as const },
 };

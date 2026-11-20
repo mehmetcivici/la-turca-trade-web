@@ -11,7 +11,7 @@ export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
     <footer className="bg-navy text-paper">
       <div className="wrap grid gap-12 py-16 md:grid-cols-12 md:py-20">
         <div className="md:col-span-5">
-          <Logo tone="light" title="" className="text-[22px]" />
+          <Logo tone="light" title="" lazy className="text-[22px]" />
           <p className="mt-6 max-w-md text-paper/75">{d.footer.blurb}</p>
           {site.email && (
             <p className="mt-6">
@@ -52,10 +52,9 @@ export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
           <ul className="mt-4 space-y-4">
             {Object.values(manufacturers).map((m) => (
               <li key={m.name}>
-                <a href={m.web} target="_blank" rel="noopener" className="text-paper/85 hover:text-copper-l">
+                <Link href={href(locale, m.page)} className="text-paper/85 hover:text-copper-l">
                   {m.name}
-                </a>
-                <span className="block text-sm text-paper/50">{m.address}</span>
+                </Link>
               </li>
             ))}
           </ul>

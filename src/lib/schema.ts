@@ -32,8 +32,8 @@ export function orgSchema(locale: Locale, d: Dict) {
     areaServed: site.areaServed.map((c) => ({ "@type": "Country", name: c })),
     knowsLanguage: ["es", "pt", "en", "tr"],
     brand: [
-      { "@type": "Brand", name: manufacturers.starTermos.name, url: manufacturers.starTermos.web },
-      { "@type": "Brand", name: manufacturers.gastroplast.name, url: manufacturers.gastroplast.web },
+      { "@type": "Brand", name: manufacturers.starTermos.name },
+      { "@type": "Brand", name: manufacturers.gastroplast.name },
     ],
     sameAs: [site.linkedin, site.instagram].filter(Boolean),
   };

@@ -1,7 +1,7 @@
 import Link from "@/components/L";
 import { href, type Locale } from "@/i18n/config";
 import type { Dict } from "@/content/dict";
-import { catalogFor, catalogs, manufacturers } from "@/content/site";
+import { catalogFor, catalogs } from "@/content/site";
 import { asset } from "@/lib/asset";
 import { gastroCategories, gnSizes, gnDepths, gnPerBox, gnCode, tx } from "@/content/products";
 import { Arrow, Check, Download, Img, PageBanner, SectionHead, Stats } from "@/components/ui";
@@ -50,9 +50,6 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
             <p key={p.slice(0, 24)}>{p}</p>
           ))}
           <p className="text-sm text-muted">{g.brands}</p>
-          <a href={manufacturers.gastroplast.web} target="_blank" rel="noopener" className="link-arrow text-navy">
-            {d.common.officialSite} <Arrow />
-          </a>
         </div>
         <div className="lg:col-span-5">
           <Img src="/img/gastroplast/gn-pc-black.webp" alt={altFor("/img/gastroplast/gn-pc-black.webp", locale, g.gnTitle)} w={800} h={800} className="aspect-square w-full rounded-2xl object-cover shadow-soft" />
@@ -139,11 +136,7 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
               ))}
             </ul>
             <p className="mt-8 text-sm text-white/60">
-              {d.common.source}:{" "}
-              <a href={manufacturers.gastroplast.web} target="_blank" rel="noopener" className="underline hover:text-white">
-                gastroplast.com
-              </a>{" "}
-              · Gastroplast catalog
+              {d.common.source}: Gastroplast catalog
             </p>
           </div>
           <div className="lg:col-span-4 lg:col-start-9">

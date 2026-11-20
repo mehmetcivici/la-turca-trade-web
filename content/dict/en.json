@@ -77,7 +77,7 @@
       "lead": "Star Termos and Gastroplast both manufacture in Esenyurt, on the European side of Istanbul, about 20 km from Ambarlı port. Being this close lets us consolidate both factories into one container and supervise loading in person."
     },
     "star": {
-      "lead": "Vacuum jugs and flasks from 250 ml to 8 litres: double-glass refills, 304 stainless steel, travel tumblers and food jars. A family business founded by Mehmet Dinçok.",
+      "lead": "Vacuum jugs and flasks from 250 ml to 8 litres: double-glass refills, 304 stainless steel, travel tumblers and food jars. A family business.",
       "facts": [
         "Exports to 19 countries",
         "ISO 9001, 14001, 22000 and 45001",
@@ -168,7 +168,7 @@
     "h1": "Star Termos",
     "sub": "Vacuum flasks and thermal jugs, Istanbul",
     "intro": [
-      "Star Termos is an Istanbul manufacturer with 30 years in housewares and 12 years of professional vacuum flask production. It was founded by Mehmet Dinçok and is run today by the Dinçok family.",
+      "Star Termos is an Istanbul manufacturer with 30 years in housewares and 12 years of professional vacuum flask production. It is a family business.",
       "The range covers double-glass jugs, stainless steel flasks, HoReCa and camping flasks, travel tumblers and food jars, from 250 ml to 8 litres. Depending on the model, drinks stay hot for up to 12 hours and cold for up to 24 hours.",
       "The plant is certified to ISO 9001 (quality), ISO 14001 (environment), ISO 22000 (food safety) and ISO 45001 (occupational health and safety), and is a Sedex member. It exports to 19 countries and manufactures for other brands (OEM and ODM)."
     ],
@@ -243,7 +243,7 @@
     "h1": "Gastroplast",
     "sub": "Food service equipment, Istanbul",
     "intro": [
-      "Gastroplast is the main brand of SürPlast Plastik, an Istanbul manufacturer founded in 2015 that exports to more than 55 countries. It supplies hotels, restaurants, caterers and the food industry.",
+      "Gastroplast is the main brand of an Istanbul manufacturer founded in 2015 that exports to more than 55 countries. It supplies hotels, restaurants, caterers and the food industry.",
       "The company designs and builds its own moulds. Making the mould and the part in the same plant lowers cost, tightens quality control and shortens lead times for new models.",
       "Its PC and PP gastronorm pans and lids are listed by NSF International. The polycarbonate it uses has been food-contact tested to FDA and EU requirements. Gastroplast has a branch and warehouse in Budapest, Hungary, and exhibits at fairs such as Ambiente (Frankfurt) and Host (Milan)."
     ],
@@ -270,7 +270,7 @@
     "gnLead": "Every GN size in four depths. Factory code and units per carton.",
     "gnDepth": "Depth",
     "gnSize": "Size",
-    "gnNote": "Source: gastroplast.com. Also available in black PC and in PP, with plain, notched and hinged lids.",
+    "gnNote": "Also available in black PC and in PP, with plain, notched and hinged lids.",
     "certTitle": "Certifications and tests",
     "certs": [
       {
@@ -296,7 +296,7 @@
       "Host, Milan",
       "Anfaş, Antalya"
     ],
-    "brands": "SürPlast brands: GastroPlast, GastroCups and GastroCarry."
+    "brands": "Group brands: GastroPlast, GastroCups and GastroCarry."
   },
   "dist": {
     "title": "For importers and distributors",
