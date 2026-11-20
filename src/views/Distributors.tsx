@@ -6,6 +6,7 @@ import { Arrow, DefList, Faq, PageBanner, SectionHead, Steps } from "@/component
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { CtaBand, crumbs } from "./shared";
+import { altFor } from "@/content/alts";
 
 const WHO_ICONS = [Building2, Store, UtensilsCrossed, Gift, ShoppingCart];
 
@@ -19,7 +20,7 @@ export function Distributors({ locale, d }: { locale: Locale; d: Dict }) {
         title={x.h1}
         lead={x.lead}
         kicker="B2B"
-        image={{ src: "/img/star-termos/lineup.webp", w: 1582, h: 986, alt: "Star Termos", pos: "object-[70%_60%]" }}
+        image={{ src: "/img/star-termos/lineup.webp", w: 1582, h: 986, alt: altFor("/img/star-termos/lineup.webp", locale, "Star Termos"), pos: "object-[70%_60%]" }}
         crumbs={crumbs(d, locale, d.nav.distributors)}
       >
         <div className="mt-8 flex flex-wrap gap-3">

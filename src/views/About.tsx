@@ -6,6 +6,7 @@ import { Arrow, Img, PageBanner, SectionHead } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { CtaBand, crumbs } from "./shared";
+import { altFor } from "@/content/alts";
 
 const ICONS = [ShieldCheck, Camera, Clock, CalendarCheck];
 
@@ -18,7 +19,7 @@ export function About({ locale, d }: { locale: Locale; d: Dict }) {
         title={a.h1}
         lead={a.lead}
         kicker={`${d.contact.office} · İstanbul`}
-        image={{ src: "/img/star-termos/scene-tea-table.webp", w: 1378, h: 919, alt: "Star Termos" }}
+        image={{ src: "/img/star-termos/scene-tea-table.webp", w: 1378, h: 919, alt: altFor("/img/star-termos/scene-tea-table.webp", locale, "Star Termos") }}
         crumbs={crumbs(d, locale, d.nav.about)}
       />
 
@@ -29,7 +30,7 @@ export function About({ locale, d }: { locale: Locale; d: Dict }) {
           ))}
         </div>
         <div className="lg:col-span-5">
-          <Img src="/img/star-termos/scene-red-jug.webp" alt="Star Termos" w={1279} h={966} className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
+          <Img src="/img/star-termos/scene-red-jug.webp" alt={altFor("/img/star-termos/scene-red-jug.webp", locale, "Star Termos")} w={1279} h={966} className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft" />
         </div>
       </section>
 

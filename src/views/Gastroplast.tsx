@@ -8,6 +8,7 @@ import { Arrow, Check, Download, Img, PageBanner, SectionHead, Stats } from "@/c
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { CategoryGrid, CtaBand, crumbs } from "./shared";
+import { altFor } from "@/content/alts";
 
 export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
   const g = d.gastro;
@@ -27,7 +28,7 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
         title={g.h1}
         kicker={g.sub}
         lead={d.home.gastro.lead}
-        image={{ src: "/img/gastroplast/scene-condiment.webp", w: 1600, h: 900, alt: "Gastroplast" }}
+        image={{ src: "/img/gastroplast/scene-condiment.webp", w: 1600, h: 900, alt: altFor("/img/gastroplast/scene-condiment.webp", locale, "Gastroplast") }}
         crumbs={crumbs(d, locale, "Gastroplast")}
       >
         <div className="mt-8 flex flex-wrap gap-3">
@@ -54,7 +55,7 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
           </a>
         </div>
         <div className="lg:col-span-5">
-          <Img src="/img/gastroplast/gn-pc-black.webp" alt={g.gnTitle} w={800} h={800} className="aspect-square w-full rounded-2xl object-cover shadow-soft" />
+          <Img src="/img/gastroplast/gn-pc-black.webp" alt={altFor("/img/gastroplast/gn-pc-black.webp", locale, g.gnTitle)} w={800} h={800} className="aspect-square w-full rounded-2xl object-cover shadow-soft" />
         </div>
       </section>
 
@@ -70,7 +71,7 @@ export function Gastroplast({ locale, d }: { locale: Locale; d: Dict }) {
       <section className="wrap grid gap-6 py-20 md:py-28 lg:grid-cols-12" aria-labelledby="gn">
         <div className="lg:col-span-4">
           <SectionHead id="gn" kicker="GN · PC" title={g.gnTitle} lead={g.gnLead} />
-          <Img src="/img/gastroplast/gn-pc-clear.webp" alt={g.gnTitle} w={840} h={839} className="mt-8 hidden w-4/5 rounded-2xl lg:block" />
+          <Img src="/img/gastroplast/gn-pc-clear.webp" alt={altFor("/img/gastroplast/gn-pc-clear.webp", locale, g.gnTitle)} w={840} h={839} className="mt-8 hidden w-4/5 rounded-2xl lg:block" />
         </div>
         <div className="card overflow-x-auto p-6 md:p-8 lg:col-span-8">
           <table className="w-full min-w-[36rem] border-collapse text-left">

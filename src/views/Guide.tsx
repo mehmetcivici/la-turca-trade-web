@@ -7,6 +7,7 @@ import { Arrow, Check, DefList, Faq, Img, PageBanner, SectionHead, Steps } from 
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { CatalogCards, CtaBand, crumbs } from "./shared";
+import { altFor, logoAlt } from "@/content/alts";
 
 const WHY_ICONS = [Factory, Award, Layers, Ship];
 
@@ -25,7 +26,7 @@ export function Guide({ locale, d }: { locale: Locale; d: Dict }) {
         title={g.h1}
         kicker={g.kicker}
         lead={g.lead}
-        image={{ src: "/img/star-termos/scene-jugs-stone.webp", w: 1283, h: 969, alt: "Star Termos" }}
+        image={{ src: "/img/star-termos/scene-jugs-stone.webp", w: 1283, h: 969, alt: altFor("/img/star-termos/scene-jugs-stone.webp", locale, "Star Termos") }}
         crumbs={crumbs(d, locale, d.nav.guide)}
       >
         <div className="mt-8 flex flex-wrap gap-3">
@@ -64,9 +65,9 @@ export function Guide({ locale, d }: { locale: Locale; d: Dict }) {
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {makers.map((m) => (
               <article key={m.key} className="card grid overflow-hidden sm:grid-cols-[2fr_3fr]">
-                <Img src={m.img} alt={d.nav[m.key]} w={m.iw} h={m.ih} className="h-full min-h-48 w-full object-cover" />
+                <Img src={m.img} alt={altFor(m.img, locale, d.nav[m.key])} w={m.iw} h={m.ih} className="h-full min-h-48 w-full object-cover" />
                 <div className="p-6">
-                  <Img src={m.logo} alt={d.nav[m.key]} w={m.lw} h={m.lh} className="h-8 w-auto" />
+                  <Img src={m.logo} alt={logoAlt(d.nav[m.key], locale)} w={m.lw} h={m.lh} className="h-8 w-auto" />
                   <p className="mt-4 text-[0.95rem] text-muted">{m.data.lead}</p>
                   <ul className="mt-4 space-y-2">
                     {m.data.facts.map((f) => (

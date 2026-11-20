@@ -9,6 +9,7 @@ import { Arrow, Check, Img, SectionHead, Stats } from "@/components/ui";
 import { ATLANTIC_PORTS, PACIFIC_PORTS } from "@/content/routes";
 import { BoxDieline } from "@/components/BoxDieline";
 import { CatalogCards, CategoryGrid, CtaBand, SeriesGrid } from "./shared";
+import { altFor, logoAlt } from "@/content/alts";
 
 export function LoadingTable({ d, locale }: { d: Dict; locale: Locale }) {
   const nf = new Intl.NumberFormat(locale === "pt" ? "pt-BR" : locale);
@@ -86,9 +87,9 @@ export function Home({ locale, d }: { locale: Locale; d: Dict }) {
           {makers.map((m) => (
             <article key={m.key} className="card card-hover flex flex-col overflow-hidden">
               <Link href={href(locale, m.key)} className="relative block overflow-hidden">
-                <Img src={m.img} alt={d.nav[m.key]} w={m.iw} h={m.ih} className="aspect-[16/10] w-full object-cover transition-transform duration-700 hover:scale-[1.03]" />
+                <Img src={m.img} alt={altFor(m.img, locale, d.nav[m.key])} w={m.iw} h={m.ih} className="aspect-[16/10] w-full object-cover transition-transform duration-700 hover:scale-[1.03]" />
                 <span className="absolute left-5 top-5 rounded-lg bg-white/95 px-3 py-2 shadow-soft">
-                  <Img src={m.logo} alt={d.nav[m.key]} w={m.lw} h={m.lh} className="h-7 w-auto" />
+                  <Img src={m.logo} alt={logoAlt(d.nav[m.key], locale)} w={m.lw} h={m.lh} className="h-7 w-auto" />
                 </span>
               </Link>
               <div className="flex flex-1 flex-col p-7 md:p-8">

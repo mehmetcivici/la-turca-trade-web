@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { PageBanner } from "@/components/ui";
 import { crumbs } from "./shared";
+import { altFor } from "@/content/alts";
 
 export function Contact({ locale, d }: { locale: Locale; d: Dict }) {
   const c = d.contact;
@@ -16,7 +17,7 @@ export function Contact({ locale, d }: { locale: Locale; d: Dict }) {
         title={c.h1}
         lead={c.lead}
         kicker="ES · PT · EN · TR"
-        image={{ src: "/img/star-termos/lineup.webp", w: 1582, h: 986, alt: "Star Termos", pos: "object-[70%_60%]" }}
+        image={{ src: "/img/star-termos/lineup.webp", w: 1582, h: 986, alt: altFor("/img/star-termos/lineup.webp", locale, "Star Termos"), pos: "object-[70%_60%]" }}
         crumbs={crumbs(d, locale, d.nav.contact)}
       />
       <section className="wrap grid gap-8 py-16 md:py-24 lg:grid-cols-12">

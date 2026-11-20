@@ -11,7 +11,7 @@ export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
     <footer className="bg-navy text-paper">
       <div className="wrap grid gap-12 py-16 md:grid-cols-12 md:py-20">
         <div className="md:col-span-5">
-          <Logo tone="light" className="text-[22px]" />
+          <Logo tone="light" title="" className="text-[22px]" />
           <p className="mt-6 max-w-md text-paper/75">{d.footer.blurb}</p>
           {site.email && (
             <p className="mt-6">

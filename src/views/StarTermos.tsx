@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { CtaBand, SeriesCard, crumbs } from "./shared";
 import { LoadingTable } from "./Home";
+import { altFor } from "@/content/alts";
 
 export function StarTermos({ locale, d }: { locale: Locale; d: Dict }) {
   const s = d.star;
@@ -29,7 +30,7 @@ export function StarTermos({ locale, d }: { locale: Locale; d: Dict }) {
         title={s.h1}
         kicker={s.sub}
         lead={d.home.star.lead}
-        image={{ src: "/img/star-termos/scene-jugs-stone.webp", w: 1283, h: 969, alt: "Star Termos" }}
+        image={{ src: "/img/star-termos/scene-jugs-stone.webp", w: 1283, h: 969, alt: altFor("/img/star-termos/scene-jugs-stone.webp", locale, "Star Termos") }}
         crumbs={crumbs(d, locale, "Star Termos")}
       >
         <div className="mt-8 flex flex-wrap gap-3">

@@ -5,6 +5,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { CatalogCards, crumbs } from "./shared";
+import { altFor } from "@/content/alts";
 
 export function Catalogs({ locale, d }: { locale: Locale; d: Dict }) {
   const c = d.cat;
@@ -15,7 +16,7 @@ export function Catalogs({ locale, d }: { locale: Locale; d: Dict }) {
         title={c.h1}
         lead={c.lead}
         kicker="PDF"
-        image={{ src: "/img/star-termos/scene-pastel-jugs.webp", w: 1374, h: 962, alt: "Star Termos" }}
+        image={{ src: "/img/star-termos/scene-pastel-jugs.webp", w: 1374, h: 962, alt: altFor("/img/star-termos/scene-pastel-jugs.webp", locale, "Star Termos") }}
         crumbs={crumbs(d, locale, d.nav.catalogs)}
       />
       <section className="wrap py-20 md:py-24">

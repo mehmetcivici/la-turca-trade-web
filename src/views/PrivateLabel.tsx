@@ -7,6 +7,7 @@ import { BoxDieline } from "@/components/BoxDieline";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { CtaBand, crumbs } from "./shared";
+import { altFor } from "@/content/alts";
 
 const ICONS = [Stamp, Palette, Package, FileText];
 
@@ -19,7 +20,7 @@ export function PrivateLabel({ locale, d }: { locale: Locale; d: Dict }) {
         title={p.h1}
         lead={p.lead}
         kicker="OEM · ODM"
-        image={{ src: "/img/star-termos/travel-mugs.webp", w: 900, h: 900, alt: "Star Termos", pos: "object-center" }}
+        image={{ src: "/img/star-termos/travel-mugs.webp", w: 900, h: 900, alt: altFor("/img/star-termos/travel-mugs.webp", locale, "Star Termos"), pos: "object-center" }}
         crumbs={crumbs(d, locale, d.nav.privateLabel)}
       >
         <Link href={href(locale, "contact")} className="btn btn-amber mt-8">
@@ -32,7 +33,7 @@ export function PrivateLabel({ locale, d }: { locale: Locale; d: Dict }) {
           <BoxDieline brand={p.mock} label={p.whatTitle} />
         </div>
         <div className="grid grid-cols-2 gap-6 md:col-span-5 md:grid-cols-1">
-          <Img src="/img/star-termos/steel-jug.webp" alt="Star Termos" w={900} h={900} className="aspect-square h-full w-full rounded-2xl object-cover md:aspect-[16/10]" />
+          <Img src="/img/star-termos/steel-jug.webp" alt={altFor("/img/star-termos/steel-jug.webp", locale, "Star Termos")} w={900} h={900} className="aspect-square h-full w-full rounded-2xl object-cover md:aspect-[16/10]" />
           <Img src="/img/star-termos/thermbox-family.webp" alt="Star Termos Thermbox" w={900} h={900} className="aspect-square h-full w-full rounded-2xl object-cover md:aspect-[16/10]" />
         </div>
       </section>

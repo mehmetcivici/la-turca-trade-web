@@ -5,6 +5,7 @@ import { catalogFor, catalogs, site } from "@/content/site";
 import { asset } from "@/lib/asset";
 import { starSeries, gastroCategories, tx, type StarSeries, type GastroCategory } from "@/content/products";
 import { Arrow, Download, Img } from "@/components/ui";
+import { altFor } from "@/content/alts";
 
 export function SeriesCard({ s, d, locale }: { s: StarSeries; d: Dict; locale: Locale }) {
   const detail = tx(s.detail, locale);
@@ -110,7 +111,7 @@ export function CtaBand({ d, locale }: { d: Dict; locale: Locale }) {
   return (
     <section className="wrap py-16 md:py-24">
       <div className="relative isolate overflow-hidden rounded-3xl bg-navy px-7 py-12 text-white md:px-14 md:py-16">
-        <Img src="/img/star-termos/scene-tea-table.webp" alt="Star Termos" w={1378} h={919} className="absolute inset-0 -z-20 h-full w-full object-cover opacity-30" />
+        <Img src="/img/star-termos/scene-tea-table.webp" alt="" w={1378} h={919} className="absolute inset-0 -z-20 h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/95 to-navy/60" />
         <div className="grid gap-8 md:grid-cols-12 md:items-center">
           <div className="md:col-span-8">
